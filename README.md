@@ -13,7 +13,7 @@ The Automated Cat Feeding Device (ACFD) consists of four hardware modules:
  * [Raspberry Pi Zero, without WiFi](https://www.buyapi.ca/product/raspberry-pi-zero-w/)
  * [Time Display PCB](timepcb/pcb.md)  
 ![timepcb](figures/7seg.png)
-   * 1x [12 Pin Common Cathod 7-Segment Display](https://www.amazon.ca/DOLITY-Segement-Displays-Common-Cathode/dp/B07GVKQWDX/ref=sr_1_3?dchild=1&keywords=common+cathode+7+set+4+digit&qid=1621708725&sr=8-3)
+   * 1x [12 Pin Common Cathode 7-Segment Display](https://www.amazon.ca/DOLITY-Segement-Displays-Common-Cathode/dp/B07GVKQWDX/ref=sr_1_3?dchild=1&keywords=common+cathode+7+set+4+digit&qid=1621708725&sr=8-3)
    * 7x 250Ω Resistor
    * 1x [Mini PCB](https://www.amazon.ca/Gikfun-Solder-able-Breadboard-Arduino-Electronic/dp/B077938SQF/ref=sr_1_1_sspa?dchild=1&keywords=pcb+gikfun&qid=1621708675&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUE5TURQWTNOUkQ3N0QmZW5jcnlwdGVkSWQ9QTA5Mjc2MTkzRFlJRlhDOUhPQkxCJmVuY3J5cHRlZEFkSWQ9QTAyMjc0MzgyWDBQSEpTMko2M05MJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==)
    * Wires
@@ -24,6 +24,19 @@ The Automated Cat Feeding Device (ACFD) consists of four hardware modules:
  * Lid Lifter
    * 1x [28byj Stepper Motor](https://www.amazon.ca/Titri-28BYJ-48-Stepper-Motor-5V/dp/B07PS2MJCX/ref=sr_1_10?dchild=1&keywords=28byj&qid=1621708600&sr=8-10)
    * 1x [ULN2003 Driver Controller Board](https://www.amazon.ca/ULN2003-Controller-Stepping-Electric-Control/dp/B07P5C2KWX/ref=pd_sbs_5/143-8326619-7922505?pd_rd_w=9C9KQ&pf_rd_p=4dc33e2e-16b5-4e12-aab9-e86d5748e0cb&pf_rd_r=ZP2TV2SNF7EJDQ68PBNA&pd_rd_r=a4128fd4-54f9-4180-9a7a-c8ab0560926e&pd_rd_wg=SAr8U&pd_rd_i=B07P5C2KWX&psc=1)
+
+## Wiring
+
+Raspi-400:
+
+| 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 5V | 5V | GND | 14 | 15 | 18 | 23 | 24 | GND | 25 | 8 | 7 | EEPROM | GND | 12 | GND | 16 | 20 | 21 |
+| 3V3 | 2 | 3 | 4 | GND | 17 | 27 | 22 | 3V3 | 10 | 9 | 11 | GND | EEPROM | 5 | 6 | 13 | 19 | 26 | GND |
+
+Raspi-Zero:
+
+...
 
 ## Software 
 
