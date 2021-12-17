@@ -11,7 +11,7 @@ My cat wants food at specific hours. This repository is the blueprint for an aut
 The Automated Cat Feeding Device (ACFD) consists of four hardware modules:
 
  * [Raspberry Pi Zero, without WiFi](https://www.buyapi.ca/product/raspberry-pi-zero-w/)  
-![zero](https://upload.wikimedia.org/wikipedia/commons/b/ba/Raspberry_Pi_Zero_-_Location_of_connectors_and_ICs.svg)
+![zero](figures/pizero.svg)
  * [Time Display PCB](timer)
 ![timepcb](figures/7seg.png)
    * 1x [12 Pin Common Cathode 7-Segment Display](https://www.amazon.ca/DOLITY-Segement-Displays-Common-Cathode/dp/B07GVKQWDX)
