@@ -12,16 +12,16 @@ The Automated Cat Feeding Device (ACFD) consists of four hardware modules:
 
  * [Raspberry Pi Zero, without WiFi](https://www.buyapi.ca/product/raspberry-pi-zero-w/)  
 ![zero](figures/pizero.svg)
- * [Time Display PCB](timer)
-![timepcb](figures/7seg.png)
+ * [Time Display PCB](timer)  
+![timepcb](figures/7seg.svg)
    * 1x [12 Pin Common Cathode 7-Segment Display](https://www.amazon.ca/DOLITY-Segement-Displays-Common-Cathode/dp/B07GVKQWDX)
-   * 7x 250Ω Resistor
+   * 7x 230Ω Resistor
    * 1x [Mini PCB](https://www.amazon.ca/Gikfun-Solder-able-Breadboard-Arduino-Electronic/dp/B077938SQF)
    * [Jumper Wires](https://www.amazon.ca/Elegoo-120pcs-Multicolored-Breadboard-arduino/dp/B01EV70C78)
  * [4 Button Keypad](keypad)  
-![keypcb](figures/keypad.png)
+![keypcb](figures/keypad.svg)
    * 4x [Tactile Push Buttons](https://www.amazon.ca/Ocr-10Value-Tactile-Momentary-Assortment/dp/B01NAJEVE3)
-   * 1x 250Ω Resistor
+   * 9x 250Ω Resistor
    * 1x [Mini PCB](https://www.amazon.ca/Gikfun-Solder-able-Breadboard-Arduino-Electronic/dp/B077938SQF)
    * [Jumper Wires](https://www.amazon.ca/Elegoo-120pcs-Multicolored-Breadboard-arduino/dp/B01EV70C78)
  * Lid Lifter
