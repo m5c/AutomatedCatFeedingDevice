@@ -4,6 +4,7 @@
 # Date: 20170615
 # Version Alpha 0.1
 # Decision Maker
+# original source: github.com/custom/build-robots/Stepper-motor-28BYJ-48-Raspberry-Pi 
 
 from time import sleep
 import RPi.GPIO as GPIO
