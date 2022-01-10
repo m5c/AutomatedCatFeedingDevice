@@ -22,14 +22,26 @@ GPIO.setup(taster4, GPIO.IN, GPIO.PUD_DOWN)
 # Power up 3.3V input oin
 GPIO.output(keypadPower, 1)
 
+noTouch=True
+
 while True:
   if GPIO.input(taster1):
+      if noTouch:
         print('1')
-  if GPIO.input(taster2):
+        noTouch=False
+  elif GPIO.input(taster2):
+      if noTouch:
         print('2')
-  if GPIO.input(taster3):
+        noTouch=False
+  elif GPIO.input(taster3):
+      if noTouch:
         print('3')
-  if GPIO.input(taster4):
+        noTouch=False
+  elif GPIO.input(taster4):
+      if noTouch:
         print('4')
+        noTouch=False
+  else:
+    noTouch=True
 
 GPIO.cleanup()
