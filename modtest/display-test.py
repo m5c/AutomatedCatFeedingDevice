@@ -26,14 +26,22 @@ GPIO.setmode(GPIO.BCM)
 ##
 q = queue.Queue()
 
-## HELPER THREAD FOR COUNTDOWN
+## HELPER THREAD FUNCTION FOR COUNTDOWN
 def thread_function(counter):
     print("Thread started.")
     while counter >= 0:
         print(counter)
         q.put(counter)
+
+        # second counter only goes up to 59.
+        # leave minutes, apply mod 60 on seconds
         counter = counter - 1
-        time.sleep(0.1)
+        minutes = counter // 100
+        seconds = (counter % 100)
+        if seconds > 60:
+            seconds = 59
+        counter = minutes * 100 + seconds
+        time.sleep(1)
     print("Thread finished.")
 
 #     A  B    C  D   E   F   G
@@ -53,14 +61,15 @@ for s in range(len(gnd)):
     GPIO.setup(gnd[s], GPIO.OUT, initial=1)
     
 ## COUNT DOWN THREAD (MUST NOT BLOCK)
-counter = 9999
+# starts with 11 minutes
+counter = 1100
 t = threading.Thread(target=thread_function, args=(counter,))
 t.start()
 
 ## MAIN CONTROL
 print('CTRL-C to terminate')
 try:
-    while True:
+    while (counter > 0):
 
         # update counter if changed
         if not q.empty():
