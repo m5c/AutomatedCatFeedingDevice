@@ -33,15 +33,32 @@ def thread_function(counter):
         print(counter)
         q.put(counter)
 
-        # second counter only goes up to 59.
-        # leave minutes, apply mod 60 on seconds
-        counter = counter - 1
-        minutes = counter // 100
-        seconds = (counter % 100)
-        if seconds > 60:
-            seconds = 59
-        counter = minutes * 100 + seconds
-        time.sleep(1)
+        # in hour mode, hour counter
+        global hours
+        if hours:
+            # second counter only goes up to 59.
+            # leave minutes, apply mod 60 on seconds
+            counter = counter - 1
+            hour = counter // 100
+            minute = (counter % 100)
+            if minute > 60:
+                minute = 59
+            counter = hour * 100 + minute
+            time.sleep(60)
+            if counter == 100:
+                counter = 6000
+                hours = False
+        else:
+            # second counter only goes up to 59.
+            # leave minutes, apply mod 60 on seconds
+            counter = counter - 1
+            minute = counter // 100
+            second = (counter % 100)
+            if second > 60:
+                second = 59
+            counter = minute * 100 + second
+            time.sleep(1)
+
     print("Thread finished.")
 
 #     A  B    C  D   E   F   G
@@ -64,8 +81,9 @@ for s in range(len(gnd)):
     GPIO.setup(gnd[s], GPIO.OUT, initial=1)
     
 ## COUNT DOWN THREAD (MUST NOT BLOCK)
-# starts with 11 minutes
-counter = 1100
+# starts with 1h 1 minute
+counter = 101
+hours = True
 t = threading.Thread(target=thread_function, args=(counter,))
 t.start()
 
