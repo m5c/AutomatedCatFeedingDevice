@@ -44,9 +44,11 @@ def thread_function(counter):
             if minute > 60:
                 minute = 59
             counter = hour * 100 + minute
-            time.sleep(60)
+            time.sleep(10)
             if counter == 100:
-                counter = 6000
+                q.put(counter)
+                time.sleep(1)
+                counter = 5959
                 hours = False
         else:
             # second counter only goes up to 59.
