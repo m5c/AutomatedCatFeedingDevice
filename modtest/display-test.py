@@ -44,7 +44,7 @@ def thread_function(counter):
             if minute > 60:
                 minute = 59
             counter = hour * 100 + minute
-            time.sleep(10)
+            time.sleep(60)
             if counter == 100:
                 q.put(counter)
                 time.sleep(1)
