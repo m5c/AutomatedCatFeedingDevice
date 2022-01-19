@@ -52,6 +52,9 @@ gnd=[2, 3, 4, 14]
 digits=[[15, 24, 18, 22, 23, 17], [24, 18], [15, 24, 22, 23, 27], [15, 24, 18, 22, 27], [24, 18, 17, 27], [15, 18, 22, 17, 27], [18, 22, 23, 17, 27], [15, 24, 18], [15, 24, 18, 22, 23, 17, 27], [15, 24, 18, 17, 27]]
 
 ## INIT
+# reset dot segement output
+GPIO.setup(10, GPIO.OUT, initial=0)
+
 # reset GPIO pins for all segments to 0. (off)
 for s in range(len(seg)):
     GPIO.setup(seg[s], GPIO.OUT, initial=0)
@@ -75,6 +78,7 @@ try:
         if not q.empty():
             counter = q.get()
 
+        # i is the digit iterator
         for i in range(len(gnd)):
 
             # activate digit i
@@ -86,11 +90,18 @@ try:
             # Light up all segments that correspond to number "i" 
             for seg in range(len(digits[digit])):
                 GPIO.output(digits[digit][seg], 1)
+
+            # Light up dot separator if curret digit is second position
+            if i == 1:
+                GPIO.output(10, 1)
                 
             time.sleep(0.005)
             
             # switch digit off again
             GPIO.output(gnd[i], 1)
+
+            # Switch dot separator off again
+            GPIO.output(10, 0)
 
             # reset all segments that were lit up
             for seg in range(len(digits[digit])):
