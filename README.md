@@ -53,7 +53,7 @@ Before full assembly, use below scripts to test individual ACFD components:
 
  * [Display Test](modtest/display-test.py): Test Time Display PCB and wiring with a fast countdown 9999-0000.  
 ```python3 ./display-test.py```.
- * [Keypad Test](modtest/keypad-test.py): Test Keypad PDB and wiring with on terminal display of pressed buttons.  
+ * [Keypad Test](modtest/interruptclick.py): Test Keypad PDB and wiring with on terminal display of pressed buttons.  
 ```python3 ./keypad-test.py```
 
 ...
