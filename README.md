@@ -2,6 +2,8 @@
 
 A Raspi project to ensure consistent dinner times for the cat when I am not home.
 
+![casing](figures/acfd-casing.jpg)
+
 ## About
 
 My cat wants food at specific hours. This repository is the blueprint for an automated cat feeding device. You fill it with food, set a timer and it keeps the food until the programmed time is up.
@@ -44,7 +46,6 @@ Casing consists of 3 bays:
  * Cat food bad, houses the *croquettes*.
  * Electonics bay, houses Pi-Zero, 7 Segment PCB, Tactile PCB and ULN2003 Driver Board
 
-![casing](figures/acfd-casing.jpg)
 
 ## Software 
 
