@@ -106,7 +106,7 @@ def left(step):
 		Step6()
 		Step7()
 		Step8()  
-		print "Step left: ",i
+		print("Step left: ",i)
 
 # Umdrehung rechts herum		
 def right(step):
@@ -120,9 +120,15 @@ def right(step):
 		Step3()
 		Step2()
 		Step1()  
-		print "Step right: ",i	
+		print("Step right: ",i)
 
+def openlid():
+    right(170)
 
-left(100*1024)
+def closelid():
+    left(170)
+
+openlid()
+closelid()
 
 GPIO.cleanup()
