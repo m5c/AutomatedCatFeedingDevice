@@ -1,17 +1,18 @@
 #!/usr/bin/python
 import RPi.GPIO as GPIO
-import time
-import threading, queue
+import os
+import queue
+import random
 import signal
 import sys
+import threading
+import time
 from time import sleep
-import os
-import random
 
 GPIO.setmode(GPIO.BCM)
 
 # Waiting time between stepper motor steps.
-steptime = 0.002
+step_time = 0.002
 
 # 8 SEGMENT DISPLAY PINS
 #     A  B    C  D   E   F   G
@@ -22,7 +23,7 @@ gnd = [2, 3, 4, 14]
 digits = [[15, 24, 18, 22, 23, 17], [24, 18], [15, 24, 22, 23, 27], [15, 24, 18, 22, 27], [24, 18, 17, 27],
           [15, 18, 22, 17, 27], [18, 22, 23, 17, 27], [15, 24, 18], [15, 24, 18, 22, 23, 17, 27], [15, 24, 18, 17, 27]]
 
-# reset dot segement output
+# reset dot segment output
 GPIO.setup(10, GPIO.OUT, initial=0)
 # reset GPIO pins for all segments to 0. (off)
 for s in range(len(seg)):
@@ -279,6 +280,7 @@ def button_pressed_callback(channel):
     if channel == button4:
         print("4")
         countdown()
+
 
 # Add keypad button handlers
 GPIO.add_event_detect(button1, GPIO.RISING, callback=button_pressed_callback, bouncetime=100)
