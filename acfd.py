@@ -10,151 +10,163 @@ import random
 
 GPIO.setmode(GPIO.BCM)
 
-## STEPPER MOTOR PINS
-# Verwendete Pins des ULN2003A auf die Pins des Rapberry Pi
-# zugeordnet 
-IN1=21 # IN1
-IN2=26 # IN2
-IN3=20 # IN3
-IN4=19 # IN4
-# - goes to +5V, + goes to GND
-
-# Wartezeit regelt die Geschwindigkeit wie schnell sich der Motor
-# dreht.
+# Waiting time between stepper motor steps.
 steptime = 0.002
 
-# Pins aus Ausgänge definieren
-GPIO.setup(IN1,GPIO.OUT)
-GPIO.setup(IN2,GPIO.OUT)
-GPIO.setup(IN3,GPIO.OUT)
-GPIO.setup(IN4,GPIO.OUT)
-# Alle Pins werden initial auf False gesetzt. So dreht sich der 
-# Stepper-Motor nicht sofort irgendwie.
+# 8 SEGMENT DISPLAY PINS
+#     A  B    C  D   E   F   G
+seg = [15, 24, 18, 22, 23, 17, 27]
+gnd = [2, 3, 4, 14]
+
+# indicates which segments must light up for digits 0-9
+digits = [[15, 24, 18, 22, 23, 17], [24, 18], [15, 24, 22, 23, 27], [15, 24, 18, 22, 27], [24, 18, 17, 27],
+          [15, 18, 22, 17, 27], [18, 22, 23, 17, 27], [15, 24, 18], [15, 24, 18, 22, 23, 17, 27], [15, 24, 18, 17, 27]]
+
+# reset dot segement output
+GPIO.setup(10, GPIO.OUT, initial=0)
+# reset GPIO pins for all segments to 0. (off)
+for s in range(len(seg)):
+    GPIO.setup(seg[s], GPIO.OUT, initial=0)
+# reset GPIO pins for all digits to 1. (not selected)
+for s in range(len(gnd)):
+    GPIO.setup(gnd[s], GPIO.OUT, initial=1)
+
+# STEPPER MOTOR PINS (and modes)
+# ULN2003 "-" goes to +5V pin, ULN2003 "+" goes to GND pin.
+# ULN2003 mappings to GPIO pins:
+IN1 = 21
+IN2 = 26
+IN3 = 20
+IN4 = 19
+GPIO.setup(IN1, GPIO.OUT)
+GPIO.setup(IN2, GPIO.OUT)
+GPIO.setup(IN3, GPIO.OUT)
+GPIO.setup(IN4, GPIO.OUT)
+# Initialize all pins with false, to prevent random movement at program start.
 GPIO.output(IN1, False)
 GPIO.output(IN2, False)
 GPIO.output(IN3, False)
 GPIO.output(IN4, False)
-GPIO.setmode(GPIO.BCM)
 
-## KEYPAD
+# KEYPAD PINS
 # PIN layout
-keypadPower=7
-taster4=9
-taster3=25
-taster2=8
-taster1=11
+keypadPowerPin = 7
+button1 = 11
+button2 = 8
+button3 = 25
+button4 = 9
+GPIO.setup(keypadPowerPin, GPIO.OUT)
+GPIO.setup(button1, GPIO.IN, GPIO.PUD_DOWN)
+GPIO.setup(button2, GPIO.IN, GPIO.PUD_DOWN)
+GPIO.setup(button3, GPIO.IN, GPIO.PUD_DOWN)
+GPIO.setup(button4, GPIO.IN, GPIO.PUD_DOWN)
+# Power up 3.3V input pin
+GPIO.output(keypadPowerPin, 1)
 
-# Set PIN IO modes
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(keypadPower, GPIO.OUT)
-GPIO.setup(taster1, GPIO.IN, GPIO.PUD_DOWN)
-GPIO.setup(taster2, GPIO.IN, GPIO.PUD_DOWN)
-GPIO.setup(taster3, GPIO.IN, GPIO.PUD_DOWN)
-GPIO.setup(taster4, GPIO.IN, GPIO.PUD_DOWN)
-
-# Power up 3.3V input oin
-GPIO.output(keypadPower, 1)
-
-## global variables
+# global variables for inter-thread communication
 # current counter value - stored in a queue, so it can be conveniently accessed from threads
 # Only one value is stored in here at a time.
 q = queue.Queue()
 # Hours is set to false if coundown switches from HHMM to MMSS.
 hours = False
-#hours = True
+# hours = True
 armed = False
 
-# Der Schrittmotoren 28BYJ-48 ist so aufgebaut, das der Motor im
-# Inneren 8 Schritte für eine Umdrehung benötigt. Durch die Betriebe
-# benätigt es aber 512 x 8 Schritte damit die Achse sich einmal um
-# sich selbt also 360° dreht.
 
-# Definition der Schritte 1 - 8 über die Pins IN1 bis IN4
-# Zwischen jeder Bewegung des Motors wird kurz gewartet damit der
-# Motoranker seine Position erreicht.
-def Step1():
+# Define stepper motor sequential step functions
+def step_1():
     GPIO.output(IN4, True)
-    sleep (steptime)
+    sleep(steptime)
     GPIO.output(IN4, False)
 
-def Step2():
+
+def step_2():
     GPIO.output(IN4, True)
     GPIO.output(IN3, True)
-    sleep (steptime)
+    sleep(steptime)
     GPIO.output(IN4, False)
     GPIO.output(IN3, False)
 
-def Step3():
+
+def step_3():
     GPIO.output(IN3, True)
-    sleep (steptime)
+    sleep(steptime)
     GPIO.output(IN3, False)
 
-def Step4():
+
+def step_4():
     GPIO.output(IN2, True)
     GPIO.output(IN3, True)
-    sleep (steptime)
+    sleep(steptime)
     GPIO.output(IN2, False)
     GPIO.output(IN3, False)
 
-def Step5():
+
+def step_5():
     GPIO.output(IN2, True)
-    sleep (steptime)
+    sleep(steptime)
     GPIO.output(IN2, False)
 
-def Step6():
+
+def step_6():
     GPIO.output(IN1, True)
     GPIO.output(IN2, True)
-    sleep (steptime)
+    sleep(steptime)
     GPIO.output(IN1, False)
     GPIO.output(IN2, False)
 
-def Step7():
+
+def step_7():
     GPIO.output(IN1, True)
-    sleep (steptime)
+    sleep(steptime)
     GPIO.output(IN1, False)
 
-def Step8():
+
+def step_8():
     GPIO.output(IN4, True)
     GPIO.output(IN1, True)
-    sleep (steptime)
+    sleep(steptime)
     GPIO.output(IN4, False)
     GPIO.output(IN1, False)
 
-# Umdrehung links herum  
-def left(step):	
-	for i in range (step):   
-		#os.system('clear') # verlangsamt die Bewegung des Motors zu sehr. 
-		Step1()
-		Step2()
-		Step3()
-		Step4()
-		Step5()
-		Step6()
-		Step7()
-		Step8()  
-		print("Step left: ",i)
 
-# Umdrehung rechts herum		
+# Rotate counter-clockwise
+def left(step):
+    for i in range(step):
+        step_1()
+        step_2()
+        step_3()
+        step_4()
+        step_5()
+        step_6()
+        step_7()
+        step_8()
+
+
+# Rotate clock-wise
 def right(step):
-	for i in range (step):
-		#os.system('clear') # verlangsamt die Bewegung des Motors zu sehr.  
-		Step8()
-		Step7()
-		Step6()
-		Step5()
-		Step4()
-		Step3()
-		Step2()
-		Step1()  
-		print("Step right: ",i)
+    for i in range(step):
+        step_8()
+        step_7()
+        step_6()
+        step_5()
+        step_4()
+        step_3()
+        step_2()
+        step_1()
 
-def openlid():
+
+# custom function to open lid (perfect angle)
+def open_lid():
     right(170)
 
-def closelid():
+
+# custom function to close lid (perfect angle)
+def close_lid():
     left(170)
 
-## HELPER THREAD FUNCTION FOR COUNTDOWN
+
+# Continuous countdown thread. (Updates global remaining time variable via queue)
 def thread_countdown():
     counter = q.queue[0]
     print("Thread started.")
@@ -192,34 +204,15 @@ def thread_countdown():
             time.sleep(1)
 
     print("Thread finished.")
-    openlid()
+    open_lid()
 
-#     A  B    C  D   E   F   G
-seg=[15, 24, 18, 22, 23, 17, 27]
-gnd=[2, 3, 4, 14]
 
-# indicates which segments must light up for digits 0-9
-digits=[[15, 24, 18, 22, 23, 17], [24, 18], [15, 24, 22, 23, 27], [15, 24, 18, 22, 27], [24, 18, 17, 27], [15, 18, 22, 17, 27], [18, 22, 23, 17, 27], [15, 24, 18], [15, 24, 18, 22, 23, 17, 27], [15, 24, 18, 17, 27]]
-
-## INIT
-# reset dot segement output
-GPIO.setup(10, GPIO.OUT, initial=0)
-
-# reset GPIO pins for all segments to 0. (off)
-for s in range(len(seg)):
-    GPIO.setup(seg[s], GPIO.OUT, initial=0)
-
-# reset GPIO pins for all digits to 1. (not selected)
-for s in range(len(gnd)):
-    GPIO.setup(gnd[s], GPIO.OUT, initial=1)
-    
 # call to run countdown. provided counter value is interpreted as hhmm value.
-def displaytime():
-
-    ## MAIN CONTROL
+def enable_display():
+    # MAIN CONTROL
     print('CTRL-C to terminate')
     try:
-        while (True):
+        while True:
 
             # update counter if changed
             if not q.empty():
@@ -232,18 +225,18 @@ def displaytime():
                 GPIO.output(gnd[i], 0)
 
                 # compute what to display on that digit
-                digit = counter // pow(10, 3-i) % 10
+                digit = counter // pow(10, 3 - i) % 10
 
                 # Light up all segments that correspond to number "i" 
-                for seg in range(len(digits[digit])):
-                    GPIO.output(digits[digit][seg], 1)
+                for segment in range(len(digits[digit])):
+                    GPIO.output(digits[digit][segment], 1)
 
                 # Light up dot separator if curret digit is second position
                 if i == 1:
                     GPIO.output(10, 1)
-                    
+
                 time.sleep(0.005)
-                
+
                 # switch digit off again
                 GPIO.output(gnd[i], 1)
 
@@ -251,47 +244,49 @@ def displaytime():
                 GPIO.output(10, 0)
 
                 # reset all segments that were lit up
-                for seg in range(len(digits[digit])):
-                    GPIO.output(digits[digit][seg], 0)
+                for segment in range(len(digits[digit])):
+                    GPIO.output(digits[digit][segment], 0)
 
     except KeyboardInterrupt:
         GPIO.cleanup()
+
 
 # Helper function to start countdown in extra thread.
 def countdown():
     global armed
     if not armed:
         armed = True
-        ## COUNT DOWN THREAD (MUST NOT BLOCK)
+        # COUNT DOWN THREAD (MUST NOT BLOCK)
         # starts with 1h 1 minute
         t = threading.Thread(target=thread_countdown)
         t.start()
+
 
 # Def handler to be called on ctrl-C event
 def signal_handler(sig, frame):
     GPIO.cleanup()
     sys.exit(0)
 
+
 # Define handler for button press (channel is the GPIO that registered RISING signal)
 def button_pressed_callback(channel):
-    if channel==taster1:
-        q.put(q.get()+100)
-    if channel==taster2:
-        q.put(q.get()+15)
-    if channel==taster3:
+    if channel == button1:
+        q.put(q.get() + 100)
+    if channel == button2:
+        q.put(q.get() + 15)
+    if channel == button3:
         print("3")
-    if channel==taster4:
+    if channel == button4:
         print("4")
         countdown()
 
 # Add keypad button handlers
-GPIO.add_event_detect(taster1, GPIO.RISING, callback=button_pressed_callback, bouncetime=100)
-GPIO.add_event_detect(taster2, GPIO.RISING, callback=button_pressed_callback, bouncetime=100)
-GPIO.add_event_detect(taster3, GPIO.RISING, callback=button_pressed_callback, bouncetime=100)
-GPIO.add_event_detect(taster4, GPIO.RISING, callback=button_pressed_callback, bouncetime=100)
+GPIO.add_event_detect(button1, GPIO.RISING, callback=button_pressed_callback, bouncetime=100)
+GPIO.add_event_detect(button2, GPIO.RISING, callback=button_pressed_callback, bouncetime=100)
+GPIO.add_event_detect(button3, GPIO.RISING, callback=button_pressed_callback, bouncetime=100)
+GPIO.add_event_detect(button4, GPIO.RISING, callback=button_pressed_callback, bouncetime=100)
 
-closelid()
+# actual main thread starts here
+# close_lid()
 q.put(0)
-displaytime()
-
-
+enable_display()
