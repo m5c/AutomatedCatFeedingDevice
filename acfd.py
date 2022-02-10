@@ -69,8 +69,8 @@ GPIO.output(keypadPowerPin, 1)
 # Only one value is stored in here at a time.
 q = queue.Queue()
 # Hours is set to false if coundown switches from HHMM to MMSS.
-hours = False
-# hours = True
+hours = True
+# armed flag is set to true when the countdown begins
 armed = False
 
 
@@ -204,8 +204,13 @@ def thread_countdown():
             counter = minute * 100 + second
             time.sleep(1)
 
-    print("Thread finished.")
+    # Lid is perfectly balanced when open, we retract the whisker again right away, so the machine leaves in the same
+    # state it left off.
     open_lid()
+    close_lid()
+    # Set armed to False, allow for next countdown iteration
+    global armed
+    armed = False
 
 
 # call to run countdown. provided counter value is interpreted as hhmm value.
@@ -272,9 +277,9 @@ def signal_handler(sig, frame):
 # Define handler for button press (channel is the GPIO that registered RISING signal)
 def button_pressed_callback(channel):
     if channel == button1:
-        q.put(q.get() + 100)
+        q.put((q.get() + 100) % 24)
     if channel == button2:
-        q.put(q.get() + 15)
+        q.put((q.get() + 5) % 60)
     if channel == button3:
         print("3")
     if channel == button4:
