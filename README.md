@@ -23,14 +23,16 @@ The Automated Cat Feeding Device (ACFD) consists of four hardware modules:
  * [4 Button Keypad](keypad)  
 ![keypcb](figures/keypad.svg)
    * 4x [Tactile Push Buttons](https://www.amazon.ca/Ocr-10Value-Tactile-Momentary-Assortment/dp/B01NAJEVE3)
-   * 9x 250Ω Resistor
+   * 1x 230Ω Resistor
    * 1x [Mini PCB](https://www.amazon.ca/Gikfun-Solder-able-Breadboard-Arduino-Electronic/dp/B077938SQF)
    * [Jumper Wires](https://www.amazon.ca/Elegoo-120pcs-Multicolored-Breadboard-arduino/dp/B01EV70C78)
+   * 2x [Lego 1 x 2 Plate](https://www.bricklink.com/v2/catalog/catalogitem.page?P=3023&name=Plate%201%20x%202)
  * Lid Lifter  
 ![uln](figures/ULN2003.svg)
    * 1x [28byj Stepper Motor](https://www.amazon.ca/Titri-28BYJ-48-Stepper-Motor-5V/dp/B07PS2MJCX)
    * 1x [ULN2003 Driver Board](https://www.amazon.ca/ULN2003-Controller-Stepping-Electric-Control/dp/B07P5C2KWX)
    * 1x [Universal Mount Hub](https://www.amazon.ca/Coupling-Connector-Coupler-Accessory-Fittings/dp/B08334MFVT)
+   * 1x [Hair Pin](https://www.amazon.ca/Goody-Ouchless-Bobby-Black-48/dp/B000NHKVNQ)
 
 ## Wiring
 
