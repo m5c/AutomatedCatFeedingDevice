@@ -1,19 +1,20 @@
 # Automated Cat Feeding Device
 
-A Raspi project to ensure consistent dinner times for the cat when I am not home.
+A Raspi project to ensure consistent dinner times my cat.
 
 ![casing](figures/acfd-casing.jpg)
 
 ## About
 
-My cat wants food at specific hours. This repository is the blueprint for an automated cat feeding device. You fill it with food, set a timer and it keeps the food until the programmed time is up.
+This repository lists material, assembly instructions and software for the **A.C.F.D. MARK-I** (Automated Cat Feeding Device). The device is a one-shot feeder, that is to say it keeps a single portion of cat food under a plexiglas lid. The user sets a due time using 4 tactile buttons and a 4-Digit display. The lid opens when the programmed time is up.
 
 ## Hardware
 
-The Automated Cat Feeding Device (ACFD) consists of four hardware modules:
+The Automated Cat Feeding Device consists of four modules: (casing and glass not counted)
 
  * [Raspberry Pi Zero, without WiFi](https://www.buyapi.ca/product/raspberry-pi-zero-w/)  
 ![zero](figures/pizero.svg)
+ > Note: Any raspberry with 20 GPIO pins and 5V output will serve for this purpose. Sadly this excludes the cheaper [Raspi Pico](https://www.pishop.ca/product/raspberry-pi-pico/).
  * [Time Display PCB](timer)  
 ![timepcb](figures/7seg.svg)
    * 1x [12 Pin Common Cathode 7-Segment Display](https://www.amazon.ca/DOLITY-Segement-Displays-Common-Cathode/dp/B07GVKQWDX)
@@ -36,29 +37,63 @@ The Automated Cat Feeding Device (ACFD) consists of four hardware modules:
 
 ## Wiring
 
+Use below pin layout to connect display, keypad and motor driver to the Raspberry.
+
 ![pins](figures/pins.svg)
 
  > Black dot marks pin 1
 
 ## Casing
 
-Casing consists of 3 bays:
+The blueprint at the top of this page does not display the outer wooden walls of the box. Add depending on your available material.  
+For reference, I used 6mm CDX plywood.
 
- * Motor bay, houses the *28BYJ-48* Step Motor.
- * Cat food bad, houses the *croquettes*.
- * Electonics bay, houses Pi-Zero, 7 Segment PCB, Tactile PCB and ULN2003 Driver Board
+6mm CDX plates:
+ * Base plate:  
+16.3cm x 12.2cm
+ * Left and right wall:  
+16.2cm x 5.0cm
+ * Front and back wall, electronics bay separator:  
+11.0cm x 5.0cm
+ * Motor bay separator:
+10.5cm x 5.0cm
 
+4mm plexiglass plates:
+ * Electronics bay lid:  
+12.2cm x 5.3cm
+ * Motor bay lid:  
+10.4cm x 2.8cm
+ * Cat food bay lid:  
+11cm x 9.3cm
+
+Component location:
+ * Electronics bay:
+    * Raspberry-0
+    * ULN2003
+    * Display PCB
+    * Tactile PCB
+ * Motor Bay:
+    * 28byj Stepper Motor
+ * Cat Food Bay:
+    * Universal Mount Hub
+    * Hair Pin
 
 ## Software 
 
-Before full assembly, use below scripts to test individual ACFD components:
+Before full assembly, use below scripts to test individual ACFD components and wiring:
 
  * [Display Test](modtest/display-test.py): Test Time Display PCB and wiring with a fast countdown 9999-0000.  
 ```python3 ./display-test.py```.
  * [Keypad Test](modtest/interruptclick.py): Test Keypad PDB and wiring with on terminal display of pressed buttons.  
-```python3 ./keypad-test.py```
+```python3 ./interruptclick.py```
+ * [Motor Test](modetest/motor-test.py): Test ULN2003 and Motor wiring. Performs rotations needed for lid open and close.  
+```python3 ./motor-test.py
 
-...
+To manually run the software, start it with:  
+```python3 acfd.py```
+
+For automated start on Raspberry boot, add this line to your ```/etc/rc.local```:  
+```python3 acfd.py &``` (ampersand prevents blocking the boot sequence)
 
 ## Contact / Pull Requests
 
