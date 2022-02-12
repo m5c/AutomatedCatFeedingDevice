@@ -1,6 +1,6 @@
 # Automated Cat Feeding Device
 
-A Raspi project to ensure consistent dinner times my cat.
+A Raspi project to ensure consistent dinner times for my cat.
 
 ![acfd](figures/acfd.jpg)
 
