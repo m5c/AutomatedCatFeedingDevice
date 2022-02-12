@@ -87,7 +87,7 @@ Before full assembly, use below scripts to test individual ACFD components and w
  * [Keypad Test](modtest/interruptclick.py): Test Keypad PDB and wiring with on terminal display of pressed buttons.  
 ```python3 ./interruptclick.py```
  * [Motor Test](modetest/motor-test.py): Test ULN2003 and Motor wiring. Performs rotations needed for lid open and close.  
-```python3 ./motor-test.py
+```python3 ./motor-test.py```
 
 To manually run the software, start it with:  
 ```python3 acfd.py```
