@@ -2,7 +2,7 @@
 
 A Raspi project to ensure consistent dinner times my cat.
 
-![casing](figures/acfd-casing.jpg)
+![acfd](figures/acfd.jpg)
 
 ## About
 
@@ -45,8 +45,9 @@ Use below pin layout to connect display, keypad and motor driver to the Raspberr
 
 ## Casing
 
-The blueprint at the top of this page does not display the outer wooden walls of the box. Add depending on your available material.  
-For reference, I used 6mm CDX plywood.
+Below blueprint does not indicate outer walls. Add the required margin strength, depending on your available material. For reference, I used 6mm CDX plywood.
+
+![casing](figures/acfd-casing.jpg)
 
 6mm CDX plates:
  * Base plate:  
