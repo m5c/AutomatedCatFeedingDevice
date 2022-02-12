@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="259.14386 363 376.27005 150.1953" width="376.27005" height="150.1953">
+<svg version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="65 291 790.1002 255.13203" width="790.1002" height="255.13203">
   <defs>
     <font-face font-family="Arial" font-size="8" panose-1="2 11 6 4 2 2 2 2 2 4" units-per-em="1000" underline-position="-105.95703" underline-thickness="73.24219" slope="0" x-height="518.5547" cap-height="716.3086" ascent="905.2734" descent="-211.91406" font-weight="400">
       <font-face-src>
@@ -8,821 +8,849 @@
       </font-face-src>
     </font-face>
   </defs>
-  <metadata> Produced by OmniGraffle 7.18.5\n2022-01-10 22:30:17 +0000</metadata>
-  <g id="Canvas_1" stroke="none" stroke-opacity="1" fill="none" stroke-dasharray="none" fill-opacity="1">
+  <metadata> Produced by OmniGraffle 7.18.5\n2022-02-12 12:55:56 +0000</metadata>
+  <g id="Canvas_1" stroke-opacity="1" fill="none" fill-opacity="1" stroke-dasharray="none" stroke="none">
     <title>Canvas 1</title>
+    <rect fill="white" x="65" y="291" width="790.1002" height="255.13203"/>
     <g id="Canvas_1_Layer_1">
       <title>Layer 1</title>
-      <g id="Group_727">
-        <g id="Graphic_622">
-          <rect x="564.8" y="398.2" width="45.772726" height="31.144623" fill="white"/>
-          <rect x="564.8" y="398.2" width="45.772726" height="31.144623" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_385">
-          <circle cx="602.7893" cy="420.9166" r="6.00000967681845" fill="#666"/>
-          <circle cx="602.7893" cy="420.9166" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_378">
-          <circle cx="572.0351" cy="406" r="6.00000967681846" fill="white"/>
-          <circle cx="572.0351" cy="406" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_376">
-          <circle cx="572.0351" cy="420.9166" r="6.00000967681845" fill="#592f0f"/>
-          <circle cx="572.0351" cy="420.9166" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_374">
-          <circle cx="586.7999" cy="406" r="6.00000967681848" fill="#ff4040"/>
-          <circle cx="586.7999" cy="406" r="6.00000967681848" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_372">
-          <circle cx="586.7999" cy="420.9166" r="6.00000967681846" fill="#ffab40"/>
-          <circle cx="586.7999" cy="420.9166" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_384">
-          <circle cx="602.7893" cy="406" r="6.00000967681846" fill="#ffff40"/>
-          <circle cx="602.7893" cy="406" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_627">
-          <rect x="460" y="398.2" width="44.4" height="31.144623" fill="white"/>
-          <rect x="460" y="398.2" width="44.4" height="31.144623" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_342">
-          <circle cx="467.45694" cy="406" r="6.00000967681846" fill="#218721"/>
-          <circle cx="467.45694" cy="406" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_340">
-          <circle cx="467.45694" cy="420.9166" r="6.00000967681845" fill="#4040ff"/>
-          <circle cx="467.45694" cy="420.9166" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_338">
-          <circle cx="482.22173" cy="406" r="6.00000967681848" fill="#ffff40"/>
-          <circle cx="482.22173" cy="406" r="6.00000967681848" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_336">
-          <circle cx="482.22173" cy="420.9166" r="6.00000967681846" fill="#ffab2c"/>
-          <circle cx="482.22173" cy="420.9166" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_334">
-          <circle cx="496.9865" cy="406" r="6.00000967681846" fill="#ff4040"/>
-          <circle cx="496.9865" cy="406" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_332">
-          <circle cx="496.9865" cy="420.9166" r="6.00000967681845" fill="#984cff"/>
-          <circle cx="496.9865" cy="420.9166" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_317">
-          <text transform="translate(374.419 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">15</tspan>
-          </text>
-        </g>
-        <g id="Graphic_337">
-          <text transform="translate(479.9971 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">8</tspan>
-          </text>
-        </g>
-        <g id="Graphic_335">
-          <text transform="translate(478.0694 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">11</tspan>
-          </text>
-        </g>
-        <g id="Graphic_333">
-          <text transform="translate(494.7619 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">7</tspan>
-          </text>
-        </g>
-        <g id="Graphic_331">
-          <text transform="translate(493.8752 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
-          </text>
-        </g>
-        <g id="Graphic_341">
-          <text transform="translate(463.0077 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">25</tspan>
-          </text>
-        </g>
-        <g id="Graphic_339">
-          <text transform="translate(465.23233 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">9</tspan>
-          </text>
-        </g>
-        <g id="Graphic_616">
-          <rect x="327.3492" y="398.2" width="132.65079" height="31.165735" fill="white"/>
-          <rect x="327.3492" y="398.2" width="132.65079" height="31.165735" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_304">
-          <circle cx="423.16257" cy="420.9166" r="6.00000967681845" fill="#1c1c1c"/>
-          <circle cx="423.16257" cy="420.9166" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_303">
-          <text transform="translate(418.71335 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">22</tspan>
-          </text>
-        </g>
-        <g id="Graphic_318">
-          <circle cx="378.8682" cy="406" r="6.00000967681847" fill="white"/>
-          <circle cx="378.8682" cy="406" r="6.00000967681847" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_266">
-          <circle cx="319.80904" cy="420.9166" r="6.00000967681846" fill="white"/>
-          <circle cx="319.80904" cy="420.9166" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_106">
-          <circle cx="319.80904" cy="406" r="6.00000967681847" fill="#984cff"/>
-          <circle cx="319.80904" cy="406" r="6.00000967681847" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_294">
-          <circle cx="334.57383" cy="406" r="6.00000967681847" fill="white"/>
-          <circle cx="334.57383" cy="406" r="6.00000967681847" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_292">
-          <circle cx="334.57383" cy="420.9166" r="6.00000967681846" fill="#666"/>
-          <circle cx="334.57383" cy="420.9166" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_302">
-          <circle cx="349.3386" cy="406" r="6.00000967681847" fill="white"/>
-          <circle cx="349.3386" cy="406" r="6.00000967681847" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_300">
-          <circle cx="349.3386" cy="420.9166" r="6.00000967681846" fill="#ff4040"/>
-          <circle cx="349.3386" cy="420.9166" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_298">
-          <circle cx="364.1034" cy="406" r="6.00000967681846" fill="#ffff40"/>
-          <circle cx="364.1034" cy="406" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_296">
-          <circle cx="364.1034" cy="420.9166" r="6.00000967681845" fill="#ffab40"/>
-          <circle cx="364.1034" cy="420.9166" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_316">
-          <circle cx="378.8682" cy="420.9166" r="6.00000967681846" fill="white"/>
-          <circle cx="378.8682" cy="420.9166" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_314">
-          <circle cx="393.633" cy="406" r="6.00000967681847" fill="#ccc"/>
-          <circle cx="393.633" cy="406" r="6.00000967681847" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_312">
-          <circle cx="393.633" cy="420.9166" r="6.00000967681846" fill="#4040ff"/>
-          <circle cx="393.633" cy="420.9166" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_310">
-          <circle cx="408.3978" cy="406" r="6.00000967681846" fill="white"/>
-          <circle cx="408.3978" cy="406" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_308">
-          <circle cx="408.3978" cy="420.9166" r="6.00000967681845" fill="#666"/>
-          <circle cx="408.3978" cy="420.9166" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_306">
-          <circle cx="423.16257" cy="406" r="6.00000967681846" fill="white"/>
-          <circle cx="423.16257" cy="406" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_350">
-          <circle cx="437.92736" cy="406" r="6.00000967681848" fill="#218721"/>
-          <circle cx="437.92736" cy="406" r="6.00000967681848" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_348">
-          <circle cx="437.92736" cy="420.9166" r="6.00000967681846" fill="white"/>
-          <circle cx="437.92736" cy="420.9166" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_346">
-          <circle cx="452.69215" cy="406" r="6.00000967681846" fill="white"/>
-          <circle cx="452.69215" cy="406" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_344">
-          <circle cx="452.69215" cy="420.9166" r="6.00000967681845" fill="#ff4040"/>
-          <circle cx="452.69215" cy="420.9166" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_632">
-          <text transform="translate(468.49316 388)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">Keypad</tspan>
-          </text>
-        </g>
-        <g id="Graphic_634">
-          <circle cx="378.8632" cy="406" r="6.00000967681849" fill="#984cff"/>
-          <circle cx="378.8632" cy="406" r="6.00000967681849" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_386">
-          <text transform="translate(599.3501 416.6136)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
-          </text>
-        </g>
-        <g id="Graphic_260">
-          <text transform="translate(314.91646 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">3V</tspan>
-          </text>
-        </g>
-        <g id="Graphic_120">
-          <text transform="translate(314.91646 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">5V</tspan>
-          </text>
-        </g>
-        <g id="Graphic_293">
-          <text transform="translate(329.68125 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">5V</tspan>
-          </text>
-        </g>
-        <g id="Graphic_291">
-          <text transform="translate(332.3492 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">2</tspan>
-          </text>
-        </g>
-        <g id="Graphic_301">
-          <text transform="translate(346.2273 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
-          </text>
-        </g>
-        <g id="Graphic_299">
-          <text transform="translate(347.114 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">3</tspan>
-          </text>
-        </g>
-        <g id="Graphic_297">
-          <text transform="translate(359.6542 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">14</tspan>
-          </text>
-        </g>
-        <g id="Graphic_295">
-          <text transform="translate(361.8788 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">4</tspan>
-          </text>
-        </g>
-        <g id="Graphic_315">
-          <text transform="translate(375.75687 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
-          </text>
-        </g>
-        <g id="Graphic_313">
-          <text transform="translate(389.18377 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">18</tspan>
-          </text>
-        </g>
-        <g id="Graphic_311">
-          <text transform="translate(389.18377 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">17</tspan>
-          </text>
-        </g>
-        <g id="Graphic_309">
-          <text transform="translate(405.28645 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
-          </text>
-        </g>
-        <g id="Graphic_307">
-          <text transform="translate(403.94856 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">27</tspan>
-          </text>
-        </g>
-        <g id="Graphic_305">
-          <text transform="translate(418.71335 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">23</tspan>
-          </text>
-        </g>
-        <g id="Graphic_349">
-          <text transform="translate(433.47814 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">24</tspan>
-          </text>
-        </g>
-        <g id="Graphic_347">
-          <text transform="translate(433.0348 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">3V</tspan>
-          </text>
-        </g>
-        <g id="Graphic_345">
-          <text transform="translate(449.5808 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
-          </text>
-        </g>
-        <g id="Graphic_343">
-          <text transform="translate(448.24293 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">10</tspan>
-          </text>
-        </g>
-        <g id="Graphic_377">
-          <text transform="translate(567.58587 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">16</tspan>
-          </text>
-        </g>
-        <g id="Graphic_375">
-          <text transform="translate(567.58587 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">19</tspan>
-          </text>
-        </g>
-        <g id="Graphic_373">
-          <text transform="translate(582.6785 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">20</tspan>
-          </text>
-        </g>
-        <g id="Graphic_371">
-          <text transform="translate(582.35066 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">26</tspan>
-          </text>
-        </g>
-        <g id="Graphic_383">
-          <text transform="translate(598.6679 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">21</tspan>
-          </text>
-        </g>
-        <g id="Graphic_244">
-          <text transform="translate(284.14386 409.09135)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">Pi-400</tspan>
-          </text>
-        </g>
-        <g id="Graphic_330">
-          <circle cx="511.7513" cy="406" r="6.00000967681849" fill="white"/>
-          <circle cx="511.7513" cy="406" r="6.00000967681849" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_329">
-          <text transform="translate(509.08334 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">E</tspan>
-          </text>
-        </g>
-        <g id="Graphic_328">
-          <circle cx="511.7513" cy="420.9166" r="6.00000967681848" fill="white"/>
-          <circle cx="511.7513" cy="420.9166" r="6.00000967681848" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_327">
-          <text transform="translate(509.08334 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">E</tspan>
-          </text>
-        </g>
-        <g id="Graphic_326">
-          <circle cx="526.5161" cy="406" r="6.00000967681848" fill="white"/>
-          <circle cx="526.5161" cy="406" r="6.00000967681848" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_325">
-          <text transform="translate(523.4048 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
-          </text>
-        </g>
-        <g id="Graphic_324">
-          <circle cx="526.5161" cy="420.9166" r="6.00000967681846" fill="white"/>
-          <circle cx="526.5161" cy="420.9166" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_323">
-          <text transform="translate(524.2915 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">5</tspan>
-          </text>
-        </g>
-        <g id="Graphic_322">
-          <circle cx="541.2809" cy="406" r="6.00000967681847" fill="white"/>
-          <circle cx="541.2809" cy="406" r="6.00000967681847" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_321">
-          <text transform="translate(536.8317 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">12</tspan>
-          </text>
-        </g>
-        <g id="Graphic_320">
-          <circle cx="541.2809" cy="420.9166" r="6.00000967681846" fill="white"/>
-          <circle cx="541.2809" cy="420.9166" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_319">
-          <text transform="translate(539.0563 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">6</tspan>
-          </text>
-        </g>
-        <g id="Graphic_382">
-          <circle cx="557.2703" cy="406" r="6.00000967681846" fill="white"/>
-          <circle cx="557.2703" cy="406" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_381">
-          <text transform="translate(554.15897 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
-          </text>
-        </g>
-        <g id="Graphic_380">
-          <circle cx="557.2703" cy="420.9166" r="6.00000967681845" fill="white"/>
-          <circle cx="557.2703" cy="420.9166" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_379">
-          <text transform="translate(552.8211 417)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">13</tspan>
-          </text>
-        </g>
-        <g id="Graphic_549">
-          <text transform="translate(284.14386 470.16383)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">Pi-0</tspan>
-          </text>
-        </g>
-        <g id="Graphic_628">
-          <text transform="translate(324.81766 448.88436)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">Motor</tspan>
-          </text>
-        </g>
-        <g id="Graphic_629">
-          <text transform="translate(456.3046 448.88436)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">Keypad</tspan>
-          </text>
-        </g>
-        <g id="Graphic_630">
-          <text transform="translate(516.3417 448.88436)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">7-Segment Display</tspan>
-          </text>
-        </g>
-        <g id="Graphic_631">
-          <text transform="translate(576.5753 388)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">Motor</tspan>
-          </text>
-        </g>
-        <g id="Graphic_633">
-          <text transform="translate(331.10675 388)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">7-Segment Display</tspan>
-          </text>
-        </g>
-        <g id="Graphic_638">
-          <circle cx="309.13335" cy="430.21876" r="3.21875514324675" fill="black"/>
-          <circle cx="309.13335" cy="430.21876" r="3.21875514324675" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_639">
-          <circle cx="611.69515" cy="458.41876" r="3.21875514324671" fill="black"/>
-          <circle cx="611.69515" cy="458.41876" r="3.21875514324671" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_640">
-          <text transform="translate(374.41397 402.08344)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">15</tspan>
-          </text>
-        </g>
-        <g id="Graphic_641">
-          <rect x="311.9101" y="459.62265" width="45.772726" height="31.144623" fill="white"/>
-          <rect x="311.9101" y="459.62265" width="45.772726" height="31.144623" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_642">
-          <circle cx="319.69355" cy="468.0507" r="6.00000967681846" fill="#666"/>
-          <circle cx="319.69355" cy="468.0507" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_643">
-          <circle cx="350.44774" cy="482.96727" r="6.00000967681847" fill="white"/>
-          <circle cx="350.44774" cy="482.96727" r="6.00000967681847" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_644">
-          <circle cx="350.44774" cy="468.0507" r="6.00000967681847" fill="#592f0f"/>
-          <circle cx="350.44774" cy="468.0507" r="6.00000967681847" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_645">
-          <circle cx="335.68295" cy="482.96727" r="6.00000967681846" fill="#ff4040"/>
-          <circle cx="335.68295" cy="482.96727" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_646">
-          <circle cx="335.68295" cy="468.0507" r="6.00000967681846" fill="#ffab40"/>
-          <circle cx="335.68295" cy="468.0507" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_647">
-          <circle cx="319.69355" cy="482.96727" r="6.00000967681846" fill="#ffff40"/>
-          <circle cx="319.69355" cy="482.96727" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_648">
-          <rect x="418.0828" y="459.62265" width="44.4" height="31.144623" fill="white"/>
-          <rect x="418.0828" y="459.62265" width="44.4" height="31.144623" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_649">
-          <circle cx="455.0259" cy="482.96727" r="6.00000967681845" fill="#218721"/>
-          <circle cx="455.0259" cy="482.96727" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_650">
-          <circle cx="455.0259" cy="468.0507" r="6.00000967681845" fill="#4040ff"/>
-          <circle cx="455.0259" cy="468.0507" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_651">
-          <circle cx="440.2611" cy="482.96727" r="6.00000967681845" fill="#ffff40"/>
-          <circle cx="440.2611" cy="482.96727" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_652">
-          <circle cx="440.2611" cy="468.0507" r="6.00000967681845" fill="#ffab2c"/>
-          <circle cx="440.2611" cy="468.0507" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_653">
-          <circle cx="425.4963" cy="482.96727" r="6.00000967681845" fill="#ff4040"/>
-          <circle cx="425.4963" cy="482.96727" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_654">
-          <circle cx="425.4963" cy="468.0507" r="6.00000967681845" fill="#984cff"/>
-          <circle cx="425.4963" cy="468.0507" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_655">
-          <text transform="translate(548.06384 486.88384) rotate(180)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">15</tspan>
-          </text>
-        </g>
-        <g id="Graphic_656">
-          <text transform="translate(438.0365 478.6057)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">8</tspan>
-          </text>
-        </g>
-        <g id="Graphic_657">
-          <text transform="translate(436.10875 463.68915)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">11</tspan>
-          </text>
-        </g>
-        <g id="Graphic_658">
-          <text transform="translate(423.2717 478.9336)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">7</tspan>
-          </text>
-        </g>
-        <g id="Graphic_659">
-          <text transform="translate(422.0571 464.017)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
-          </text>
-        </g>
-        <g id="Graphic_660">
-          <text transform="translate(450.57666 478.6057)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">25</tspan>
-          </text>
-        </g>
-        <g id="Graphic_661">
-          <text transform="translate(452.80127 464.017)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">9</tspan>
-          </text>
-        </g>
-        <g id="Graphic_662">
-          <rect x="462.4828" y="459.60153" width="132.65079" height="31.165735" fill="white"/>
-          <rect x="462.4828" y="459.60153" width="132.65079" height="31.165735" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_663">
-          <circle cx="499.32025" cy="468.0507" r="6.00000967681845" fill="#1c1c1c"/>
-          <circle cx="499.32025" cy="468.0507" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_664">
-          <text transform="translate(494.87103 463.68915)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">22</tspan>
-          </text>
-        </g>
-        <g id="Graphic_665">
-          <circle cx="543.6146" cy="482.96727" r="6.00000967681849" fill="white"/>
-          <circle cx="543.6146" cy="482.96727" r="6.00000967681849" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_666">
-          <circle cx="602.6738" cy="468.0507" r="6.00000967681848" fill="white"/>
-          <circle cx="602.6738" cy="468.0507" r="6.00000967681848" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_667">
-          <circle cx="602.6738" cy="482.96727" r="6.00000967681848" fill="#984cff"/>
-          <circle cx="602.6738" cy="482.96727" r="6.00000967681848" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_668">
-          <circle cx="587.909" cy="482.96727" r="6.00000967681845" fill="white"/>
-          <circle cx="587.909" cy="482.96727" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_669">
-          <circle cx="587.909" cy="468.0507" r="6.00000967681845" fill="#666"/>
-          <circle cx="587.909" cy="468.0507" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_670">
-          <circle cx="573.1442" cy="482.96727" r="6.00000967681849" fill="white"/>
-          <circle cx="573.1442" cy="482.96727" r="6.00000967681849" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_671">
-          <circle cx="573.1442" cy="468.0507" r="6.00000967681849" fill="#ff4040"/>
-          <circle cx="573.1442" cy="468.0507" r="6.00000967681849" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_672">
-          <circle cx="558.3794" cy="482.96727" r="6.00000967681845" fill="#ffff40"/>
-          <circle cx="558.3794" cy="482.96727" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_673">
-          <circle cx="558.3794" cy="468.0507" r="6.00000967681845" fill="#ffab40"/>
-          <circle cx="558.3794" cy="468.0507" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_674">
-          <circle cx="543.6146" cy="468.0507" r="6.00000967681849" fill="white"/>
-          <circle cx="543.6146" cy="468.0507" r="6.00000967681849" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_675">
-          <circle cx="528.84983" cy="482.96727" r="6.00000967681846" fill="#ccc"/>
-          <circle cx="528.84983" cy="482.96727" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_676">
-          <circle cx="528.84983" cy="468.0507" r="6.00000967681846" fill="#4040ff"/>
-          <circle cx="528.84983" cy="468.0507" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_677">
-          <circle cx="514.08504" cy="482.96727" r="6.00000967681846" fill="white"/>
-          <circle cx="514.08504" cy="482.96727" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_678">
-          <circle cx="514.08504" cy="468.0507" r="6.00000967681846" fill="#666"/>
-          <circle cx="514.08504" cy="468.0507" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_679">
-          <circle cx="499.32025" cy="482.96727" r="6.00000967681845" fill="white"/>
-          <circle cx="499.32025" cy="482.96727" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_680">
-          <circle cx="484.55546" cy="482.96727" r="6.00000967681845" fill="#218721"/>
-          <circle cx="484.55546" cy="482.96727" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_681">
-          <circle cx="484.55546" cy="468.0507" r="6.00000967681845" fill="white"/>
-          <circle cx="484.55546" cy="468.0507" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_682">
-          <circle cx="469.79067" cy="482.96727" r="6.00000967681845" fill="white"/>
-          <circle cx="469.79067" cy="482.96727" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_683">
-          <circle cx="469.79067" cy="468.0507" r="6.00000967681845" fill="#ff4040"/>
-          <circle cx="469.79067" cy="468.0507" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_684">
-          <circle cx="543.61963" cy="482.96727" r="6.00000967681849" fill="#984cff"/>
-          <circle cx="543.61963" cy="482.96727" r="6.00000967681849" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_685">
-          <text transform="translate(316.25435 464.07557)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
-          </text>
-        </g>
-        <g id="Graphic_686">
-          <text transform="translate(597.7812 463.68915)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">3V</tspan>
-          </text>
-        </g>
-        <g id="Graphic_687">
-          <text transform="translate(597.7812 478.6057)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">5V</tspan>
-          </text>
-        </g>
-        <g id="Graphic_688">
-          <text transform="translate(583.0164 478.6057)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">5V</tspan>
-          </text>
-        </g>
-        <g id="Graphic_689">
-          <text transform="translate(585.6844 463.68915)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">2</tspan>
-          </text>
-        </g>
-        <g id="Graphic_690">
-          <text transform="translate(570.0329 478.6057)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
-          </text>
-        </g>
-        <g id="Graphic_691">
-          <text transform="translate(570.9196 463.68915)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">3</tspan>
-          </text>
-        </g>
-        <g id="Graphic_692">
-          <text transform="translate(553.9302 478.6057)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">14</tspan>
-          </text>
-        </g>
-        <g id="Graphic_693">
-          <text transform="translate(556.1548 463.68915)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">4</tspan>
-          </text>
-        </g>
-        <g id="Graphic_694">
-          <text transform="translate(540.5033 463.68915)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
-          </text>
-        </g>
-        <g id="Graphic_695">
-          <text transform="translate(524.07274 478.6057)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">18</tspan>
-          </text>
-        </g>
-        <g id="Graphic_696">
-          <text transform="translate(524.07274 463.68915)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">17</tspan>
-          </text>
-        </g>
-        <g id="Graphic_697">
-          <text transform="translate(510.9737 478.6057)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
-          </text>
-        </g>
-        <g id="Graphic_698">
-          <text transform="translate(509.6358 463.68915)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">27</tspan>
-          </text>
-        </g>
-        <g id="Graphic_699">
-          <text transform="translate(494.87103 478.6057)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">23</tspan>
-          </text>
-        </g>
-        <g id="Graphic_700">
-          <text transform="translate(480.10624 478.6057)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">24</tspan>
-          </text>
-        </g>
-        <g id="Graphic_701">
-          <text transform="translate(479.6629 464.017)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">3V</tspan>
-          </text>
-        </g>
-        <g id="Graphic_702">
-          <text transform="translate(466.67934 478.9336)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
-          </text>
-        </g>
-        <g id="Graphic_703">
-          <text transform="translate(465.0136 464.017)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">10</tspan>
-          </text>
-        </g>
-        <g id="Graphic_704">
-          <text transform="translate(345.3428 478.9336)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">16</tspan>
-          </text>
-        </g>
-        <g id="Graphic_705">
-          <text transform="translate(345.67065 464.017)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">19</tspan>
-          </text>
-        </g>
-        <g id="Graphic_706">
-          <text transform="translate(331.23373 478.9336)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">20</tspan>
-          </text>
-        </g>
-        <g id="Graphic_707">
-          <text transform="translate(331.23373 464.017)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">26</tspan>
-          </text>
-        </g>
-        <g id="Graphic_708">
-          <text transform="translate(315.5722 478.9336)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">21</tspan>
-          </text>
-        </g>
-        <g id="Graphic_709">
-          <circle cx="410.7315" cy="482.96727" r="6.00000967681845" fill="white"/>
-          <circle cx="410.7315" cy="482.96727" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_710">
-          <text transform="translate(408.06354 478.9336)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">E</tspan>
-          </text>
-        </g>
-        <g id="Graphic_711">
-          <circle cx="410.7315" cy="468.0507" r="6.00000967681845" fill="white"/>
-          <circle cx="410.7315" cy="468.0507" r="6.00000967681845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_712">
-          <text transform="translate(408.06354 464.017)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">E</tspan>
-          </text>
-        </g>
-        <g id="Graphic_713">
-          <circle cx="395.9667" cy="482.96727" r="6.00000967681846" fill="white"/>
-          <circle cx="395.9667" cy="482.96727" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_714">
-          <text transform="translate(392.8554 478.6057)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
-          </text>
-        </g>
-        <g id="Graphic_715">
-          <circle cx="395.9667" cy="468.0507" r="6.00000967681846" fill="white"/>
-          <circle cx="395.9667" cy="468.0507" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_716">
-          <text transform="translate(393.7421 463.68915)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">5</tspan>
-          </text>
-        </g>
-        <g id="Graphic_717">
-          <circle cx="381.20193" cy="482.96727" r="6.00000967681846" fill="white"/>
-          <circle cx="381.20193" cy="482.96727" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_718">
-          <text transform="translate(376.42484 478.6057)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">12</tspan>
-          </text>
-        </g>
-        <g id="Graphic_719">
-          <circle cx="381.20193" cy="468.0507" r="6.00000967681846" fill="white"/>
-          <circle cx="381.20193" cy="468.0507" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_720">
-          <text transform="translate(378.9773 463.68915)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">6</tspan>
-          </text>
-        </g>
-        <g id="Graphic_721">
-          <circle cx="365.21253" cy="482.96727" r="6.00000967681846" fill="white"/>
-          <circle cx="365.21253" cy="482.96727" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_722">
-          <text transform="translate(362.1012 478.9336)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
-          </text>
-        </g>
-        <g id="Graphic_723">
-          <circle cx="365.21253" cy="468.0507" r="6.00000967681846" fill="white"/>
-          <circle cx="365.21253" cy="468.0507" r="6.00000967681846" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        </g>
-        <g id="Graphic_724">
-          <text transform="translate(360.43544 464.017)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">13</tspan>
-          </text>
-        </g>
-        <g id="Graphic_725">
-          <text transform="translate(539.1704 478.6057)" fill="black">
-            <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">15</tspan>
-          </text>
+      <g id="Group_1091">
+        <g id="Graphic_901">
+          <rect x="65" y="291" width="790.1002" height="255.13203" fill="white"/>
+        </g>
+        <g id="Group_727">
+          <g id="Graphic_622">
+            <rect x="670.8024" y="347.16887" width="81.91063" height="55.73353" fill="white"/>
+            <rect x="670.8024" y="347.16887" width="81.91063" height="55.73353" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_385">
+            <circle cx="738.7845" cy="387.82035" r="10.7370610912861" fill="#666"/>
+            <circle cx="738.7845" cy="387.82035" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_378">
+            <circle cx="683.7496" cy="361.12704" r="10.7370610912861" fill="white"/>
+            <circle cx="683.7496" cy="361.12704" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_376">
+            <circle cx="683.7496" cy="387.82035" r="10.7370610912861" fill="#592f0f"/>
+            <circle cx="683.7496" cy="387.82035" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_374">
+            <circle cx="710.1713" cy="361.12704" r="10.7370610912861" fill="#ff4040"/>
+            <circle cx="710.1713" cy="361.12704" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_372">
+            <circle cx="710.1713" cy="387.82035" r="10.7370610912861" fill="#ffab40"/>
+            <circle cx="710.1713" cy="387.82035" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_384">
+            <circle cx="738.7845" cy="361.12704" r="10.7370610912861" fill="#ffff40"/>
+            <circle cx="738.7845" cy="361.12704" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_627">
+            <rect x="483.262" y="347.16887" width="79.454125" height="55.73353" fill="white"/>
+            <rect x="483.262" y="347.16887" width="79.454125" height="55.73353" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_342">
+            <circle cx="496.60627" cy="361.12704" r="10.737061091286" fill="#218721"/>
+            <circle cx="496.60627" cy="361.12704" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_340">
+            <circle cx="496.60627" cy="387.82035" r="10.737061091286" fill="#4040ff"/>
+            <circle cx="496.60627" cy="387.82035" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_338">
+            <circle cx="523.02797" cy="361.12704" r="10.7370610912861" fill="#ffff40"/>
+            <circle cx="523.02797" cy="361.12704" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_336">
+            <circle cx="523.02797" cy="387.82035" r="10.737061091286" fill="#ffab2c"/>
+            <circle cx="523.02797" cy="387.82035" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_334">
+            <circle cx="549.44967" cy="361.12704" r="10.7370610912861" fill="#ff4040"/>
+            <circle cx="549.44967" cy="361.12704" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_332">
+            <circle cx="549.44967" cy="387.82035" r="10.7370610912861" fill="#984cff"/>
+            <circle cx="549.44967" cy="387.82035" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_317">
+            <text transform="translate(333.62685 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">15</tspan>
+            </text>
+          </g>
+          <g id="Graphic_337">
+            <text transform="translate(520.80336 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">8</tspan>
+            </text>
+          </g>
+          <g id="Graphic_335">
+            <text transform="translate(518.8756 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">11</tspan>
+            </text>
+          </g>
+          <g id="Graphic_333">
+            <text transform="translate(547.22506 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">7</tspan>
+            </text>
+          </g>
+          <g id="Graphic_331">
+            <text transform="translate(546.33834 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
+            </text>
+          </g>
+          <g id="Graphic_341">
+            <text transform="translate(492.15705 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">25</tspan>
+            </text>
+          </g>
+          <g id="Graphic_339">
+            <text transform="translate(494.38166 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">9</tspan>
+            </text>
+          </g>
+          <g id="Graphic_616">
+            <rect x="245.88247" y="347.16887" width="237.37955" height="55.77131" fill="white"/>
+            <rect x="245.88247" y="347.16887" width="237.37955" height="55.77131" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_304">
+            <circle cx="417.34116" cy="387.82035" r="10.737061091286" fill="#1c1c1c"/>
+            <circle cx="417.34116" cy="387.82035" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_303">
+            <text transform="translate(412.89195 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">22</tspan>
+            </text>
+          </g>
+          <g id="Graphic_318">
+            <circle cx="338.07606" cy="361.12704" r="10.737061091286" fill="white"/>
+            <circle cx="338.07606" cy="361.12704" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_266">
+            <circle cx="232.38926" cy="387.82035" r="10.737061091286" fill="white"/>
+            <circle cx="232.38926" cy="387.82035" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_106">
+            <circle cx="232.38926" cy="361.12704" r="10.737061091286" fill="#984cff"/>
+            <circle cx="232.38926" cy="361.12704" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_294">
+            <circle cx="258.81096" cy="361.12704" r="10.737061091286" fill="white"/>
+            <circle cx="258.81096" cy="361.12704" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_292">
+            <circle cx="258.81096" cy="387.82035" r="10.737061091286" fill="#666"/>
+            <circle cx="258.81096" cy="387.82035" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_302">
+            <circle cx="285.23266" cy="361.12704" r="10.737061091286" fill="white"/>
+            <circle cx="285.23266" cy="361.12704" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_300">
+            <circle cx="285.23266" cy="387.82035" r="10.737061091286" fill="#ff4040"/>
+            <circle cx="285.23266" cy="387.82035" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_298">
+            <circle cx="311.65436" cy="361.12704" r="10.737061091286" fill="#ffff40"/>
+            <circle cx="311.65436" cy="361.12704" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_296">
+            <circle cx="311.65436" cy="387.82035" r="10.737061091286" fill="#ffab40"/>
+            <circle cx="311.65436" cy="387.82035" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_316">
+            <circle cx="338.07606" cy="387.82035" r="10.737061091286" fill="white"/>
+            <circle cx="338.07606" cy="387.82035" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_314">
+            <circle cx="364.49776" cy="361.12704" r="10.737061091286" fill="#ccc"/>
+            <circle cx="364.49776" cy="361.12704" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_312">
+            <circle cx="364.49776" cy="387.82035" r="10.737061091286" fill="#4040ff"/>
+            <circle cx="364.49776" cy="387.82035" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_310">
+            <circle cx="390.91946" cy="361.12704" r="10.737061091286" fill="white"/>
+            <circle cx="390.91946" cy="361.12704" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_308">
+            <circle cx="390.91946" cy="387.82035" r="10.737061091286" fill="#666"/>
+            <circle cx="390.91946" cy="387.82035" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_306">
+            <circle cx="417.34116" cy="361.12704" r="10.737061091286" fill="white"/>
+            <circle cx="417.34116" cy="361.12704" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_350">
+            <circle cx="443.76287" cy="361.12704" r="10.737061091286" fill="#218721"/>
+            <circle cx="443.76287" cy="361.12704" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_348">
+            <circle cx="443.76287" cy="387.82035" r="10.737061091286" fill="white"/>
+            <circle cx="443.76287" cy="387.82035" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_346">
+            <circle cx="470.18457" cy="361.12704" r="10.737061091286" fill="white"/>
+            <circle cx="470.18457" cy="361.12704" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_344">
+            <circle cx="470.18457" cy="387.82035" r="10.737061091286" fill="#ff4040"/>
+            <circle cx="470.18457" cy="387.82035" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_632">
+            <text transform="translate(509.17136 332.572)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">Keypad</tspan>
+            </text>
+          </g>
+          <g id="Graphic_634">
+            <circle cx="338.0671" cy="361.12704" r="10.737061091286" fill="#984cff"/>
+            <circle cx="338.0671" cy="361.12704" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_386">
+            <text transform="translate(735.0864 383.7762)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
+            </text>
+          </g>
+          <g id="Graphic_260">
+            <text transform="translate(227.49669 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">3V</tspan>
+            </text>
+          </g>
+          <g id="Graphic_120">
+            <text transform="translate(227.49669 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">5V</tspan>
+            </text>
+          </g>
+          <g id="Graphic_293">
+            <text transform="translate(253.9184 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">5V</tspan>
+            </text>
+          </g>
+          <g id="Graphic_291">
+            <text transform="translate(256.58635 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">2</tspan>
+            </text>
+          </g>
+          <g id="Graphic_301">
+            <text transform="translate(282.12134 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
+            </text>
+          </g>
+          <g id="Graphic_299">
+            <text transform="translate(283.00805 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">3</tspan>
+            </text>
+          </g>
+          <g id="Graphic_297">
+            <text transform="translate(307.20515 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">14</tspan>
+            </text>
+          </g>
+          <g id="Graphic_295">
+            <text transform="translate(309.42975 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">4</tspan>
+            </text>
+          </g>
+          <g id="Graphic_315">
+            <text transform="translate(334.96474 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
+            </text>
+          </g>
+          <g id="Graphic_313">
+            <text transform="translate(360.04855 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">18</tspan>
+            </text>
+          </g>
+          <g id="Graphic_311">
+            <text transform="translate(360.04855 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">17</tspan>
+            </text>
+          </g>
+          <g id="Graphic_309">
+            <text transform="translate(387.80814 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
+            </text>
+          </g>
+          <g id="Graphic_307">
+            <text transform="translate(386.47025 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">27</tspan>
+            </text>
+          </g>
+          <g id="Graphic_305">
+            <text transform="translate(412.89195 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">23</tspan>
+            </text>
+          </g>
+          <g id="Graphic_349">
+            <text transform="translate(439.31365 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">24</tspan>
+            </text>
+          </g>
+          <g id="Graphic_347">
+            <text transform="translate(438.8703 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">3V</tspan>
+            </text>
+          </g>
+          <g id="Graphic_345">
+            <text transform="translate(467.07324 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
+            </text>
+          </g>
+          <g id="Graphic_343">
+            <text transform="translate(465.73535 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">10</tspan>
+            </text>
+          </g>
+          <g id="Graphic_377">
+            <text transform="translate(679.3004 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">16</tspan>
+            </text>
+          </g>
+          <g id="Graphic_375">
+            <text transform="translate(679.3004 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">19</tspan>
+            </text>
+          </g>
+          <g id="Graphic_373">
+            <text transform="translate(706.3088 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">20</tspan>
+            </text>
+          </g>
+          <g id="Graphic_371">
+            <text transform="translate(705.7221 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">26</tspan>
+            </text>
+          </g>
+          <g id="Graphic_383">
+            <text transform="translate(734.922 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">21</tspan>
+            </text>
+          </g>
+          <g id="Graphic_244">
+            <text transform="translate(177.69484 370.3151)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">Pi-400</tspan>
+            </text>
+          </g>
+          <g id="Graphic_330">
+            <circle cx="575.8714" cy="361.12704" r="10.7370610912861" fill="white"/>
+            <circle cx="575.8714" cy="361.12704" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_329">
+            <text transform="translate(573.2034 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">E</tspan>
+            </text>
+          </g>
+          <g id="Graphic_328">
+            <circle cx="575.8714" cy="387.82035" r="10.7370610912861" fill="white"/>
+            <circle cx="575.8714" cy="387.82035" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_327">
+            <text transform="translate(573.2034 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">E</tspan>
+            </text>
+          </g>
+          <g id="Graphic_326">
+            <circle cx="602.2931" cy="361.12704" r="10.7370610912861" fill="white"/>
+            <circle cx="602.2931" cy="361.12704" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_325">
+            <text transform="translate(599.18174 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
+            </text>
+          </g>
+          <g id="Graphic_324">
+            <circle cx="602.2931" cy="387.82035" r="10.7370610912861" fill="white"/>
+            <circle cx="602.2931" cy="387.82035" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_323">
+            <text transform="translate(600.06846 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">5</tspan>
+            </text>
+          </g>
+          <g id="Graphic_322">
+            <circle cx="628.7148" cy="361.12704" r="10.7370610912861" fill="white"/>
+            <circle cx="628.7148" cy="361.12704" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_321">
+            <text transform="translate(624.26555 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">12</tspan>
+            </text>
+          </g>
+          <g id="Graphic_320">
+            <circle cx="628.7148" cy="387.82035" r="10.7370610912861" fill="white"/>
+            <circle cx="628.7148" cy="387.82035" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_319">
+            <text transform="translate(626.49016 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">6</tspan>
+            </text>
+          </g>
+          <g id="Graphic_382">
+            <circle cx="657.3279" cy="361.12704" r="10.7370610912861" fill="white"/>
+            <circle cx="657.3279" cy="361.12704" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_381">
+            <text transform="translate(654.2166 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
+            </text>
+          </g>
+          <g id="Graphic_380">
+            <circle cx="657.3279" cy="387.82035" r="10.737061091286" fill="white"/>
+            <circle cx="657.3279" cy="387.82035" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_379">
+            <text transform="translate(652.8787 384.4677)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">13</tspan>
+            </text>
+          </g>
+          <g id="Graphic_549">
+            <text transform="translate(174.18215 479.60476)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">Pi-0</tspan>
+            </text>
+          </g>
+          <g id="Graphic_628">
+            <text transform="translate(249.42464 441.525)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">Motor</tspan>
+            </text>
+          </g>
+          <g id="Graphic_629">
+            <text transform="translate(487.35985 441.525)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">Keypad</tspan>
+            </text>
+          </g>
+          <g id="Graphic_630">
+            <text transform="translate(610.7657 441.525)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">7-Segment Display</tspan>
+            </text>
+          </g>
+          <g id="Graphic_631">
+            <text transform="translate(699.9467 332.572)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">Motor</tspan>
+            </text>
+          </g>
+          <g id="Graphic_633">
+            <text transform="translate(279.2864 332.572)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">7-Segment Display</tspan>
+            </text>
+          </g>
+          <g id="Graphic_638">
+            <circle cx="213.28505" cy="404.46666" r="5.75998581209899" fill="black"/>
+            <circle cx="213.28505" cy="404.46666" r="5.75998581209899" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_639">
+            <circle cx="754.7216" cy="454.93077" r="5.75998581209903" fill="black"/>
+            <circle cx="754.7216" cy="454.93077" r="5.75998581209903" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_640">
+            <text transform="translate(333.61788 357.7744)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">15</tspan>
+            </text>
+          </g>
+          <g id="Graphic_641">
+            <rect x="218.25403" y="457.08514" width="81.91063" height="55.73353" fill="white"/>
+            <rect x="218.25403" y="457.08514" width="81.91063" height="55.73353" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_642">
+            <circle cx="232.1826" cy="472.1672" r="10.737061091286" fill="#666"/>
+            <circle cx="232.1826" cy="472.1672" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_643">
+            <circle cx="287.21744" cy="498.8605" r="10.737061091286" fill="white"/>
+            <circle cx="287.21744" cy="498.8605" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_644">
+            <circle cx="287.21744" cy="472.1672" r="10.737061091286" fill="#592f0f"/>
+            <circle cx="287.21744" cy="472.1672" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_645">
+            <circle cx="260.79574" cy="498.8605" r="10.737061091286" fill="#ff4040"/>
+            <circle cx="260.79574" cy="498.8605" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_646">
+            <circle cx="260.79574" cy="472.1672" r="10.737061091286" fill="#ffab40"/>
+            <circle cx="260.79574" cy="472.1672" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_647">
+            <circle cx="232.1826" cy="498.8605" r="10.737061091286" fill="#ffff40"/>
+            <circle cx="232.1826" cy="498.8605" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_648">
+            <rect x="408.2509" y="457.08514" width="79.454125" height="55.73353" fill="white"/>
+            <rect x="408.2509" y="457.08514" width="79.454125" height="55.73353" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_649">
+            <circle cx="474.3608" cy="498.8605" r="10.737061091286" fill="#218721"/>
+            <circle cx="474.3608" cy="498.8605" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_650">
+            <circle cx="474.3608" cy="472.1672" r="10.737061091286" fill="#4040ff"/>
+            <circle cx="474.3608" cy="472.1672" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_651">
+            <circle cx="447.9391" cy="498.8605" r="10.737061091286" fill="#ffff40"/>
+            <circle cx="447.9391" cy="498.8605" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_652">
+            <circle cx="447.9391" cy="472.1672" r="10.737061091286" fill="#ffab2c"/>
+            <circle cx="447.9391" cy="472.1672" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_653">
+            <circle cx="421.5174" cy="498.8605" r="10.737061091286" fill="#ff4040"/>
+            <circle cx="421.5174" cy="498.8605" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_654">
+            <circle cx="421.5174" cy="472.1672" r="10.737061091286" fill="#984cff"/>
+            <circle cx="421.5174" cy="472.1672" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_655">
+            <text transform="translate(637.3402 502.21314) rotate(180)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">15</tspan>
+            </text>
+          </g>
+          <g id="Graphic_656">
+            <text transform="translate(445.7145 494.7116)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">8</tspan>
+            </text>
+          </g>
+          <g id="Graphic_657">
+            <text transform="translate(443.78675 468.0183)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">11</tspan>
+            </text>
+          </g>
+          <g id="Graphic_658">
+            <text transform="translate(419.2928 495.2983)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">7</tspan>
+            </text>
+          </g>
+          <g id="Graphic_659">
+            <text transform="translate(417.81934 468.605)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
+            </text>
+          </g>
+          <g id="Graphic_660">
+            <text transform="translate(469.91157 494.7116)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">25</tspan>
+            </text>
+          </g>
+          <g id="Graphic_661">
+            <text transform="translate(472.1362 468.605)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">9</tspan>
+            </text>
+          </g>
+          <g id="Graphic_662">
+            <rect x="487.705" y="457.04735" width="237.37955" height="55.77131" fill="white"/>
+            <rect x="487.705" y="457.04735" width="237.37955" height="55.77131" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_663">
+            <circle cx="553.6259" cy="472.1672" r="10.7370610912861" fill="#1c1c1c"/>
+            <circle cx="553.6259" cy="472.1672" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_664">
+            <text transform="translate(549.1767 468.0183)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">22</tspan>
+            </text>
+          </g>
+          <g id="Graphic_665">
+            <circle cx="632.891" cy="498.8605" r="10.7370610912861" fill="white"/>
+            <circle cx="632.891" cy="498.8605" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_666">
+            <circle cx="738.5778" cy="472.1672" r="10.737061091286" fill="white"/>
+            <circle cx="738.5778" cy="472.1672" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_667">
+            <circle cx="738.5778" cy="498.8605" r="10.7370610912861" fill="#984cff"/>
+            <circle cx="738.5778" cy="498.8605" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_668">
+            <circle cx="712.1561" cy="498.8605" r="10.7370610912861" fill="white"/>
+            <circle cx="712.1561" cy="498.8605" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_669">
+            <circle cx="712.1561" cy="472.1672" r="10.737061091286" fill="#666"/>
+            <circle cx="712.1561" cy="472.1672" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_670">
+            <circle cx="685.7344" cy="498.8605" r="10.7370610912861" fill="white"/>
+            <circle cx="685.7344" cy="498.8605" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_671">
+            <circle cx="685.7344" cy="472.1672" r="10.737061091286" fill="#ff4040"/>
+            <circle cx="685.7344" cy="472.1672" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_672">
+            <circle cx="659.3127" cy="498.8605" r="10.7370610912861" fill="#ffff40"/>
+            <circle cx="659.3127" cy="498.8605" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_673">
+            <circle cx="659.3127" cy="472.1672" r="10.7370610912861" fill="#ffab40"/>
+            <circle cx="659.3127" cy="472.1672" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_674">
+            <circle cx="632.891" cy="472.1672" r="10.7370610912861" fill="white"/>
+            <circle cx="632.891" cy="472.1672" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_675">
+            <circle cx="606.4693" cy="498.8605" r="10.7370610912861" fill="#ccc"/>
+            <circle cx="606.4693" cy="498.8605" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_676">
+            <circle cx="606.4693" cy="472.1672" r="10.7370610912861" fill="#4040ff"/>
+            <circle cx="606.4693" cy="472.1672" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_677">
+            <circle cx="580.0476" cy="498.8605" r="10.7370610912861" fill="white"/>
+            <circle cx="580.0476" cy="498.8605" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_678">
+            <circle cx="580.0476" cy="472.1672" r="10.737061091286" fill="#666"/>
+            <circle cx="580.0476" cy="472.1672" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_679">
+            <circle cx="553.6259" cy="498.8605" r="10.7370610912861" fill="white"/>
+            <circle cx="553.6259" cy="498.8605" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_680">
+            <circle cx="527.2042" cy="498.8605" r="10.7370610912861" fill="#218721"/>
+            <circle cx="527.2042" cy="498.8605" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_681">
+            <circle cx="527.2042" cy="472.1672" r="10.7370610912861" fill="white"/>
+            <circle cx="527.2042" cy="472.1672" r="10.7370610912861" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_682">
+            <circle cx="500.7825" cy="498.8605" r="10.737061091286" fill="white"/>
+            <circle cx="500.7825" cy="498.8605" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_683">
+            <circle cx="500.7825" cy="472.1672" r="10.737061091286" fill="#ff4040"/>
+            <circle cx="500.7825" cy="472.1672" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_684">
+            <circle cx="632.89996" cy="498.8605" r="10.737061091286" fill="#984cff"/>
+            <circle cx="632.89996" cy="498.8605" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_685">
+            <text transform="translate(228.48454 468.70977)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
+            </text>
+          </g>
+          <g id="Graphic_686">
+            <text transform="translate(733.6852 468.0183)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">3V</tspan>
+            </text>
+          </g>
+          <g id="Graphic_687">
+            <text transform="translate(733.6852 494.7116)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">5V</tspan>
+            </text>
+          </g>
+          <g id="Graphic_688">
+            <text transform="translate(707.2635 494.7116)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">5V</tspan>
+            </text>
+          </g>
+          <g id="Graphic_689">
+            <text transform="translate(709.9315 468.0183)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">2</tspan>
+            </text>
+          </g>
+          <g id="Graphic_690">
+            <text transform="translate(682.6231 494.7116)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
+            </text>
+          </g>
+          <g id="Graphic_691">
+            <text transform="translate(683.5098 468.0183)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">3</tspan>
+            </text>
+          </g>
+          <g id="Graphic_692">
+            <text transform="translate(654.8635 494.7116)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">14</tspan>
+            </text>
+          </g>
+          <g id="Graphic_693">
+            <text transform="translate(657.0881 468.0183)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">4</tspan>
+            </text>
+          </g>
+          <g id="Graphic_694">
+            <text transform="translate(629.77966 468.0183)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
+            </text>
+          </g>
+          <g id="Graphic_695">
+            <text transform="translate(601.43335 494.7116)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">18</tspan>
+            </text>
+          </g>
+          <g id="Graphic_696">
+            <text transform="translate(601.43335 468.0183)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">17</tspan>
+            </text>
+          </g>
+          <g id="Graphic_697">
+            <text transform="translate(576.93626 494.7116)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
+            </text>
+          </g>
+          <g id="Graphic_698">
+            <text transform="translate(575.5984 468.0183)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">27</tspan>
+            </text>
+          </g>
+          <g id="Graphic_699">
+            <text transform="translate(549.1767 494.7116)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">23</tspan>
+            </text>
+          </g>
+          <g id="Graphic_700">
+            <text transform="translate(522.755 494.7116)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">24</tspan>
+            </text>
+          </g>
+          <g id="Graphic_701">
+            <text transform="translate(522.3116 468.605)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">3V</tspan>
+            </text>
+          </g>
+          <g id="Graphic_702">
+            <text transform="translate(497.67116 495.2983)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
+            </text>
+          </g>
+          <g id="Graphic_703">
+            <text transform="translate(495.74655 468.605)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">10</tspan>
+            </text>
+          </g>
+          <g id="Graphic_704">
+            <text transform="translate(281.59477 495.2983)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">16</tspan>
+            </text>
+          </g>
+          <g id="Graphic_705">
+            <text transform="translate(282.1815 468.605)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">19</tspan>
+            </text>
+          </g>
+          <g id="Graphic_706">
+            <text transform="translate(256.34652 495.2983)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">20</tspan>
+            </text>
+          </g>
+          <g id="Graphic_707">
+            <text transform="translate(256.34652 468.605)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">26</tspan>
+            </text>
+          </g>
+          <g id="Graphic_708">
+            <text transform="translate(228.3201 495.2983)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">21</tspan>
+            </text>
+          </g>
+          <g id="Graphic_709">
+            <circle cx="395.0957" cy="498.8605" r="10.737061091286" fill="white"/>
+            <circle cx="395.0957" cy="498.8605" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_710">
+            <text transform="translate(392.4277 495.2983)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">E</tspan>
+            </text>
+          </g>
+          <g id="Graphic_711">
+            <circle cx="395.0957" cy="472.1672" r="10.737061091286" fill="white"/>
+            <circle cx="395.0957" cy="472.1672" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_712">
+            <text transform="translate(392.4277 468.605)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">E</tspan>
+            </text>
+          </g>
+          <g id="Graphic_713">
+            <circle cx="368.674" cy="498.8605" r="10.737061091286" fill="white"/>
+            <circle cx="368.674" cy="498.8605" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_714">
+            <text transform="translate(365.56266 494.7116)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
+            </text>
+          </g>
+          <g id="Graphic_715">
+            <circle cx="368.674" cy="472.1672" r="10.737061091286" fill="white"/>
+            <circle cx="368.674" cy="472.1672" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_716">
+            <text transform="translate(366.4494 468.0183)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">5</tspan>
+            </text>
+          </g>
+          <g id="Graphic_717">
+            <circle cx="342.2523" cy="498.8605" r="10.737061091286" fill="white"/>
+            <circle cx="342.2523" cy="498.8605" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_718">
+            <text transform="translate(337.21634 494.7116)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">12</tspan>
+            </text>
+          </g>
+          <g id="Graphic_719">
+            <circle cx="342.2523" cy="472.1672" r="10.737061091286" fill="white"/>
+            <circle cx="342.2523" cy="472.1672" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_720">
+            <text transform="translate(340.02768 468.0183)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">6</tspan>
+            </text>
+          </g>
+          <g id="Graphic_721">
+            <circle cx="313.63914" cy="498.8605" r="10.737061091286" fill="white"/>
+            <circle cx="313.63914" cy="498.8605" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_722">
+            <text transform="translate(310.5278 495.2983)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">G</tspan>
+            </text>
+          </g>
+          <g id="Graphic_723">
+            <circle cx="313.63914" cy="472.1672" r="10.737061091286" fill="white"/>
+            <circle cx="313.63914" cy="472.1672" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_724">
+            <text transform="translate(308.6032 468.605)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">13</tspan>
+            </text>
+          </g>
+          <g id="Graphic_725">
+            <text transform="translate(628.45074 494.7116)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">15</tspan>
+            </text>
+          </g>
+        </g>
+        <g id="Group_1087">
+          <g id="Graphic_1085">
+            <circle cx="417.3512" cy="361.133" r="10.737061091286" fill="#592f0f"/>
+            <circle cx="417.3512" cy="361.133" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_1086">
+            <text transform="translate(412.90197 356.50215)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">23</tspan>
+            </text>
+          </g>
+        </g>
+        <g id="Group_1088">
+          <g id="Graphic_1090">
+            <circle cx="553.6242" cy="498.8756" r="10.737061091286" fill="#592f0f"/>
+            <circle cx="553.6242" cy="498.8756" r="10.737061091286" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_1089">
+            <text transform="translate(549.175 494.24474)" fill="black">
+              <tspan font-family="Arial" font-size="8" font-weight="400" fill="black" x="0" y="7">23</tspan>
+            </text>
+          </g>
         </g>
       </g>
     </g>
