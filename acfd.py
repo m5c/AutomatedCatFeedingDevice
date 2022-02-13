@@ -169,9 +169,10 @@ def close_lid():
 
 # Continuous countdown thread. (Updates global remaining time variable via queue)
 def thread_countdown():
+    global armed
     counter = q.queue[0]
-    print("Thread started.")
-    while counter >= 0:
+
+    while counter >= 0 and armed:
         print(counter)
         q.get()
         q.put(counter)
@@ -188,7 +189,7 @@ def thread_countdown():
                 minute = 59
             counter = hour * 100 + minute
             time.sleep(60)
-            if counter == 100:
+            if counter == 100 and armed:
                 q.put(counter)
                 time.sleep(1)
                 counter = 5959
@@ -206,11 +207,12 @@ def thread_countdown():
 
     # Lid is perfectly balanced when open, we retract the whisker again right away, so the machine leaves in the same
     # state it left off.
-    open_lid()
-    close_lid()
-    # Set armed to False, allow for next countdown iteration
-    global armed
-    armed = False
+    if armed:
+        open_lid()
+        close_lid()
+        # Set armed to False, allow for next countdown iteration
+        armed = False
+        hours = True
 
 
 # call to run countdown. provided counter value is interpreted as hhmm value.
@@ -261,7 +263,10 @@ def enable_display():
 def countdown():
     global armed
     global hours
-    if not armed:
+    counter = q.queue[0]
+
+    # only start countdown if not yet running and a time was set
+    if not armed and counter > 0:
         armed = True
         
         # Convert timer to minutes / seconds if HH is 0
@@ -284,15 +289,23 @@ def signal_handler(sig, frame):
 
 # Define handler for button press (channel is the GPIO that registered RISING signal)
 def button_pressed_callback(channel):
+    global armed
     if channel == button1:
         q.put((q.get() + 100) % 2400)
     if channel == button2:
         q.put((q.get() + 15) % 60)
     if channel == button3:
-        print("3")
+        q.put((q.get() + 1) % 60)
     if channel == button4:
-        print("4")
-        countdown()
+        # if armed: reset. Otherwise start.
+        if armed:
+            print("Unarming")
+            q.get()
+            q.put(0)
+            armed = False
+            hours = True
+        else:
+            countdown()
 
 
 # Add keypad button handlers
