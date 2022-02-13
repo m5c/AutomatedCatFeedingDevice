@@ -79,6 +79,11 @@ Component location:
     * Universal Mount Hub
     * Hair Pin
 
+### Sheets
+
+ * Front cover sheet as [printable PDF](print/front.pdf)
+ * Motor bay cover sheet as [printable PDF](print/legal-note.pdf)
+
 ## Software 
 
 Before full assembly, use below scripts to test individual ACFD components and wiring:
