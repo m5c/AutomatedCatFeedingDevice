@@ -67,7 +67,7 @@ GPIO.output(keypadPowerPin, 1)
 # global variables for inter-thread communication
 # current counter value - stored in a queue, so it can be conveniently accessed from threads
 # Only one value is stored in here at a time.
-q = queue.Queue()
+q = queue.Queue(1)
 # Hours is set to false if coundown switches from HHMM to MMSS.
 hours = True
 # armed flag is set to true when the countdown begins
@@ -212,6 +212,7 @@ def thread_countdown():
     # Lid is perfectly balanced when open, we retract the whisker again right away, so the machine leaves in the same
     # state it left off.
     if armed:
+        q.get()
         q.put(0)
         open_lid()
         close_lid()
