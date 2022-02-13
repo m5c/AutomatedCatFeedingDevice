@@ -69,7 +69,7 @@ GPIO.output(keypadPowerPin, 1)
 # Only one value is stored in here at a time.
 q = queue.Queue()
 # Hours is set to false if coundown switches from HHMM to MMSS.
-hours = False
+hours = True
 # armed flag is set to true when the countdown begins
 armed = False
 
@@ -260,10 +260,18 @@ def enable_display():
 # Helper function to start countdown in extra thread.
 def countdown():
     global armed
+    global hours
     if not armed:
         armed = True
-        # COUNT DOWN THREAD (MUST NOT BLOCK)
-        # starts with 1h 1 minute
+        
+        # Convert timer to minutes / seconds if HH is 0
+        counter = q.get()
+        if counter < 100:
+            hours = False
+            counter = counter * 100
+        q.put(counter)
+
+        # Start auto counter decrease in extra thread
         t = threading.Thread(target=thread_countdown)
         t.start()
 
@@ -277,9 +285,9 @@ def signal_handler(sig, frame):
 # Define handler for button press (channel is the GPIO that registered RISING signal)
 def button_pressed_callback(channel):
     if channel == button1:
-        q.put((q.get() + 100) % 24)
+        q.put((q.get() + 100) % 2400)
     if channel == button2:
-        q.put((q.get() + 5) % 60)
+        q.put((q.get() + 15) % 60)
     if channel == button3:
         print("3")
     if channel == button4:
