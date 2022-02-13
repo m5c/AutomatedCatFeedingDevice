@@ -69,7 +69,7 @@ GPIO.output(keypadPowerPin, 1)
 # Only one value is stored in here at a time.
 q = queue.Queue()
 # Hours is set to false if coundown switches from HHMM to MMSS.
-hours = True
+hours = False
 # armed flag is set to true when the countdown begins
 armed = False
 
@@ -77,56 +77,56 @@ armed = False
 # Define stepper motor sequential step functions
 def step_1():
     GPIO.output(IN4, True)
-    sleep(steptime)
+    sleep(step_time)
     GPIO.output(IN4, False)
 
 
 def step_2():
     GPIO.output(IN4, True)
     GPIO.output(IN3, True)
-    sleep(steptime)
+    sleep(step_time)
     GPIO.output(IN4, False)
     GPIO.output(IN3, False)
 
 
 def step_3():
     GPIO.output(IN3, True)
-    sleep(steptime)
+    sleep(step_time)
     GPIO.output(IN3, False)
 
 
 def step_4():
     GPIO.output(IN2, True)
     GPIO.output(IN3, True)
-    sleep(steptime)
+    sleep(step_time)
     GPIO.output(IN2, False)
     GPIO.output(IN3, False)
 
 
 def step_5():
     GPIO.output(IN2, True)
-    sleep(steptime)
+    sleep(step_time)
     GPIO.output(IN2, False)
 
 
 def step_6():
     GPIO.output(IN1, True)
     GPIO.output(IN2, True)
-    sleep(steptime)
+    sleep(step_time)
     GPIO.output(IN1, False)
     GPIO.output(IN2, False)
 
 
 def step_7():
     GPIO.output(IN1, True)
-    sleep(steptime)
+    sleep(step_time)
     GPIO.output(IN1, False)
 
 
 def step_8():
     GPIO.output(IN4, True)
     GPIO.output(IN1, True)
-    sleep(steptime)
+    sleep(step_time)
     GPIO.output(IN4, False)
     GPIO.output(IN1, False)
 
