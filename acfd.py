@@ -166,48 +166,53 @@ def open_lid():
 def close_lid():
     left(170)
 
+def decr_counter(counter):
+    if counter == 0:
+        return counter
+    counter = counter-1
+    first_two_digits = counter // 100
+    last_two_digits = counter % 100
+    if last_two_digits > 60:
+      last_two_digits = 59
+    return first_two_digits*100 + last_two_digits
+
 
 # Continuous countdown thread. (Updates global remaining time variable via queue)
 def thread_countdown():
     global armed
+    global hours
     counter = q.queue[0]
 
-    while counter >= 0 and armed:
+    while counter > 0 and armed:
+        
+        # Current value remains displayed (by display function) and will stay on display until q is filled with updated value
+        counter = q.queue[0]
         print(counter)
-        q.get()
-        q.put(counter)
 
-        # in hour mode, hour counter
-        global hours
-        if hours:
-            # second counter only goes up to 59.
-            # leave minutes, apply mod 60 on seconds
-            counter = counter - 1
-            hour = counter // 100
-            minute = (counter % 100)
-            if minute > 60:
-                minute = 59
-            counter = hour * 100 + minute
-            time.sleep(60)
-            if counter == 100 and armed:
-                q.put(counter)
-                time.sleep(1)
-                counter = 5959
-                hours = False
+        # decrement second wise if in either on verge to seconds or in seconds mode.
+        if (hours == True and counter == 100):
+            # flip hours tag and manually override counter by 59:59
+            sleep(1)
+            counter = 5959
+            hours = False
+        elif hours == False:
+            sleep(1)
+            counter = decr_counter(counter)
+        # decrement minute wise in every other case
         else:
-            # second counter only goes up to 59.
-            # leave minutes, apply mod 60 on seconds
-            counter = counter - 1
-            minute = counter // 100
-            second = (counter % 100)
-            if second > 60:
-                second = 59
-            counter = minute * 100 + second
-            time.sleep(1)
+            sleep(60)
+            counter = decr_counter(counter)
+            
+        # when wait time is overi (and machine was not unarmed inbetween), update counter value on display and enter next iteration 
+        if armed:
+            q.get()
+            q.put(counter)
+
 
     # Lid is perfectly balanced when open, we retract the whisker again right away, so the machine leaves in the same
     # state it left off.
     if armed:
+        q.put(0)
         open_lid()
         close_lid()
         # Set armed to False, allow for next countdown iteration
@@ -299,19 +304,29 @@ def button_pressed_callback(channel):
     # only allow timer changes if not armed
     if channel == button1:
         if not armed:
-            q.put((q.get() + 100) % 2400)
+            counter = q.get()
+            print("From " + str(counter))
+            counter = ((counter + 100) % 2400)
+            q.put(counter)
+            print("To " + str(counter))
     if channel == button2:
         if not armed:
             counter = q.get()
+            print("From " + str(counter))
             h = counter // 100 * 100
             m = counter % 100
-            q.put(h + ((m + 15) % 60))
+            counter = (h + ((m + 15) % 60))
+            q.put(counter)
+            print("To " + str(counter))
     if channel == button3:
         if not armed:
             counter = q.get()
+            print("From " + str(counter))
             h = counter // 100 * 100
             m = counter % 100
-            q.put(h + ((m + 1) % 60))
+            counter = (h + ((m + 1) % 60))
+            q.put(counter)
+            print("To " + str(counter))
     if channel == button4:
         # if armed: reset. Otherwise start.
         if armed:
