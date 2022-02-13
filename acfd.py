@@ -219,6 +219,7 @@ def thread_countdown():
 def enable_display():
     # MAIN CONTROL
     print('CTRL-C to terminate')
+    global armed
     try:
         while True:
 
@@ -239,10 +240,15 @@ def enable_display():
                 for segment in range(len(digits[digit])):
                     GPIO.output(digits[digit][segment], 1)
 
-                # Light up dot separator if curret digit is second position
+                # Light up dot separator if current digit is second position
                 if i == 1:
                     GPIO.output(10, 1)
 
+                # Light up dot separator if current digit is 4th position and ACFD is armed
+                if i == 3 and armed:
+                    GPIO.output(10, 1)
+
+                # Keep the lights on long enough to be visible to the human eye
                 time.sleep(0.005)
 
                 # switch digit off again
@@ -320,10 +326,10 @@ def button_pressed_callback(channel):
 
 
 # Add keypad button handlers
-GPIO.add_event_detect(button1, GPIO.RISING, callback=button_pressed_callback, bouncetime=100)
-GPIO.add_event_detect(button2, GPIO.RISING, callback=button_pressed_callback, bouncetime=100)
-GPIO.add_event_detect(button3, GPIO.RISING, callback=button_pressed_callback, bouncetime=100)
-GPIO.add_event_detect(button4, GPIO.RISING, callback=button_pressed_callback, bouncetime=100)
+GPIO.add_event_detect(button1, GPIO.RISING, callback=button_pressed_callback, bouncetime=300)
+GPIO.add_event_detect(button2, GPIO.RISING, callback=button_pressed_callback, bouncetime=300)
+GPIO.add_event_detect(button3, GPIO.RISING, callback=button_pressed_callback, bouncetime=300)
+GPIO.add_event_detect(button4, GPIO.RISING, callback=button_pressed_callback, bouncetime=300)
 
 # actual main thread starts here
 # close_lid()
