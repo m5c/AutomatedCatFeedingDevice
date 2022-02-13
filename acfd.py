@@ -290,12 +290,22 @@ def signal_handler(sig, frame):
 # Define handler for button press (channel is the GPIO that registered RISING signal)
 def button_pressed_callback(channel):
     global armed
+    # only allow timer changes if not armed
     if channel == button1:
-        q.put((q.get() + 100) % 2400)
+        if not armed:
+            q.put((q.get() + 100) % 2400)
     if channel == button2:
-        q.put((q.get() + 15) % 60)
+        if not armed:
+            counter = q.get()
+            h = counter // 100 * 100
+            m = counter % 100
+            q.put(h + ((m + 15) % 60))
     if channel == button3:
-        q.put((q.get() + 1) % 60)
+        if not armed:
+            counter = q.get()
+            h = counter // 100 * 100
+            m = counter % 100
+            q.put(h + ((m + 1) % 60))
     if channel == button4:
         # if armed: reset. Otherwise start.
         if armed:
@@ -303,6 +313,7 @@ def button_pressed_callback(channel):
             q.get()
             q.put(0)
             armed = False
+            global hours
             hours = True
         else:
             countdown()
