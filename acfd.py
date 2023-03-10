@@ -1,9 +1,6 @@
 #!/usr/bin/python
-import RPi.GPIO as GPIO
-import os
+from RPi import GPIO
 import queue
-import random
-import signal
 import sys
 import threading
 import time
@@ -20,8 +17,10 @@ seg = [15, 24, 18, 22, 23, 17, 27]
 gnd = [2, 3, 4, 14]
 
 # indicates which segments must light up for digits 0-9
-digits = [[15, 24, 18, 22, 23, 17], [24, 18], [15, 24, 22, 23, 27], [15, 24, 18, 22, 27], [24, 18, 17, 27],
-          [15, 18, 22, 17, 27], [18, 22, 23, 17, 27], [15, 24, 18], [15, 24, 18, 22, 23, 17, 27], [15, 24, 18, 17, 27]]
+digits = [[15, 24, 18, 22, 23, 17], [24, 18], [15, 24, 22, 23, 27], [15, 24, 18, 22, 27],
+          [24, 18, 17, 27],
+          [15, 18, 22, 17, 27], [18, 22, 23, 17, 27], [15, 24, 18], [15, 24, 18, 22, 23, 17, 27],
+          [15, 24, 18, 17, 27]]
 
 # reset dot segment output
 GPIO.setup(10, GPIO.OUT, initial=0)
@@ -159,22 +158,23 @@ def right(step):
 
 # custom function to open lid (perfect angle)
 def open_lid():
-    right(170)
+    right(175)
 
 
 # custom function to close lid (perfect angle)
 def close_lid():
     left(170)
 
+
 def decr_counter(counter):
     if counter == 0:
         return counter
-    counter = counter-1
+    counter = counter - 1
     first_two_digits = counter // 100
     last_two_digits = counter % 100
     if last_two_digits > 60:
-      last_two_digits = 59
-    return first_two_digits*100 + last_two_digits
+        last_two_digits = 59
+    return first_two_digits * 100 + last_two_digits
 
 
 # Continuous countdown thread. (Updates global remaining time variable via queue)
@@ -184,8 +184,9 @@ def thread_countdown():
     counter = q.queue[0]
 
     while counter > 0 and armed:
-        
-        # Current value remains displayed (by display function) and will stay on display until q is filled with updated value
+
+        # Current value remains displayed (by display function) and will stay on display until q
+        # is filled with updated value
         counter = q.queue[0]
         print(counter)
 
@@ -202,14 +203,15 @@ def thread_countdown():
         else:
             sleep(60)
             counter = decr_counter(counter)
-            
-        # when wait time is overi (and machine was not unarmed inbetween), update counter value on display and enter next iteration 
+
+        # when wait time is overi (and machine was not unarmed inbetween), update counter value
+        # on display and enter next iteration
         if armed:
             q.get()
             q.put(counter)
 
-
-    # Lid is perfectly balanced when open, we retract the whisker again right away, so the machine leaves in the same
+    # Lid is perfectly balanced when open, we retract the whisker again right away,
+    # so the machine leaves in the same
     # state it left off.
     if armed:
         q.get()
@@ -270,6 +272,9 @@ def enable_display():
     except KeyboardInterrupt:
         GPIO.cleanup()
 
+    finally:
+        GPIO.cleanup()
+
 
 # Helper function to start countdown in extra thread.
 def countdown():
@@ -280,7 +285,7 @@ def countdown():
     # only start countdown if not yet running and a time was set
     if not armed and counter > 0:
         armed = True
-        
+
         # Convert timer to minutes / seconds if HH is 0
         counter = q.get()
         if counter < 100:
