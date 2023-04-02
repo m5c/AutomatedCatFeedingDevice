@@ -106,7 +106,7 @@ For automated start on Raspberry boot, add this line to your ```/etc/rc.local```
 ## Contact / Pull Requests
 
  * Author: Maximilian Schiedermeier ![email](email.png)
- * Github: Kartoffelquadrat
+ * Github: m5c
  * Webpage: https://www.cs.mcgill.ca/~mschie3
  * License: [MIT](https://opensource.org/licenses/MIT)
 
