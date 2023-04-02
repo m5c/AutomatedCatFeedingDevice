@@ -1,80 +1,44 @@
-import queue
-import threading
+"""
+This tester module lights up all individual segments of the four digit segment display with
+common cathode. Run it to test wiring and board integrity.
+Author: Maximilian Schiedermeier.
+"""
 import time
-
 import RPi.GPIO as GPIO
 
-from modtest.segment import Segment
+from digit import Digit, digit_values
+from segment import Segment, segment_values
 
+# At program start we reset all outputs
 GPIO.setmode(GPIO.BCM)
 
+# Reset PINS
+# Segments default to 0, Digits (common cathode) default to 1
+for segment in segment_values():
+    GPIO.setup(segment, GPIO.OUT, initial=0)
+for digit in digit_values():
+    GPIO.setup(digit, GPIO.OUT, initial=1)
 
-#                 A   B   C  D    E   F   G
-seg: list[int] = [s.value for s in Segment]
-digit: list[int] = [2, 3, 4, 14]
+# Run the actual segment test:
+# iterate over the four digits
+for digit in digit_values():
 
-# indicates which segments must light up for digits 0-9
-numbers: list[list[int]] = [[15, 24, 18, 22, 23, 17], [24, 18], [15, 24, 22, 23, 27], [15, 24, 18, 22, 27],
-          [24, 18, 17, 27], [15, 18, 22, 17, 27], [18, 22, 23, 17, 27], [15, 24, 18],
-          [15, 24, 18, 22, 23, 17, 27], [15, 24, 18, 17, 27]]
+    # activate digit i
+    GPIO.output(digit, 0)
 
-## INIT
-# reset dot segement output
-GPIO.setup(10, GPIO.OUT, initial=0)
+    # iterate over all segment, including the "dot"
+    # Light up all segments that correspond to number "i"
+    for segment in segment_values():
 
-# reset GPIO pins for all segments to 0. (off)
-for s in range(len(seg)):
-    GPIO.setup(seg[s], GPIO.OUT, initial=0)
+        # light current segment on current digit up for 200ms, then continue
+        GPIO.output(segment, 1)
+        time.sleep(0.1)
 
-# reset GPIO pins for all digits to 1. (not selected)
-for s in range(len(gnd)):
-    GPIO.setup(gnd[s], GPIO.OUT, initial=1)
+        # then reset segment again
+        GPIO.output(segment, 0)
 
-## COUNT DOWN THREAD (MUST NOT BLOCK)
-# starts with 1h 1 minute
-counter = 101
-hours = True
-t = threading.Thread(target=thread_function, args=(counter,))
-t.start()
+    # When all segments of current digit are tested, proceed to next digit (disable current)
+    GPIO.output(digit, 1)
 
-## MAIN CONTROL
-print('CTRL-C to terminate')
-try:
-    while (counter > 0):
-
-        # update counter if changed
-        if not q.empty():
-            counter = q.get()
-
-        # i is the digit iterator
-        for i in range(len(gnd)):
-
-            # activate digit i
-            GPIO.output(gnd[i], 0)
-
-            # compute what to display on that digit
-            digit = counter // pow(10, 3 - i) % 10
-
-            # Light up all segments that correspond to number "i"
-            for seg in range(len(digits[digit])):
-                GPIO.output(digits[digit][seg], 1)
-
-            # Light up dot separator if curret digit is second position
-            if i == 1:
-                GPIO.output(10, 1)
-
-            time.sleep(0.005)
-
-            # switch digit off again
-            GPIO.output(gnd[i], 1)
-
-            # Switch dot separator off again
-            GPIO.output(10, 0)
-
-            # reset all segments that were lit up
-            for seg in range(len(digits[digit])):
-                GPIO.output(digits[digit][seg], 0)
-
-except KeyboardInterrupt:
-    GPIO.cleanup()
-
+# At program end, reset all pins
+GPIO.cleanup()

@@ -272,9 +272,6 @@ def enable_display():
     except KeyboardInterrupt:
         GPIO.cleanup()
 
-    finally:
-        GPIO.cleanup()
-
 
 # Helper function to start countdown in extra thread.
 def countdown():
@@ -309,6 +306,7 @@ def button_pressed_callback(channel):
     global armed
     # only allow timer changes if not armed
     if channel == button1:
+        print("Button A")
         if not armed:
             counter = q.get()
             print("From " + str(counter))
@@ -316,6 +314,7 @@ def button_pressed_callback(channel):
             q.put(counter)
             print("To " + str(counter))
     if channel == button2:
+        print("Button B")
         if not armed:
             counter = q.get()
             print("From " + str(counter))
@@ -325,6 +324,7 @@ def button_pressed_callback(channel):
             q.put(counter)
             print("To " + str(counter))
     if channel == button3:
+        print("Button C")
         if not armed:
             counter = q.get()
             print("From " + str(counter))
@@ -334,6 +334,7 @@ def button_pressed_callback(channel):
             q.put(counter)
             print("To " + str(counter))
     if channel == button4:
+        print("Button D")
         # if armed: reset. Otherwise start.
         if armed:
             print("Unarming")
