@@ -3,7 +3,7 @@ Helper module to define segments to light up for a given character (or number).
 Author: Maximilian Schiedermeier"""
 from enum import Enum
 
-from modtest.segment import Segment
+from acfd.modules.segment import Segment
 
 
 class SegmentChar(Enum):

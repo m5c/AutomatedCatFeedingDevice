@@ -8,13 +8,10 @@
 
 from time import sleep
 import RPi.GPIO as GPIO
-import os
-#from random import randint
-import random
 
 GPIO.setmode(GPIO.BCM)
 
-# Verwendete Pins des ULN2003A auf die Pins des Rapberry Pi
+# Verwendete Pins des ULN2003A auf die Pins des Raspberry Pi
 # zugeordnet 
 IN1=21 # IN1
 IN2=26 # IN2

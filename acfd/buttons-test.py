@@ -1,5 +1,5 @@
 """
-This module tests the correct wiring of four pull down buttons.
+This module modules the correct wiring of four pull down buttons.
 See: https://raspberrypi.stackexchange.com/questions/141207/phantom-events-on-pull-down-button
 """
 import time
@@ -10,6 +10,7 @@ from RPi import GPIO
 # PIN layout
 button_pins: list[int] = [11, 8, 25, 9]
 GPIO.setmode(GPIO.BCM)
+
 # All buttons react to 3.3 voltage on button click (interrupt on rising edge, from low to high).
 # That also means they all should be defaulted to DOWN.
 # See: https://forums.raspberrypi.com/viewtopic.php?t=87292

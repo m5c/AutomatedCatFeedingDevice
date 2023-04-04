@@ -4,10 +4,9 @@ common cathode. Run it to test wiring and board integrity.
 Author: Maximilian Schiedermeier.
 """
 import time
-import RPi.GPIO as GPIO
-
-from digit import Digit, digit_values
-from segment import Segment, segment_values
+from RPi import GPIO
+from modules.digit import digit_values
+from modules.segment import segment_values
 
 # At program start we reset all outputs
 GPIO.setmode(GPIO.BCM)
