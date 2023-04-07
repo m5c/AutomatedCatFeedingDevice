@@ -40,8 +40,8 @@ def motor_power_off() -> None:
     Resets all motor pins to turn off leds and prevent initial mini step.
     :return: None
     """
-    for _ in range(len(motor_pins)):
-        GPIO.output(motor_pins[i], False)
+    for motor_pin in motor_pins:
+        GPIO.output(motor_pin, False)
 
 
 def rotate(angle: int) -> None:
@@ -58,6 +58,7 @@ def rotate(angle: int) -> None:
     # Run as many ticks as requestes (internal rotations), using requested direction and coil smode.
     for _ in range(ticks):
         tick(forward, mechanism_skip_intermediate_steps)
+    motor_power_off()
 
 
 def tick(forward: bool, skip_intermediate_steps: bool) -> None:
@@ -81,7 +82,6 @@ def tick(forward: bool, skip_intermediate_steps: bool) -> None:
 
     # Iterate through the predefined motor steps, iterate by requested amount between steps.
     iteration = 0
-    print(steps)
     while iteration < len(steps):
         # Configure pins to next desired iteration
         for idx, pin in enumerate(motor_pins):
@@ -109,7 +109,6 @@ def open_acfd_lid() -> None:
 # initialization.
 motor_power_off()
 open_acfd_lid()
-motor_power_off()
 
 # GPIO.cleanup()
 # Note: GPIO cleanup defaults A/B to off, C/D to on. It is normal that 2 LEDS light up after
