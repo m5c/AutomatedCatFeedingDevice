@@ -1,145 +1,118 @@
-#!/usr/bin/env python
-# coding: latin-1
-# Ingmar Stapel
-# Date: 20170615
-# Version Alpha 0.1
-# Decision Maker
-# original source: github.com/custom/build-robots/Stepper-motor-28BYJ-48-Raspberry-Pi 
+"""
+This module tests the motor wiring and simulates a lid open with subsequent parking of motor arm.
+Code is based on an open source decision maker, but was afterwards commented in english and
+modified to conform to python pylint checkstyle conventions.
+Original decision maker source: github.com/custom/build-robots/Stepper-motor-28BYJ-48-Raspberry-Pi
+Author: Maximilian Schiedermeier
+"""
 
 from time import sleep
 import RPi.GPIO as GPIO
+import copy
 
+# Pins used for ULN2003A driver board / GPIO.
+# Controller chip "+" goes to +5V, "-" goes to GND
+motor_pins: list[int] = [2, 3, 4, 14]
 GPIO.setmode(GPIO.BCM)
+for i in range(len(motor_pins)):
+    GPIO.setup(motor_pins[i], GPIO.OUT)
 
-# Verwendete Pins des ULN2003A auf die Pins des Raspberry Pi
-# zugeordnet
-motor_pins: list[int] = [1, 2, 3, 4, 14]
-# motor_pins[1=21 # motor_pins[1
-# motor_pins[2=26 # motor_pins[2
-# motor_pins[3=20 # motor_pins[3
-# motor_pins[4=19 # motor_pins[4
-# - goes to +5V, + goes to GND
+# Time adds short delay between motor steps, so mechanic can catch up with program pin
+# iterations. Can also be set to a higher value to artificially slow down the motor rotation.
+# Should be at least 2ms (0.002).
+mechanism_adapt_delay: float = 0.002
 
-# Wartezeit regelt die Geschwindigkeit wie schnell sich der Motor
-# dreht.
-time = 0.002
+# Set to true if you want to skip double coil steps (two neighboured coils activate as
+# intermediate steps). Is not reliable with 3V3, and I don't recommend 5V as it overhears ULN2003
+# driver and motor.
+mechanism_skip_intermediate_steps: bool = False
 
-# Pins aus Ausgänge definieren
-GPIO.setup(motor_pins[1], GPIO.OUT)
-GPIO.setup(motor_pins[2], GPIO.OUT)
-GPIO.setup(motor_pins[3], GPIO.OUT)
-GPIO.setup(motor_pins[4], GPIO.OUT)
-# Alle Pins werden initial auf False gesetzt. So dreht sich der 
-# Stepper-Motor nicht sofort irgendwie.
-GPIO.output(motor_pins[1], False)
-GPIO.output(motor_pins[2], False)
-GPIO.output(motor_pins[3], False)
-GPIO.output(motor_pins[4], False)
+# Motor steps iteration map for forward and backward ticks
+tick_steps: list[list[bool]] = [[True, False, False, False], [True, True, False, False],
+                                [False, True, False, False], [False, True, True, False],
+                                [False, False, True, False], [False, False, True, True],
+                                [False, False, False, True], [True, False, False, True]]
+backward_tick_steps: list[list[bool]] = copy.deepcopy(tick_steps)
+backward_tick_steps.reverse()
 
 
-# Der Schrittmotoren 28BYJ-48 ist so aufgebaut, das der Motor im
-# Inneren 8 Schritte für eine Umdrehung benötigt. Durch die Betriebe
-# benätigt es aber 512 x 8 Schritte damit die Achse sich einmal um
-# sich selbt also 360° dreht.
-
-# Definition der Schritte 1 - 8 über die Pins motor_pins[1 bis motor_pins[4
-# Zwischen jeder Bewegung des Motors wird kurz gewartet damit der
-# Motoranker seine Position erreicht.
-def Step1():
-    GPIO.output(motor_pins[4], True)
-    sleep(time)
-    GPIO.output(motor_pins[4], False)
+def motor_power_off() -> None:
+    """
+    Resets all motor pins to turn off leds and prevent initial mini step.
+    :return: None
+    """
+    for _ in range(len(motor_pins)):
+        GPIO.output(motor_pins[i], False)
 
 
-def Step2():
-    GPIO.output(motor_pins[4], True)
-    GPIO.output(motor_pins[3], True)
-    sleep(time)
-    GPIO.output(motor_pins[4], False)
-    GPIO.output(motor_pins[3], False)
+def rotate(angle: int) -> None:
+    """
+    Turn motor
+    :param angle: amount in degrees to rotate clockwise
+    :return: None
+    """
+
+    # Due to motor physics we need twice as many iterations as desired rotation in degrees.
+    ticks: int = abs(angle) * 2
+    forward: bool = (angle > 0)
+
+    # Run as many ticks as requestes (internal rotations), using requested direction and coil smode.
+    for _ in range(ticks):
+        tick(forward, mechanism_skip_intermediate_steps)
 
 
-def Step3():
-    GPIO.output(motor_pins[3], True)
-    sleep(time)
-    GPIO.output(motor_pins[3], False)
+def tick(forward: bool, skip_intermediate_steps: bool) -> None:
+    """
+    Runs one complete motor internal coil iteration
+    :param: forward true to turn clockwise, false for counter-clockwise.
+    :param: false to include all semi steps where two neighboured coils power up at once.
+    of the four single coils only.
+    Note that a tick is NOT a motor rotation, due to the internal motor gears.
+    :return: None
+    """
+    # By default, every step in stepper iterations is considered.
+    iterator_size = 1
+    if skip_intermediate_steps:
+        iterator_size *= 2
+
+    # Either cycle forward or backward through predefined sequence
+    steps: list[list[bool]] = tick_steps
+    if not forward:
+        steps = backward_tick_steps
+
+    # Iterate through the predefined motor steps, iterate by requested amount between steps.
+    iteration = 0
+    print(steps)
+    while iteration < len(steps):
+        # Configure pins to next desired iteration
+        for idx, pin in enumerate(motor_pins):
+            GPIO.output(pin, steps[iteration][idx])
+
+        # Give the motor mechanism a brief moment to adapt
+        sleep(mechanism_adapt_delay)
+
+        # Increment iterator (will increment by two if skip enabled)
+        iteration += iterator_size
 
 
-def Step4():
-    GPIO.output(motor_pins[2], True)
-    GPIO.output(motor_pins[3], True)
-    sleep(time)
-    GPIO.output(motor_pins[2], False)
-    GPIO.output(motor_pins[3], False)
+def open_acfd_lid() -> None:
+    """
+    Opens the ACFD lid by turning the motor from parking position to 85degrees up. Then returns
+    arm into parking position.
+    :return: None.
+    """
+    rotate(85)
+    rotate(-85)
 
 
-def Step5():
-    GPIO.output(motor_pins[2], True)
-    sleep(time)
-    GPIO.output(motor_pins[2], False)
+# Test the Module...
+# Motor should be powered off on program start, to prevent mini turns by pending ping
+# initialization.
+motor_power_off()
+open_acfd_lid()
+motor_power_off()
 
-
-def Step6():
-    GPIO.output(motor_pins[1], True)
-    GPIO.output(motor_pins[2], True)
-    sleep(time)
-    GPIO.output(motor_pins[1], False)
-    GPIO.output(motor_pins[2], False)
-
-
-def Step7():
-    GPIO.output(motor_pins[1], True)
-    sleep(time)
-    GPIO.output(motor_pins[1], False)
-
-
-def Step8():
-    GPIO.output(motor_pins[4], True)
-    GPIO.output(motor_pins[1], True)
-    sleep(time)
-    GPIO.output(motor_pins[4], False)
-    GPIO.output(motor_pins[1], False)
-
-
-# Umdrehung links herum
-def left(step):
-    for i in range(step):
-        # os.system('clear') # verlangsamt die Bewegung des Motors zu sehr.
-        Step1()
-        Step2()
-        Step3()
-        Step4()
-        Step5()
-        Step6()
-        Step7()
-        Step8()
-        print("Step left: ", i)
-
-
-# Umdrehung rechts herum
-def right(step):
-    for i in range(step):
-        # os.system('clear') # verlangsamt die Bewegung des Motors zu sehr.
-        Step8()
-        Step7()
-        Step6()
-        Step5()
-        Step4()
-        Step3()
-        Step2()
-        Step1()
-        print("Step right: ", i)
-
-
-def openlid():
-    right(170)
-
-
-def closelid():
-    left(170)
-
-
-openlid()
-closelid()
-
-GPIO.cleanup()
+# GPIO.cleanup()
+# Note: GPIO cleanup defaults A/B to off, C/D to on. It is normal that 2 LEDS light up after
+# cleanup, but not good (as it overheats the motor)
+# Recommend not to run a cleanup, for this test.
