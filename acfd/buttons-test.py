@@ -8,11 +8,14 @@ from RPi import GPIO
 
 # KEYPAD PINS
 # PIN layout
-button_pins: list[int] = [11, 8, 25, 9]
+# button_pins: list[int] = [11, 8, 25, 9]
+button_pins: list[int] = [10, 22, 24, 23]
 GPIO.setmode(GPIO.BCM)
 
 # All buttons react to 3.3 voltage on button click (interrupt on rising edge, from low to high).
 # That also means they all should be defaulted to DOWN.
+# API meaning: PUD (means nothing, just Pull Up or Down). DOWN means it is connected to GND via
+# resistor and defaults therefore to down, allowing rising edge detection.
 # See: https://forums.raspberrypi.com/viewtopic.php?t=87292
 GPIO.setup(button_pins[0], GPIO.IN, GPIO.PUD_DOWN)
 GPIO.setup(button_pins[1], GPIO.IN, GPIO.PUD_DOWN)
