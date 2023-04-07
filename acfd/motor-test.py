@@ -2,7 +2,6 @@
 This module tests the motor wiring and simulates a lid open with subsequent parking of motor arm.
 Code is based on an open source decision maker, but was afterwards commented in english and
 modified to conform to python pylint checkstyle conventions.
-Original decision maker source: github.com/custom/build-robots/Stepper-motor-28BYJ-48-Raspberry-Pi
 Author: Maximilian Schiedermeier
 """
 
