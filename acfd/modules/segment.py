@@ -6,14 +6,7 @@ from enum import Enum
 
 
 class Segment(Enum):
-    # A = 15
-    # B = 24
-    # C = 18
-    # D = 22
-    # E = 23
-    # F = 17
-    # G = 27
-    # DP = 10
+    # Zero
     A = 8
     B = 9
     C = 11
@@ -22,6 +15,16 @@ class Segment(Enum):
     F = 19
     G = 20
     DP = 26
+    # Pico
+    # A = 13
+    # B = 16
+    # C = 17
+    # D = 18
+    # E = 19
+    # F = 20
+    # G = 21
+    # DP = 22
+
 
 def segment_values() -> list[int]:
     return [s.value for s in Segment]

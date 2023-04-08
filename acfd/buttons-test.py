@@ -6,9 +6,8 @@ import time
 
 from RPi import GPIO
 
-# KEYPAD PINS
-# PIN layout
-# button_pins: list[int] = [11, 8, 25, 9]
+# keyboard GPIO pins. (Requires additional GND connected wia resistor to GPIOs, and 3V3 that
+# connects to GPIOs on button press.)
 button_pins: list[int] = [10, 22, 24, 23]
 GPIO.setmode(GPIO.BCM)
 
@@ -43,13 +42,22 @@ def button_four_pressed(channel):
     print("Button D")
 
 
-# Add keypad button handlers
-GPIO.add_event_detect(button_pins[0], GPIO.RISING, callback=button_one_pressed, bouncetime=150)
-GPIO.add_event_detect(button_pins[1], GPIO.RISING, callback=button_two_pressed, bouncetime=150)
-GPIO.add_event_detect(button_pins[2], GPIO.RISING, callback=button_three_pressed, bouncetime=150)
-GPIO.add_event_detect(button_pins[3], GPIO.RISING, callback=button_four_pressed, bouncetime=150)
+def test_buttons() -> None:
+    """
+    Call to test the keypad
+    :return:
+    """
+    # Add keypad button handlers
+    GPIO.add_event_detect(button_pins[0], GPIO.RISING, callback=button_one_pressed, bouncetime=150)
+    GPIO.add_event_detect(button_pins[1], GPIO.RISING, callback=button_two_pressed, bouncetime=150)
+    GPIO.add_event_detect(button_pins[2], GPIO.RISING, callback=button_three_pressed,
+                          bouncetime=150)
+    GPIO.add_event_detect(button_pins[3], GPIO.RISING, callback=button_four_pressed, bouncetime=150)
 
-# Keep program alive to wait for key events.
-while True:
-    time.sleep(1)
-    print("", end='')
+    # Keep program alive for 10 seconds to test keypad.
+    for _ in enumerate(10):
+        time.sleep(1)
+        print("", end='')
+
+
+test_buttons() 

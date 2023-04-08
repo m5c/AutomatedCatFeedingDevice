@@ -12,7 +12,6 @@ class SegmentChar(Enum):
     character or number.
     Prefix indicated if "N"ot dotted, or "D"otted.
     """
-
     N1 = [Segment.B, Segment.C]
     D1 = [Segment.B, Segment.C, Segment.DP]
     N2 = [Segment.A, Segment.B, Segment.D, Segment.E, Segment.G]

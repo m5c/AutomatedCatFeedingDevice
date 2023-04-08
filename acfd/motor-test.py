@@ -104,13 +104,20 @@ def open_acfd_lid() -> None:
     rotate(-85)
 
 
-# Test the Module...
-# Motor should be powered off on program start, to prevent mini turns by pending ping
-# initialization.
-motor_power_off()
-open_acfd_lid()
+def motor_test() -> None:
+    """
+    call to test the motor
+    :return: None
+    """
+    # Motor should be powered off on program start, to prevent mini turns by pending ping
+    # initialization.
+    motor_power_off()
+    open_acfd_lid()
 
-# GPIO.cleanup()
-# Note: GPIO cleanup defaults A/B to off, C/D to on. It is normal that 2 LEDS light up after
-# cleanup, but not good (as it overheats the motor)
-# Recommend not to run a cleanup, for this test.
+    # GPIO.cleanup()
+    # Note: GPIO cleanup defaults A/B to off, C/D to on. It is normal that 2 LEDS light up after
+    # cleanup, but not good (as it overheats the motor)
+    # Recommend not to run a cleanup, for this test.
+
+
+motor_test()
