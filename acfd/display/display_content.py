@@ -18,6 +18,7 @@ class DisplayContent:
         This entity should be placed on the thread safe queue communicating with the display entity.
         """
         self.__segment_chars = convert_to_segments_chars(string_content)
+        print(self.__segment_chars)
 
     @property
     def segment_chars(self) -> list[SegmentChar]:
@@ -63,7 +64,7 @@ def to_segment(char: str, dotted: bool):
         return SegmentChar.D_J if dotted else SegmentChar.N_J
     if char in ['k', 'K']:
         return SegmentChar.D_K if dotted else SegmentChar.N_K
-    if char in ['k', 'L']:
+    if char in ['l', 'L']:
         return SegmentChar.D_L if dotted else SegmentChar.N_L
     if char in ['m', 'M']:
         return SegmentChar.D_M if dotted else SegmentChar.N_M
@@ -117,6 +118,8 @@ def to_segment(char: str, dotted: bool):
         return SegmentChar.BLANK
     if char == '.':
         return SegmentChar.DOT
+    if char == '.':
+        return SegmentChar.COMMA
     if char == '!':
         return SegmentChar.EXCLAMATION
     if char == '?':

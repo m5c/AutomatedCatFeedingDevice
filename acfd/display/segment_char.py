@@ -17,7 +17,7 @@ class SegmentChar(Enum):
     N_A = [Segment.A, Segment.B, Segment.C, Segment.E, Segment.F, Segment.G]
     N_B = [Segment.C, Segment.D, Segment.E, Segment.F, Segment.G]
     N_C = [Segment.A, Segment.D, Segment.E, Segment.F]
-    N_D = [Segment.B, Segment.C, Segment.D, Segment.E, Segment.F]
+    N_D = [Segment.B, Segment.C, Segment.D, Segment.E, Segment.G]
     N_E = [Segment.A, Segment.D, Segment.E, Segment.F, Segment.G]
     N_F = [Segment.A, Segment.E, Segment.F, Segment.G]
     N_G = [Segment.A, Segment.B, Segment.C, Segment.F, Segment.G]
@@ -43,7 +43,7 @@ class SegmentChar(Enum):
     D_A = [Segment.A, Segment.B, Segment.C, Segment.E, Segment.F, Segment.G, Segment.DP]
     D_B = [Segment.C, Segment.D, Segment.E, Segment.F, Segment.G, Segment.DP]
     D_C = [Segment.A, Segment.D, Segment.E, Segment.F, Segment.DP]
-    D_D = [Segment.B, Segment.C, Segment.D, Segment.E, Segment.F, Segment.DP]
+    D_D = [Segment.B, Segment.C, Segment.D, Segment.E, Segment.G, Segment.DP]
     D_E = [Segment.A, Segment.D, Segment.E, Segment.F, Segment.G, Segment.DP]
     D_F = [Segment.A, Segment.E, Segment.F, Segment.G, Segment.DP]
     D_G = [Segment.A, Segment.B, Segment.C, Segment.F, Segment.G, Segment.DP]
@@ -68,6 +68,7 @@ class SegmentChar(Enum):
     D_Z = [Segment.A, Segment.B, Segment.D, Segment.E, Segment.DP]
     BLANK = []
     DOT = [Segment.DP]
+    COMMA = [Segment.E]
     N_UNKNOWN = [Segment.D]
     D_UNKNOWN = [Segment.D, Segment.DP]
     N_0 = [Segment.A, Segment.B, Segment.C, Segment.D, Segment.E, Segment.F]
@@ -113,4 +114,4 @@ class SegmentChar(Enum):
         self.set_power(False)
 
 def get_alphabet() -> str:
-    return "acbdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?!. "
+    return "acbdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?!,. "
