@@ -8,15 +8,16 @@ from display.segment_char import SegmentChar
 
 class DisplayContent:
 
-    def __init__(self, segment_chars: list[SegmentChar]) -> None:
-        """
-        Constructor to create a display content entity. This entity should be placed on the queue
-        for communication between display and acfd main logic.
-        """
-        self.__segment_chars = segment_chars
+    # Represents the amount of digits physically available.
+    amount_digits: int = 4
 
-    # TODO: Add smarter constructor that accepts strings (and internally converts them to
-    #  SegmentChar List as good as possible, e.g. using underscore for everything undefined.)
+    def __init__(self, string_content: str) -> None:
+        """
+        Constructor to create a display content entity. Pass a string and the contructor tries to
+        convert it to a display_content representation.
+        This entity should be placed on the thread safe queue communicating with the display entity.
+        """
+        self.__segment_chars = convert_to_segments_chars(string_content)
 
     @property
     def segment_chars(self) -> list[SegmentChar]:
@@ -30,3 +31,11 @@ class DisplayContent:
         Similar to previous method, but returns only segment char at specific index.
         """
         return self.__segment_chars[index]
+
+def convert_to_segments_chars(content: str) -> list[SegmentChar]:
+    """
+    Attempts to convert content of string to display to actual segment chars.
+    """
+    # Make as manu iterations from the start as there are
+    return [SegmentChar.N_UNKNOWN, SegmentChar.N_UNKNOWN, SegmentChar.N_UNKNOWN,
+                                SegmentChar.N_UNKNOWN]

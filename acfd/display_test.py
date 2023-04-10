@@ -34,15 +34,11 @@ light_on_time: float = 0.004
 def enable_display():
     """
     Turns on the display to light up statically whatever is placed in the queue.
+    Display will continue to iterate until the queue stores a Null object. (or ctrl-C)
     """
 
-    # TODO: Display will continue to iterate until the queue stores a Null object. (or ctrl-C)
-    print('CTRL-C to terminate')
     try:
         while True:
-
-            # TODO: change queue type to be anything displayable, not just a number, so strings
-            #  are supported.
             # If there is a new value to display in the queue, retrieve it and display it.
             if not q.empty():
                 current_display_content: DisplayContent = q.get()
@@ -74,24 +70,14 @@ def enable_display():
 
 
 # define what to display for test
-test_numbers: list[SegmentChar] = [SegmentChar.N1, SegmentChar.D2, SegmentChar.N3, SegmentChar.D4]
-q.put(DisplayContent(test_numbers))
+# test_numbers: list[SegmentChar] = [SegmentChar.N1, SegmentChar.D2, SegmentChar.N3, SegmentChar.D4]
+q.put(DisplayContent("foo"))
 
 thread = Thread(target=enable_display)
 thread.start()
 
 time.sleep(1)
-q.put(DisplayContent([SegmentChar.D2, SegmentChar.N3, SegmentChar.D4, SegmentChar.N5]))
-time.sleep(1)
-q.put(DisplayContent([SegmentChar.N3, SegmentChar.D4, SegmentChar.N5, SegmentChar.D6]))
-time.sleep(1)
-q.put(DisplayContent([SegmentChar.D4, SegmentChar.N5, SegmentChar.D6, SegmentChar.N7]))
-time.sleep(1)
-q.put(DisplayContent([SegmentChar.N5, SegmentChar.D6, SegmentChar.N7, SegmentChar.D8]))
-time.sleep(1)
-q.put(DisplayContent([SegmentChar.D6, SegmentChar.N7, SegmentChar.D8, SegmentChar.N9]))
-time.sleep(1)
-q.put(DisplayContent([SegmentChar.N7, SegmentChar.D8, SegmentChar.N9, SegmentChar.D0]))
+q.put(DisplayContent(["bar"]))
 time.sleep(1)
 q.put(None)
 
