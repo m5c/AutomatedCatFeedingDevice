@@ -37,7 +37,6 @@ class SegmentChar(Enum):
         """
         Puts current on or off for all segments of a given segment char
         """
-        print("yay")
         for segment in self.value:
             GPIO.output(segment.value, power)
 
@@ -47,7 +46,7 @@ class SegmentChar(Enum):
         """
         self.set_power(True)
 
-    def switch_on(self) -> None:
+    def switch_off(self) -> None:
         """
         Turns on all lights associated to a segment char.
         """

@@ -11,7 +11,13 @@ from RPi import GPIO
 
 from display.digit import digit_values
 from display.display_content import DisplayContent
+from display.segment import segment_values
 from display.segment_char import SegmentChar
+
+# Set up common cathode pins and segment pins
+GPIO.setmode(GPIO.BCM)
+for segment in segment_values() + digit_values():
+    GPIO.setup(segment, GPIO.OUT)
 
 # The display is threaded, therefore to safely communicate new content to the display we use a
 # queue of length 1.
@@ -21,7 +27,7 @@ q: queue.Queue[DisplayContent] = queue.Queue(1)
 
 # Set the time lights stay on, for each on digit iterations
 # to small a number: light is weak, too high a number: flickering.
-light_on_time: float = 0.005
+light_on_time: float = 0.004
 
 
 def enable_display():
@@ -29,13 +35,10 @@ def enable_display():
     Turns on the display to light up statically whatever is placed in the queue.
     """
 
-    # MAIN CONTROL
-    # TODO: terminate on specific value placed in queue.
+    # TODO: Display will continue to iterate until the queue stores a Null object. (or ctrl-C)
     print('CTRL-C to terminate')
     try:
         while True:
-
-            print("Ready for next display iteration.")
 
             # TODO: change queue type to be anything displayable, not just a number, so strings
             #  are supported.
@@ -44,14 +47,14 @@ def enable_display():
                 current_display_content: DisplayContent = q.queue[0]
 
             # iterate over the GPIO pins for the individual digits
-            for idx, digit in enumerate(digit_values):
-
+            for idx, digit in enumerate(digit_values()):
                 # activate digit i, by setting the corresponding cathode to grounded (all other
                 # remain on 1, so there is no current in the other digits)
                 GPIO.output(digit, 0)
 
                 # Light up only the segments in question (for current digit)
-                current_display_content.get_segment_char_by_index(idx).switch_on()
+                segment_char: SegmentChar = current_display_content.get_segment_char_by_index(idx)
+                segment_char.switch_on()
 
                 # Keep the lights on long enough to be visible to the human eye
                 time.sleep(light_on_time)
@@ -61,13 +64,15 @@ def enable_display():
                 GPIO.output(digit, 1)
 
                 # turn off again all the segments that were lit up
-                current_display_content.get_segment_char_by_index(idx).switch_off()
+                segment_char.switch_off()
 
     except KeyboardInterrupt:
         GPIO.cleanup()
 
 
 # define what to display for test
-test_numbers: DisplayContent = DisplayContent(
-    [SegmentChar.N1, SegmentChar.N2, SegmentChar.N3, SegmentChar.N4])
+test_numbers: list[SegmentChar] = [SegmentChar.N1, SegmentChar.N2, SegmentChar.N3, SegmentChar.N4]
 q.put(DisplayContent(test_numbers))
+print("Switching on")
+enable_display()
+print("Switching off")

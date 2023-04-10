@@ -14,6 +14,7 @@ class DisplayContent:
         for communication between display and acfd main logic.
         """
         self.__segment_chars = segment_chars
+        print(self.__segment_chars)
 
     # TODO: Add smarter constructor that accepts strings (and internally converts them to
     #  SegmentChar List as good as possible, e.g. using underscore for everything undefined.)
@@ -23,9 +24,10 @@ class DisplayContent:
         """
         Python pseudo getter to access the actual content
         """
-        return self.segment_chars
+        return self.__segment_chars
 
     def get_segment_char_by_index(self, index: int) -> SegmentChar:
         """
         Similar to previous method, but returns only segment char at specific index.
         """
+        return self.__segment_chars[index]
