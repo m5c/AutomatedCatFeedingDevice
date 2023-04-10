@@ -113,6 +113,8 @@ def to_segment(char: str, dotted: bool):
         return SegmentChar.D_8 if dotted else SegmentChar.N_8
     if char == '9':
         return SegmentChar.D_9 if dotted else SegmentChar.N_9
+    if char == ' ':
+        return SegmentChar.BLANK
     if char == '.':
         return SegmentChar.DOT
     if char == '!':

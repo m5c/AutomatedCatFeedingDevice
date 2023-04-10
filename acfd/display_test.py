@@ -77,7 +77,7 @@ thread = Thread(target=enable_display)
 thread.start()
 
 time.sleep(1)
-q.put(DisplayContent("Bar!"))
+q.put(DisplayContent("!"))
 time.sleep(1)
 q.put(None)
 
