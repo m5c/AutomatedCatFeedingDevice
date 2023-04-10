@@ -70,7 +70,7 @@ def enable_display():
 
 
 # define what to display for test
-# test_numbers: list[SegmentChar] = [SegmentChar.N1, SegmentChar.D2, SegmentChar.N3, SegmentChar.D4]
+test_message: str = "Hello. This is a test message. The weather is fantastic today in MTL! 16081990."
 q.put(DisplayContent("Fooo"))
 
 thread = Thread(target=enable_display)
