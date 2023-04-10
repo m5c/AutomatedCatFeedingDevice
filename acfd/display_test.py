@@ -6,6 +6,7 @@ common cathode, until stopdisplay() is called or another list is provided.
 """
 import queue
 import time
+from threading import Thread
 
 from RPi import GPIO
 
@@ -44,7 +45,9 @@ def enable_display():
             #  are supported.
             # If there is a new value to display in the queue, retrieve it and display it.
             if not q.empty():
-                current_display_content: DisplayContent = q.queue[0]
+                current_display_content: DisplayContent = q.get()
+                if current_display_content is None:
+                    return
 
             # iterate over the GPIO pins for the individual digits
             for idx, digit in enumerate(digit_values()):
@@ -71,8 +74,24 @@ def enable_display():
 
 
 # define what to display for test
-test_numbers: list[SegmentChar] = [SegmentChar.N1, SegmentChar.N2, SegmentChar.N3, SegmentChar.N4]
+test_numbers: list[SegmentChar] = [SegmentChar.N1, SegmentChar.D2, SegmentChar.N3, SegmentChar.D4]
 q.put(DisplayContent(test_numbers))
-print("Switching on")
-enable_display()
-print("Switching off")
+
+thread = Thread(target=enable_display)
+thread.start()
+
+time.sleep(1)
+q.put(DisplayContent([SegmentChar.D2, SegmentChar.N3, SegmentChar.D4, SegmentChar.N5]))
+time.sleep(1)
+q.put(DisplayContent([SegmentChar.N3, SegmentChar.D4, SegmentChar.N5, SegmentChar.D6]))
+time.sleep(1)
+q.put(DisplayContent([SegmentChar.D4, SegmentChar.N5, SegmentChar.D6, SegmentChar.N7]))
+time.sleep(1)
+q.put(DisplayContent([SegmentChar.N5, SegmentChar.D6, SegmentChar.N7, SegmentChar.D8]))
+time.sleep(1)
+q.put(DisplayContent([SegmentChar.D6, SegmentChar.N7, SegmentChar.D8, SegmentChar.N9]))
+time.sleep(1)
+q.put(DisplayContent([SegmentChar.N7, SegmentChar.D8, SegmentChar.N9, SegmentChar.D0]))
+time.sleep(1)
+q.put(None)
+

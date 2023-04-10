@@ -14,7 +14,6 @@ class DisplayContent:
         for communication between display and acfd main logic.
         """
         self.__segment_chars = segment_chars
-        print(self.__segment_chars)
 
     # TODO: Add smarter constructor that accepts strings (and internally converts them to
     #  SegmentChar List as good as possible, e.g. using underscore for everything undefined.)
