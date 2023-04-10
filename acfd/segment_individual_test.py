@@ -5,8 +5,8 @@ Author: Maximilian Schiedermeier.
 """
 import time
 from RPi import GPIO
-from modules.digit import digit_values
-from modules.segment import segment_values
+from display.digit import digit_values
+from display.segment import segment_values
 
 # At program start we reset all outputs
 GPIO.setmode(GPIO.BCM)

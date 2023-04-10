@@ -3,7 +3,9 @@ Helper module to define segments to light up for a given character (or number).
 Author: Maximilian Schiedermeier"""
 from enum import Enum
 
-from acfd.modules.segment import Segment
+from RPi import GPIO
+
+from display.segment import Segment
 
 
 class SegmentChar(Enum):
@@ -30,3 +32,25 @@ class SegmentChar(Enum):
     D8 = [Segment.A, Segment.B, Segment.C, Segment.D, Segment.E, Segment.F, Segment.G, Segment.DP]
     N9 = [Segment.A, Segment.B, Segment.C, Segment.F, Segment.G]
     D9 = [Segment.A, Segment.B, Segment.C, Segment.F, Segment.G, Segment.DP]
+
+    def set_power(self, power: bool) -> None:
+        """
+        Puts current on or off for all segments of a given segment char
+        """
+        print("yay")
+        for segment in self.value:
+            GPIO.output(segment.value, power)
+
+    def switch_on(self) -> None:
+        """
+        Turns on all lights associated to a segment char.
+        """
+        self.set_power(True)
+
+    def switch_on(self) -> None:
+        """
+        Turns on all lights associated to a segment char.
+        """
+        self.set_power(False)
+
+

@@ -1,5 +1,5 @@
 """
-This module modules the correct wiring of four pull down buttons.
+This module display the correct wiring of four pull down buttons.
 See: https://raspberrypi.stackexchange.com/questions/141207/phantom-events-on-pull-down-button
 """
 import time
@@ -23,22 +23,22 @@ GPIO.setup(button_pins[3], GPIO.IN, GPIO.PUD_DOWN)
 
 
 # Define handlers for button press (channel is the GPIO that registered RISING signal)
-def button_one_pressed(channel):
+def button_1_pressed(channel):
     print("Button A")
 
 
 # Define handlers for button press (channel is the GPIO that registered RISING signal)
-def button_two_pressed(channel):
+def button_2_pressed(channel):
     print("Button B")
 
 
 # Define handlers for button press (channel is the GPIO that registered RISING signal)
-def button_three_pressed(channel):
+def button_3_pressed(channel):
     print("Button C")
 
 
 # Define handlers for button press (channel is the GPIO that registered RISING signal)
-def button_four_pressed(channel):
+def button_4_pressed(channel):
     print("Button D")
 
 
@@ -48,16 +48,15 @@ def test_buttons() -> None:
     :return:
     """
     # Add keypad button handlers
-    GPIO.add_event_detect(button_pins[0], GPIO.RISING, callback=button_one_pressed, bouncetime=150)
-    GPIO.add_event_detect(button_pins[1], GPIO.RISING, callback=button_two_pressed, bouncetime=150)
-    GPIO.add_event_detect(button_pins[2], GPIO.RISING, callback=button_three_pressed,
-                          bouncetime=150)
-    GPIO.add_event_detect(button_pins[3], GPIO.RISING, callback=button_four_pressed, bouncetime=150)
+    GPIO.add_event_detect(button_pins[0], GPIO.RISING, callback=button_1_pressed, bouncetime=150)
+    GPIO.add_event_detect(button_pins[1], GPIO.RISING, callback=button_2_pressed, bouncetime=150)
+    GPIO.add_event_detect(button_pins[2], GPIO.RISING, callback=button_3_pressed, bouncetime=150)
+    GPIO.add_event_detect(button_pins[3], GPIO.RISING, callback=button_4_pressed, bouncetime=150)
 
     # Keep program alive for 10 seconds to test keypad.
-    for _ in enumerate(10):
+    for _ in range(10):
         time.sleep(1)
         print("", end='')
 
 
-test_buttons() 
+test_buttons()
