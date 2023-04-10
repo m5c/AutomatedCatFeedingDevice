@@ -44,7 +44,7 @@ class SegmentChar(Enum):
     D_B = [Segment.C, Segment.D, Segment.E, Segment.F, Segment.G, Segment.DP]
     D_C = [Segment.A, Segment.D, Segment.E, Segment.F, Segment.DP]
     D_D = [Segment.B, Segment.C, Segment.D, Segment.E, Segment.F, Segment.DP]
-    D_E = [Segment.A, Segment.D, Segment.E, Segment.F, Segment.G, Segment.DP]
+    # D_E = [Segment.A, Segment.D, Segment.E, Segment.F, Segment.G, Segment.DP]
     D_F = [Segment.A, Segment.E, Segment.F, Segment.G, Segment.DP]
     D_G = [Segment.A, Segment.B, Segment.C, Segment.F, Segment.G, Segment.DP]
     D_H = [Segment.B, Segment.C, Segment.E, Segment.F, Segment.G, Segment.DP]
@@ -53,7 +53,7 @@ class SegmentChar(Enum):
     D_K = [Segment.D, Segment.E, Segment.F, Segment.G, Segment.DP]
     D_L = [Segment.D, Segment.E, Segment.F, Segment.DP]
     D_M = [Segment.C, Segment.E, Segment.G, Segment.DP]
-    D_D = [Segment.C, Segment.E, Segment.G, Segment.DP]
+    D_N = [Segment.C, Segment.E, Segment.G, Segment.DP]
     D_O = [Segment.C, Segment.D, Segment.E, Segment.G, Segment.DP]
     D_P = [Segment.A, Segment.B, Segment.E, Segment.F, Segment.G, Segment.DP]
     D_Q = [Segment.A, Segment.B, Segment.C, Segment.F, Segment.G, Segment.DP]
@@ -66,8 +66,8 @@ class SegmentChar(Enum):
     D_X = [Segment.A, Segment.D, Segment.G, Segment.DP]
     D_Y = [Segment.B, Segment.C, Segment.F, Segment.G, Segment.DP]
     D_Z = [Segment.A, Segment.B, Segment.D, Segment.E, Segment.DP]
-    N_BLANK = []
-    D_BLANK = [Segment.DP]
+    BLANK = []
+    DOT = [Segment.DP]
     N_UNKNOWN = [Segment.D]
     D_UNKNOWN = [Segment.D, Segment.DP]
     N_0 = [Segment.A, Segment.B, Segment.C, Segment.D, Segment.E, Segment.F]
@@ -90,6 +90,8 @@ class SegmentChar(Enum):
     D_8 = [Segment.A, Segment.B, Segment.C, Segment.D, Segment.E, Segment.F, Segment.G, Segment.DP]
     N_9 = [Segment.A, Segment.B, Segment.C, Segment.D, Segment.F, Segment.G]
     D_9 = [Segment.A, Segment.B, Segment.C, Segment.D, Segment.F, Segment.G, Segment.DP]
+    QUESTION = [Segment.A, Segment.B, Segment.D, Segment.E, Segment.G, Segment.DP]
+    EXCLAMATION = [Segment.B, Segment.C, Segment.DP]
 
     def set_power(self, power: bool) -> None:
         """
@@ -109,3 +111,6 @@ class SegmentChar(Enum):
         Turns on all lights associated to a segment char.
         """
         self.set_power(False)
+
+def get_alphabet() -> str:
+    return "acbdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?!. "

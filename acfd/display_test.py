@@ -71,13 +71,13 @@ def enable_display():
 
 # define what to display for test
 # test_numbers: list[SegmentChar] = [SegmentChar.N1, SegmentChar.D2, SegmentChar.N3, SegmentChar.D4]
-q.put(DisplayContent("foo"))
+q.put(DisplayContent("Fooo"))
 
 thread = Thread(target=enable_display)
 thread.start()
 
 time.sleep(1)
-q.put(DisplayContent(["bar"]))
+q.put(DisplayContent("Bar!"))
 time.sleep(1)
 q.put(None)
 
