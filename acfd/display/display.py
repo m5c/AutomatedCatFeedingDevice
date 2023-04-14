@@ -36,8 +36,8 @@ class Display:
 
         # define what to display for test
         self.__content_queue.put(DisplayContent("____"))
-        thread = Thread(target=self.enable_display)
-        thread.start()
+        segment_light_up_thread = Thread(target=self.enable_display)
+        segment_light_up_thread.start()
 
     def enable_display(self):
 

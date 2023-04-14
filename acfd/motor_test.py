@@ -98,10 +98,12 @@ def open_acfd_lid() -> None:
     """
     Opens the ACFD lid by turning the motor from parking position to 85degrees up. Then returns
     arm into parking position.
+    The values for up and down are not identical, since we undervolt the motor, to prevent
+    overheating and the gravity on the lid reduces torc.
     :return: None.
     """
-    rotate(85)
-    rotate(-85)
+    rotate(-100)
+    rotate(83)
 
 
 def motor_test() -> None:
@@ -121,3 +123,4 @@ def motor_test() -> None:
 
 
 motor_test()
+
