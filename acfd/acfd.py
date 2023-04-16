@@ -10,18 +10,21 @@ from buttons_registrator import register_button_callbacks
 from clock_subscriber import ClockSubscriber
 from display.display import Display
 from display.display_content_formatter import to_zero_padded_number
-
-
+from lid_motor import LidMotor
 
 class Acfd(ClockSubscriber):
 
     def __init__(self):
         """
         Boot up the ACFD. Set welcome message on display, create clock, register button handlers.
+        Note: program is alive until display is switched on. Calling a turn off to display will
+        likewise end program.
         """
         print("ACFD")
-        # Reset motor power, to prevent overheating from default GPIO values
-        lid_motor.power_off()
+
+        # Obtain and reset motor, to prevent overheating from default GPIO values
+        self.__lid_motor: LidMotor = LidMotor()
+        self.__lid_motor.power_off()
 
         # Initialize display with welcome message
         self.__display: Display = Display("A.C.F.D.")
@@ -30,29 +33,8 @@ class Acfd(ClockSubscriber):
         sleep(2)
         self.__display.update_content("----")
 
-        sleep(2)
-        self.__display.turn_off()
-        # lid_motor.open_acfd_lid()
-        #
-        # sleep(2)
-        #
-        # # Test to show something else again
-        # self.__display.update_content("WXYZ")
-        # self.__display.turn_on()
-        # sleep(2)
-        # self.__display.turn_off()
-
-
-
         # Register button handlers
         register_button_callbacks(self.instant_open, self.test_message)
-
-        # Set up clock
-        # Set up test timer, subscribe to events and pass to display
-        # self.__clock: Clock = Clock(10, self)
-        # self.__clock.start_clock()
-
-        sleep(100)
 
     def update_time(self, time_update: int) -> None:
         """
@@ -67,9 +49,8 @@ class Acfd(ClockSubscriber):
         """
         self.__display.update_content("OPEN")
         # this one is blocking
-        lid_motor.open_acfd_lid()
+        self.__lid_motor.open_acfd()
         self.__display.turn_off()
-
 
     def aborted(self) -> None:
         """
@@ -78,20 +59,17 @@ class Acfd(ClockSubscriber):
         print("ABORT called!")
         self.__display.turn_off()
 
+    def instant_open(self, whatever_python_enforced_nonsense):
+        self.__lid_motor.open_acfd()
 
-    def instant_open(self, whatever):
-        print("Foo")
-        lid_motor.open_acfd_lid()
-        # self.__display.set_content("OK")
-        # # self.__display.enable_display()
-        # sleep(1)
-        # self.__display.turn_off()
 
-    def test_message(self, whatever):
-        print("Foo")
-        self.__display.update_content("OK")
-        self.__display.__enable_display()
-        sleep(1)
+    def test_message(self, whatever_python_enforced_nonsense):
+        if not self.__display.running:
+            self.__display.turn_on("OK")
+        else:
+            self.__display.update_content("OK")
+        sleep(3)
         self.__display.turn_off()
+
 
 Acfd()

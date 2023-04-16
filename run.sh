@@ -8,7 +8,7 @@ ssh schieder@192.168.0.191 'cd Code/AutomatedCatFeedingDevice; unzip acfd.zip'
 #ssh -t schieder@192.168.0.191 'cd Code/AutomatedCatFeedingDevice; python3 acfd/display_test.py; bash -l'
 #ssh schieder@192.168.0.191 'cd Code/AutomatedCatFeedingDevice; python3 acfd/segment_individual_test.py'
 #ssh schieder@192.168.0.191 'cd Code/AutomatedCatFeedingDevice; python3 acfd/lid_motor.py'
-ssh schieder@192.168.0.191 'cd Code/AutomatedCatFeedingDevice; python3 acfd/acfd.py; bash -l'
+ssh -t schieder@192.168.0.191 'cd Code/AutomatedCatFeedingDevice; python3 acfd/acfd.py'
 #ssh schieder@192.168.0.191 'cd Code/AutomatedCatFeedingDevice; python3 acfd/buttons_registrator.py; bash -l'
 
 ## Main Program

@@ -64,6 +64,14 @@ class Display:
                 segment_char.switch_off()
 
         print("Thread ended, no more content")
+        return
+
+    @property
+    def running(self) -> bool:
+        """
+        Pseudo python getter (proper OO PLs would call it a getter) to look up if display is currently switched on.
+        """
+        return not self.__content_queue.empty()
 
     def turn_off(self):
         """
