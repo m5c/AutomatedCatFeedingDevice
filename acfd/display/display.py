@@ -16,80 +16,86 @@ from display.segment_char import SegmentChar
 
 class Display:
 
-    def __init__(self):
+    def __init__(self, initial_string: str):
         # Set up common cathode pins and segment pins
         GPIO.setmode(GPIO.BCM)
         for segment in segment_values() + digit_values():
             GPIO.setup(segment, GPIO.OUT)
 
-        # The display is threaded, therefore to safely communicate new content to the display we
-        # use a
-        # queue of length 1.
-        # The display will detect when a new value has been placed, on next segment light-up
-        # iteration
-        # and update the content.
-        self.__content_queue: queue.Queue[DisplayContent] = queue.Queue(1)
-
         # Set the time lights stay on, for each on digit iterations
         # to small a number: light is weak, too high a number: flickering.
         self.__light_on_time: float = 0.004
 
-        # define what to display for test
-        self.__content_queue.put(DisplayContent("____"))
-        segment_light_up_thread = Thread(target=self.enable_display)
-        segment_light_up_thread.start()
+        # Initialize queue and turn on display light thread
+        self.__content_queue: queue.Queue[DisplayContent] = queue.Queue(1)
+        self.turn_on(initial_string)
 
-    def enable_display(self):
+    def __enable_display_thread(self):
 
         """
-        Turns on the display to light up statically whatever is placed in the queue.
-        Display will continue to iterate until the queue stores a Null object. (or ctrl-C)
+        Method for thread that turns on the display to light up statically whatever is placed in
+        the queue.
+        This thread never removes from the queue, only peeks.
+        Display will continue to iterate until the queue stores a None object.
         """
-        try:
-            while True:
-                # If there is a new value to display in the queue, retrieve it and display it.
-                if not self.__content_queue.empty():
-                    current_display_content: DisplayContent = self.__content_queue.get()
-                    if current_display_content is None:
-                        return
+        while not self.__content_queue.empty():
+            # TODO: add lock here to prevent reading on non atomic update.
+            current_display_content: DisplayContent = self.__content_queue.queue[0]
 
-                # iterate over the GPIO pins for the individual digits
-                for idx, digit in enumerate(digit_values()):
-                    # activate digit i, by setting the corresponding cathode to grounded (all other
-                    # remain on 1, so there is no current in the other digits)
-                    GPIO.output(digit, 0)
+            # iterate over the GPIO pins for the individual digits
+            for idx, digit in enumerate(digit_values()):
+                # activate digit i, by setting the corresponding cathode to grounded (all other
+                # remain on 1, so there is no current in the other digits)
+                GPIO.output(digit, 0)
 
-                    # Light up only the segments in question (for current digit)
-                    segment_char: SegmentChar = current_display_content.get_segment_char_by_index(
-                        idx)
-                    segment_char.switch_on()
+                # Light up only the segments in question (for current digit)
+                segment_char: SegmentChar = current_display_content.get_segment_char_by_index(
+                    idx)
+                segment_char.switch_on()
 
-                    # Keep the lights on long enough to be visible to the human eye
-                    time.sleep(self.__light_on_time)
+                # Keep the lights on long enough to be visible to the human eye
+                time.sleep(self.__light_on_time)
 
-                    # Turn the light at the current position off again
-                    # (turning off means, putting 1 on cathode)
-                    GPIO.output(digit, 1)
+                # Turn the light at the current position off again
+                # (turning off means, putting 1 on cathode)
+                GPIO.output(digit, 1)
 
-                    # turn off again all the segments that were lit up
-                    segment_char.switch_off()
+                # turn off again all the segments that were lit up
+                segment_char.switch_off()
 
-        except KeyboardInterrupt:
-            GPIO.cleanup()
+        print("Thread ended, no more content")
 
     def turn_off(self):
         """
-        Places none on display content queue and this way tors off the display. Needs to be
-        enabled again before new content can be displayed.
+        Clears content queue, to indicate segment thread that it should stop.
         """
-        self.__content_queue.put(None)
+        if self.__content_queue.empty():
+            raise Exception("Display cannot be turned off. Is not on.")
 
-    def set_content(self, content_str: str):
+        # Clear queue
+        self.__content_queue.get()
+
+    def turn_on(self, content_str: str):
+        """
+        Turns on display (in extra thread). Can only be called if queue is empty (display off)
+        """
+        if not self.__content_queue.empty():
+            raise Exception("Cannot turn on display. Is already lit up.")
+
+        # restart segment iteration thread
+        self.__content_queue.put(DisplayContent(content_str))
+        segment_light_up_thread = Thread(target=self.__enable_display_thread)
+        segment_light_up_thread.start()
+
+    def update_content(self, content_str: str):
         """
         Replaces the current display content. Will be adapted on next display iteration.
         :param content_str: as the content to display as string. Passing None turns off display.
         """
-        if content_str is not None:
-            self.__content_queue.put(DisplayContent(content_str))
-        else:
-            self.__content_queue.put(None)
+        # if the queue is currently empty, request display start up first.
+        if self.__content_queue.empty():
+            raise Exception("Cannot update content. Display is turned off.")
+
+        # if there is content on the queue, remove it:
+        self.__content_queue.get_nowait()
+        self.__content_queue.put_nowait(DisplayContent(content_str))

@@ -15,7 +15,7 @@ for i in range(len(test_message) - 4):
     print(excerpt)
     display_content: DisplayContent = DisplayContent(excerpt)
     print(display_content)
-    display.set_content(display_content)
+    display.update_content(display_content)
 
 time.sleep(0.3)
-display.set_content(None)
+display.update_content(None)
