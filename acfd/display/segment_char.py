@@ -67,6 +67,7 @@ class SegmentChar(Enum):
     D_Y = [Segment.B, Segment.C, Segment.F, Segment.G, Segment.DP]
     D_Z = [Segment.A, Segment.B, Segment.D, Segment.E, Segment.DP]
     BLANK = []
+    DASH = [Segment.G]
     DOT = [Segment.DP]
     COMMA = [Segment.E]
     N_UNKNOWN = [Segment.D]
@@ -114,4 +115,4 @@ class SegmentChar(Enum):
         self.set_power(False)
 
 def get_alphabet() -> str:
-    return "acbdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?!,. "
+    return "acbdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-?!,. "

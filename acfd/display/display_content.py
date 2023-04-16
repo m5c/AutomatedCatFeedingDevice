@@ -18,7 +18,6 @@ class DisplayContent:
         This entity should be placed on the thread safe queue communicating with the display entity.
         """
         self.__segment_chars = convert_to_segments_chars(string_content)
-        print(self.__segment_chars)
 
     @property
     def segment_chars(self) -> list[SegmentChar]:
@@ -114,6 +113,8 @@ def to_segment(char: str, dotted: bool):
         return SegmentChar.D_8 if dotted else SegmentChar.N_8
     if char == '9':
         return SegmentChar.D_9 if dotted else SegmentChar.N_9
+    if char == '-':
+        return SegmentChar.DASH
     if char == ' ':
         return SegmentChar.BLANK
     if char == '.':
@@ -136,9 +137,10 @@ def convert_to_segments_chars(content: str) -> list[SegmentChar]:
     # store extracted segment chars
     segment_chars: list[SegmentChar] = []
 
-    # actually parse content
+    # actually parse content, strin gposition by string position (dots are added to prev char)
     for digit in range(amount_digits):
-        # Dotted is only possible if string is a least length 2
+
+        # Dotted is only possible if string is at least length 2
         # Dotted not allowed if character itself is a dot
         dotted = len(content) >= 2 and content[1] == '.' and content[0] != '.'
 

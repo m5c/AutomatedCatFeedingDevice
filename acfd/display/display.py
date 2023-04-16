@@ -77,9 +77,19 @@ class Display:
         except KeyboardInterrupt:
             GPIO.cleanup()
 
-    def set_content(self, display_content: DisplayContent):
+    def turn_off(self):
+        """
+        Places none on display content queue and this way tors off the display. Needs to be
+        enabled again before new content can be displayed.
+        """
+        self.__content_queue.put(None)
+
+    def set_content(self, content_str: str):
         """
         Replaces the current display content. Will be adapted on next display iteration.
-        :param display_content: as the content to display. Passing None turns off display.
+        :param content_str: as the content to display as string. Passing None turns off display.
         """
-        self.__content_queue.put(display_content)
+        if content_str is not None:
+            self.__content_queue.put(DisplayContent(content_str))
+        else:
+            self.__content_queue.put(None)

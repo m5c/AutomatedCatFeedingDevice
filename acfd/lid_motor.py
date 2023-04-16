@@ -35,7 +35,7 @@ backward_tick_steps: list[list[bool]] = copy.deepcopy(tick_steps)
 backward_tick_steps.reverse()
 
 
-def motor_power_off() -> None:
+def power_off() -> None:
     """
     Resets all motor pins to turn off leds and prevent initial mini step.
     :return: None
@@ -58,7 +58,7 @@ def rotate(angle: int) -> None:
     # Run as many ticks as requestes (internal rotations), using requested direction and coil smode.
     for _ in range(ticks):
         tick(forward, mechanism_skip_intermediate_steps)
-    motor_power_off()
+    power_off()
 
 
 def tick(forward: bool, skip_intermediate_steps: bool) -> None:
@@ -104,23 +104,3 @@ def open_acfd_lid() -> None:
     """
     rotate(-100)
     rotate(83)
-
-
-def motor_test() -> None:
-    """
-    call to test the motor
-    :return: None
-    """
-    # Motor should be powered off on program start, to prevent mini turns by pending ping
-    # initialization.
-    motor_power_off()
-    open_acfd_lid()
-
-    # GPIO.cleanup()
-    # Note: GPIO cleanup defaults A/B to off, C/D to on. It is normal that 2 LEDS light up after
-    # cleanup, but not good (as it overheats the motor)
-    # Recommend not to run a cleanup, for this test.
-
-
-motor_test()
-

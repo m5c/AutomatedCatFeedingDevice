@@ -72,6 +72,10 @@ class Clock:
             zero_reached = (self.__time_queue.queue[0] == 0)
             external_touch = self.__time_queue.queue[0] != new_value
 
-        # Mark thread as closed
+        # Mark thread as closed, notify subscribers that end is reached / aborted
         self.__running = False
-        print("Count down thread closed.")
+        if external_touch:
+            self.__clock_observer.aborted()
+        else:
+            self.__clock_observer.zero_reached()
+
