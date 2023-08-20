@@ -12,6 +12,7 @@ from display.display import Display
 from display.display_content_formatter import to_zero_padded_number
 from lid_motor import LidMotor
 
+
 class Acfd(ClockSubscriber):
 
     def __init__(self):
@@ -22,19 +23,29 @@ class Acfd(ClockSubscriber):
         """
         print("ACFD")
 
+        # Registering callbacks briefly overloads system, leading to display glitch. Buttons must
+        # be registered before display powers up:
+        register_button_callbacks(self.instant_open, self.test_message)
+
         # Obtain and reset motor, to prevent overheating from default GPIO values
         self.__lid_motor: LidMotor = LidMotor()
         self.__lid_motor.power_off()
 
         # Initialize display with welcome message
         self.__display: Display = Display("A.C.F.D.")
-        #
-        # Wait a moment, print ready function
+
+
+        # wait a moment, then turn display to "dashed" to indicate that system is ready.
         sleep(2)
         self.__display.update_content("----")
 
-        # Register button handlers
-        register_button_callbacks(self.instant_open, self.test_message)
+        # END OF MAIN PROGRAM
+        sleep(2)
+        self.__display.turn_off()
+
+        # Wait a moment, print ready function
+        # sleep(2)
+
 
     def update_time(self, time_update: int) -> None:
         """
@@ -61,7 +72,6 @@ class Acfd(ClockSubscriber):
 
     def instant_open(self, whatever_python_enforced_nonsense):
         self.__lid_motor.open_acfd()
-
 
     def test_message(self, whatever_python_enforced_nonsense):
         if not self.__display.running:

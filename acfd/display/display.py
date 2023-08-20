@@ -80,7 +80,7 @@ class Display:
         if self.__content_queue.empty():
             raise Exception("Display cannot be turned off. Is not on.")
 
-        # Clear queue
+        # NOTE: there seems to be an issue here!
         self.__content_queue.get()
 
     def turn_on(self, content_str: str):

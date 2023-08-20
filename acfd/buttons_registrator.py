@@ -26,10 +26,10 @@ def register_button_callbacks(hour_button_callback, action_button_callback) -> N
     # Add keypad button handlers
     GPIO.add_event_detect(button_pins[0], GPIO.RISING, callback=hour_button_callback,
                           bouncetime=150)
-    # GPIO.add_event_detect(button_pins[1], GPIO.RISING, callback=self.button_2_pressed,
-    # bouncetime=150)
-    # GPIO.add_event_detect(button_pins[2], GPIO.RISING, callback=self.button_3_pressed,
-    # bouncetime=150)
+    # # GPIO.add_event_detect(button_pins[1], GPIO.RISING, callback=self.button_2_pressed,
+    # # bouncetime=150)
+    # # GPIO.add_event_detect(button_pins[2], GPIO.RISING, callback=self.button_3_pressed,
+    # # bouncetime=150)
     GPIO.add_event_detect(button_pins[3], GPIO.RISING, callback=action_button_callback,
                           bouncetime=150)
 
