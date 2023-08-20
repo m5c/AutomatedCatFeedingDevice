@@ -21,10 +21,11 @@ class Acfd(ClockSubscriber):
         Note: program is alive until display is switched on. Calling a turn off to display will
         likewise end program.
         """
-        print("ACFD")
 
         # Registering callbacks briefly overloads system, leading to display glitch. Buttons must
         # be registered before display powers up:
+        # NOTE: State machine should cause button presses to be without effect until boot
+        # procedure completed.
         register_button_callbacks(self.instant_open, self.test_message)
 
         # Obtain and reset motor, to prevent overheating from default GPIO values
@@ -34,18 +35,12 @@ class Acfd(ClockSubscriber):
         # Initialize display with welcome message
         self.__display: Display = Display("A.C.F.D.")
 
-
         # wait a moment, then turn display to "dashed" to indicate that system is ready.
         sleep(2)
         self.__display.update_content("----")
 
-        # END OF MAIN PROGRAM
-        sleep(2)
-        self.__display.turn_off()
-
-        # Wait a moment, print ready function
-        # sleep(2)
-
+        # There is no need for permanent loop here, the program remains active until the display is
+        # turned off.
 
     def update_time(self, time_update: int) -> None:
         """

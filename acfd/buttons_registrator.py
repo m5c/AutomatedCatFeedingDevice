@@ -5,7 +5,9 @@ See: https://raspberrypi.stackexchange.com/questions/141207/phantom-events-on-pu
 from RPi import GPIO
 
 
-def register_button_callbacks(hour_button_callback, action_button_callback) -> None:
+def register_button_callbacks(state_machine: StateMachine) -> None:
+# def register_button_callbacks(hour_button_callback, action_button_callback) -> None:
+
     # Keyboard GPIO pins. (Requires additional GND connected wia resistor to GPIOs, and 3V3 that
     # connects to GPIOs on button press.)
     button_pins: list[int] = [10, 22, 24, 23]
