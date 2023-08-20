@@ -103,6 +103,12 @@ To manually run the software, start it with:
 For automated start on Raspberry boot, add this line to your ```/etc/rc.local```:  
 ```python3 acfd.py &``` (ampersand prevents blocking the boot sequence)
 
+## IDE Setup
+
+You can conveniently develop using the PyCharm IDE and the provided run scripts.
+
+However, as your development machine likely has no GPIO pins, install the GPIO-def library instead, to remove IDE warnings: [`RPi-GPIO-def`](https://github.com/Def4l71diot/RPi.GPIO-def)
+
 ## Contact / Pull Requests
 
  * Author: Maximilian Schiedermeier ![email](email.png)
