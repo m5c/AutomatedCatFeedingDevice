@@ -1,6 +1,6 @@
 """
-Helper module to test static 4-pack segment char display, that is to say on reception of a list
-with four segments-chars those are statically displayed on the 4-digit seven segment display with
+Helper module to test static 4-pack segment char display_utils, that is to say on reception of a list
+with four segments-chars those are statically displayed on the 4-digit seven segment display_utils with
 common cathode, until stopdisplay() is called or another list is provided.
 @Author Maximilian Schiedermeier
 """
@@ -26,14 +26,14 @@ class Display:
         # to small a number: light is weak, too high a number: flickering.
         self.__light_on_time: float = 0.004
 
-        # Initialize queue and turn on display light thread
+        # Initialize queue and turn on display_utils light thread
         self.__content_queue: queue.Queue[DisplayContent] = queue.Queue(1)
         self.turn_on(initial_string)
 
     def __enable_display_thread(self):
 
         """
-        Method for thread that turns on the display to light up statically whatever is placed in
+        Method for thread that turns on the display_utils to light up statically whatever is placed in
         the queue.
         This thread never removes from the queue, only peeks.
         Display will continue to iterate until the queue stores a None object.
@@ -69,7 +69,7 @@ class Display:
     @property
     def running(self) -> bool:
         """
-        Pseudo python getter (proper OO PLs would call it a getter) to look up if display is currently switched on.
+        Pseudo python getter (proper OO PLs would call it a getter) to look up if display_utils is currently switched on.
         """
         return not self.__content_queue.empty()
 
@@ -85,10 +85,10 @@ class Display:
 
     def turn_on(self, content_str: str):
         """
-        Turns on display (in extra thread). Can only be called if queue is empty (display off)
+        Turns on display_utils (in extra thread). Can only be called if queue is empty (display_utils off)
         """
         if not self.__content_queue.empty():
-            raise Exception("Cannot turn on display. Is already lit up.")
+            raise Exception("Cannot turn on display_utils. Is already lit up.")
 
         # restart segment iteration thread
         self.__content_queue.put(DisplayContent(content_str))
@@ -97,10 +97,10 @@ class Display:
 
     def update_content(self, content_str: str):
         """
-        Replaces the current display content. Will be adapted on next display iteration.
-        :param content_str: as the content to display as string. Passing None turns off display.
+        Replaces the current display_utils content. Will be adapted on next display_utils iteration.
+        :param content_str: as the content to display_utils as string. Passing None turns off display_utils.
         """
-        # if the queue is currently empty, request display start up first.
+        # if the queue is currently empty, request display_utils start up first.
         if self.__content_queue.empty():
             raise Exception("Cannot update content. Display is turned off.")
 

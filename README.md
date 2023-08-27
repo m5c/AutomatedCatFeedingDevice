@@ -90,9 +90,9 @@ Component location:
 
 Before full assembly, use below scripts to test individual ACFD components and wiring:
 
- * [Display Test](acfd/display/display-test.py): Test Time Display PCB and wiring with a fast countdown 9999-0000.  
+ * [Display Test](acfd/display_utils/display-test.py): Test Time Display PCB and wiring with a fast countdown 9999-0000.  
 ```python3 ./display-test.py```.
- * [Keypad Test](acfd/display/interruptclick.py): Test Keypad PDB and wiring with on terminal display of pressed buttons.  
+ * [Keypad Test](acfd/display_utils/interruptclick.py): Test Keypad PDB and wiring with on terminal display of pressed buttons.  
 ```python3 ./interruptclick.py```
  * [Motor Test](modetest/motor-test.py): Test ULN2003 and Motor wiring. Performs rotations needed for lid open and close.  
 ```python3 ./motor-test.py```

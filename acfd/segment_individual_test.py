@@ -1,12 +1,12 @@
 """
-This tester module lights up all individual segments of the four digit segment display with
+This tester module lights up all individual segments of the four digit segment display_utils with
 common cathode. Run it to test wiring and board integrity.
 Author: Maximilian Schiedermeier.
 """
 import time
 from RPi import GPIO
-from display.digit import digit_values
-from display.segment import segment_values
+from display_utils.digit import digit_values
+from display_utils.segment import segment_values
 
 # At program start we reset all outputs
 GPIO.setmode(GPIO.BCM)

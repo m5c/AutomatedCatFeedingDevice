@@ -40,9 +40,9 @@
 # .idea/artifacts
 # .idea/compiler.xml
 # .idea/jarRepositories.xml
-# .idea/display.xml
+# .idea/display_utils.xml
 # .idea/*.iml
-# .idea/display
+# .idea/display_utils
 # *.iml
 # *.ipr
 
@@ -83,7 +83,7 @@ fabric.properties
 # Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
 
 # *.iml
-# display.xml
+# display_utils.xml
 # .idea/misc.xml
 # *.ipr
 

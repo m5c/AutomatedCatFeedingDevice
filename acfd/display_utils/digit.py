@@ -1,5 +1,5 @@
 """
-Helper module to map Digits of display on GPIO pins. These selectively emulate GND to light up a
+Helper module to map Digits of display_utils on GPIO pins. These selectively emulate GND to light up a
 specific digit, by enabling a specific common cathode, one at a time.
 Author: Maximilian Schiedermeier
 """

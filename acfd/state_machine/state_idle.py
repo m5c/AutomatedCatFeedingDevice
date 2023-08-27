@@ -6,7 +6,7 @@ action is completed (e.e.g opening the lid with motor, or displaying the boot me
 Author: Maximilian Schiedermeier
 """
 
-from acfd.state_machine.State import State
+from acfd.state_machine.state import State
 
 
 class StateIdle(State):
@@ -15,18 +15,14 @@ class StateIdle(State):
     is active, all incoming events should be simply discarded.
     """
 
+    def handle_button_one(self) -> None:
+        pass
 
-def handle_button_one(self) -> None:
-    pass
+    def handle_button_two(self) -> None:
+        pass
 
+    def handle_button_three(self) -> None:
+        pass
 
-def handle_button_two(self) -> None:
-    pass
-
-
-def handle_button_three(self) -> None:
-    pass
-
-
-def handle_button_four(self) -> None:
-    pass
+    def handle_button_four(self) -> None:
+        pass

@@ -1,6 +1,6 @@
 """
-Helper module to map Segments of display on GPIO pins. These emulate 3V3 to selectively light up
-one segment of the display.
+Helper module to map Segments of display_utils on GPIO pins. These emulate 3V3 to selectively light up
+one segment of the display_utils.
 """
 from enum import Enum
 

@@ -10,7 +10,7 @@ from display.segment import Segment
 
 class SegmentChar(Enum):
     """
-    Defines the segments to light up on a 7-segment display with decimal dot to display a desired
+    Defines the segments to light up on a 7-segment display_utils with decimal dot to display_utils a desired
     character or number.
     Prefix indicated if "N"ot dotted, or "D"otted.
     """

@@ -1,8 +1,8 @@
 # Run a test message ticker
 import time
 
-from display.display import Display
-from display.display_content import DisplayContent
+from display_utils.display import Display
+from display_utils.display_content import DisplayContent
 
 
 display: Display = Display()
