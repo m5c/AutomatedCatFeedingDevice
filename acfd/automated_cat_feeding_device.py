@@ -1,22 +1,25 @@
 """
-Main acfd logic. Interprets input events from keypad and sets content for display_utils, and controls
+Main acfd logic. Interprets input events from keypad and sets content for display_utils,
+and controls
 motor.
 Author: Maximilian Schiedermeier
 """
 from time import sleep
 
-from state_machine.state_machine import StateMachine
-from buttons_registrator import register_button_callbacks
-from display_utils.display import Display
-from lid_motor import LidMotor
+from acfd.buttons_registrator import register_button_callbacks
+from acfd.display_utils.display import Display
+from acfd.lid_motor import LidMotor
+from acfd.state_machine_utils.state_machine import StateMachine
 
 
-class Acfd:
+class AutomatedCatFeedingDevice:
 
     def __init__(self):
         """
-        Boot up the ACFD. Set welcome message on display_utils, create clock, register button handlers.
-        Note: program is alive until display_utils is switched on. Calling a turn off to display_utils will
+        Boot up the ACFD. Set welcome message on display_utils, create clock, register button
+        handlers.
+        Note: program is alive until display_utils is switched on. Calling a turn off to
+        display_utils will
         likewise end program.
         """
 
@@ -34,7 +37,8 @@ class Acfd:
         # complete.
         self.__state_machine = StateMachine(self.__lid_motor, self.__display)
 
-        # Registering callbacks briefly overloads system, leading to display_utils glitch. Buttons must
+        # Registering callbacks briefly overloads system, leading to display_utils glitch.
+        # Buttons must
         # be registered before display_utils powers up:
         # NOTE: State machine should cause button presses to be without effect until boot
         # procedure completed.
@@ -50,7 +54,8 @@ class Acfd:
         # active.
         self.__state_machine.change_state("SET_TIME")
 
-        # There is no need for permanent loop here, the program remains active until the display_utils is
+        # There is no need for permanent loop here, the program remains active until the
+        # display_utils is
         # turned off.
 
     # def update_time(self, time_update: int) -> None:
@@ -88,4 +93,4 @@ class Acfd:
     #     self.__display.turn_off()
 
 
-Acfd()
+AutomatedCatFeedingDevice()

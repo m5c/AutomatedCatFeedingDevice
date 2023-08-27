@@ -6,7 +6,7 @@ action is completed (e.e.g opening the lid with motor, or displaying the boot me
 Author: Maximilian Schiedermeier
 """
 
-from acfd.state_machine.state import State
+from acfd.state_machine_utils.state import State
 
 
 class StateIdle(State):

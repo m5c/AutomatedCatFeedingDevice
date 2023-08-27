@@ -5,7 +5,7 @@ from enum import Enum
 
 from RPi import GPIO
 
-from display.segment import Segment
+from acfd.display_utils.segment import Segment
 
 
 class SegmentChar(Enum):

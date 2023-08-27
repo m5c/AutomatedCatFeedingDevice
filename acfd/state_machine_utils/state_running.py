@@ -6,7 +6,7 @@ followed by Set Time state.
 Author: Maximilian Schiedermeier
 """
 
-from acfd.state_machine.state import State
+from acfd.state_machine_utils.state import State
 
 
 class StateRunning(State):

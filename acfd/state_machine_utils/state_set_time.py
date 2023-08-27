@@ -6,7 +6,7 @@ or to transition to countdown state.
 Author: Maximilian Schiedermeier
 """
 from acfd.display_utils.display import Display
-from acfd.state_machine.state import State
+from acfd.state_machine_utils.state import State
 
 
 class StateSetTime(State):

@@ -4,7 +4,8 @@ Implements a classic count-down clock that automatically notfies a subscriber on
 import queue
 from threading import Thread
 from time import sleep
-from clock_subscriber import ClockSubscriber
+from acfd.clock_subscriber import ClockSubscriber
+
 
 class Clock:
 

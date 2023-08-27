@@ -4,7 +4,7 @@ See: https://raspberrypi.stackexchange.com/questions/141207/phantom-events-on-pu
 """
 from RPi import GPIO
 
-from acfd.state_machine.state_machine import StateMachine
+from acfd.state_machine_utils.state_machine import StateMachine
 
 
 def register_button_callbacks(state_machine: StateMachine) -> None:
@@ -29,16 +29,16 @@ def register_button_callbacks(state_machine: StateMachine) -> None:
 
     # Add keypad button handlers
     GPIO.add_event_detect(button_pins[0], GPIO.RISING,
-                          callback=state_machine.state.handle_button_one(),
+                          callback=state_machine.state.handle_button_one,
                           bouncetime=150)
     GPIO.add_event_detect(button_pins[1], GPIO.RISING,
-                          callback=state_machine.state.handle_button_two(),
+                          callback=state_machine.state.handle_button_two,
                           bouncetime=150)
     GPIO.add_event_detect(button_pins[2], GPIO.RISING,
-                          callback=state_machine.state.handle_button_three(),
+                          callback=state_machine.state.handle_button_three,
                           bouncetime=150)
     GPIO.add_event_detect(button_pins[3], GPIO.RISING,
-                          callback=state_machine.state.handle_button_four(),
+                          callback=state_machine.state.handle_button_four,
                           bouncetime=150)
 
 # def button_1_pressed(self, channel):

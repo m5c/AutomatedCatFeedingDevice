@@ -7,9 +7,9 @@ Author: Maximilian Schiedermeier
 """
 from acfd.display_utils.display import Display
 from acfd.lid_motor import LidMotor
-from acfd.state_machine.state import State
-from acfd.state_machine.state_idle import StateIdle
-from acfd.state_machine.state_set_time import StateSetTime
+from acfd.state_machine_utils.state import State
+from acfd.state_machine_utils.state_idle import StateIdle
+from acfd.state_machine_utils.state_set_time import StateSetTime
 
 
 class StateMachine:

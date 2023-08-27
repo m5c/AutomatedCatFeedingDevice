@@ -3,7 +3,7 @@ Represents a valid display_utils content, that is to say something that can be s
 a 7 segment display_utils with decimal dot, four digits.
 Author: Maximilian Schiedermeier
 """
-from display.segment_char import SegmentChar, get_alphabet
+from acfd.display_utils.segment_char import SegmentChar, get_alphabet
 
 # Represents the amount of digits physically available.
 amount_digits: int = 4

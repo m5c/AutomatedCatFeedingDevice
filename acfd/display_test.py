@@ -1,9 +1,8 @@
 # Run a test message ticker
 import time
 
-from display_utils.display import Display
-from display_utils.display_content import DisplayContent
-
+from acfd.display_utils.display import Display
+from acfd.display_utils.display_content import DisplayContent
 
 display: Display = Display()
 test_message: str = "Hello this is a test message. The weather is fantastic today in MTL! 16081990."

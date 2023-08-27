@@ -8,10 +8,9 @@ import queue
 import time
 from threading import Thread
 from RPi import GPIO
-from display.digit import digit_values
-from display.display_content import DisplayContent
-from display.segment import segment_values
-from display.segment_char import SegmentChar
+from acfd.display_utils.digit import digit_values
+from acfd.display_utils.display_content import DisplayContent
+from acfd.display_utils.segment import segment_values
 
 
 class Display:
