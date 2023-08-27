@@ -15,14 +15,15 @@ class StateIdle(State):
     is active, all incoming events should be simply discarded.
     """
 
-    def handle_button_one(self) -> None:
-        pass
+    def handle_button_one(self, whatever_python_enforced_nonsense) -> None:
+        print("IDLE 1")
 
-    def handle_button_two(self) -> None:
-        pass
+    def handle_button_two(self, whatever_python_enforced_nonsense) -> None:
+        print("IDLE 2")
 
-    def handle_button_three(self) -> None:
-        pass
+    def handle_button_three(self, whatever_python_enforced_nonsense) -> None:
+        print("IDLE 3")
 
-    def handle_button_four(self) -> None:
-        pass
+    def handle_button_four(self, whatever_python_enforced_nonsense) -> None:
+        print("IDLE 4")
+

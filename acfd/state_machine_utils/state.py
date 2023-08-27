@@ -19,7 +19,8 @@ class State(ABC):
     #     events until a function is fully executed (IDLE).
     #     """
     #     pass
-    # I think this is not needed, for every called can just set to IDLE, then call the parameter function and then transition themselves.
+    # I think this is not needed, for every called can just set to IDLE, then call the parameter
+    # function and then transition themselves.
 
     @abstractmethod
     def handle_button_one(self) -> None:

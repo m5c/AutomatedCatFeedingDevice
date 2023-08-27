@@ -17,16 +17,19 @@ class StateSetTime(State):
 
     def __init__(self, display: Display):
         self.__display = display
-        display.update_content("0000")
 
     def handle_button_one(self) -> None:
+        print("SET TIME 1")
         self.__display.update_content("0001")
 
     def handle_button_two(self) -> None:
-        self.__display.update_content("0001")
+        print("SET TIME 2")
+        self.__display.update_content("0002")
 
     def handle_button_three(self) -> None:
-        self.__display.update_content("0001")
+        print("SET TIME 3")
+        self.__display.update_content("0003")
 
     def handle_button_four(self) -> None:
+        print("SET TIME 4")
         self.__display.turn_off()

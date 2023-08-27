@@ -57,6 +57,8 @@ class AutomatedCatFeedingDevice:
         # There is no need for permanent loop here, the program remains active until the
         # display_utils is
         # turned off.
+        # sleep(2)
+        # self.__display.turn_off()
 
     # def update_time(self, time_update: int) -> None:
     #     """

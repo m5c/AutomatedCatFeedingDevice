@@ -16,13 +16,14 @@ class StateRunning(State):
     """
 
     def handle_button_one(self) -> None:
-        pass
+        print("RUNNING 1")
 
     def handle_button_two(self) -> None:
-        pass
+        print("RUNNING 2")
 
     def handle_button_three(self) -> None:
-        pass
+        print("RUNNING 3")
 
     def handle_button_four(self) -> None:
-        pass
+        print("RUNNING 4")
+
