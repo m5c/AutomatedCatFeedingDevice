@@ -9,6 +9,7 @@ from acfd.display_utils.display import Display
 from acfd.lid_motor import LidMotor
 from acfd.state_machine_utils.state import State
 from acfd.state_machine_utils.state_idle import StateIdle
+from acfd.state_machine_utils.state_running import StateRunning
 from acfd.state_machine_utils.state_set_time import StateSetTime
 
 
@@ -27,7 +28,8 @@ class StateMachine:
         # state manually and let the state machine maintain those).
         self.__states = {
             "IDLE": StateIdle(),
-            "SET_TIME": StateSetTime(display)
+            "SET_TIME": StateSetTime(self, display),
+            "RUNNING": StateRunning(self, display)
         }
         self.__state: State = self.__states.get("IDLE")
 
@@ -60,4 +62,3 @@ class StateMachine:
     def handle_button_four(self, whatever_python_nonsense_parameter):
         print("FSM-4")
         self.__state.handle_button_four()
-

@@ -16,10 +16,11 @@ class StateSetTime(State):
     count-down state.
     """
 
-    def __init__(self, display: Display):
+    def __init__(self, state_machine, display: Display):
+        self.__state_machine = state_machine
+        self.__display = display
         self.__time_hours: int = 0
         self.__time_minutes: int = 0
-        self.__display = display
 
     def time_to_padded_string(self) -> str:
         """
@@ -47,4 +48,5 @@ class StateSetTime(State):
     def handle_button_four(self) -> None:
         print("SET TIME 4")
         # TODO: transition to state running.
+        self.__state_machine.change_state("IDLE")
         self.__display.turn_off()
