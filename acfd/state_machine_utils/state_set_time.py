@@ -16,7 +16,7 @@ class StateSetTime(State):
     count-down state.
     """
 
-    def __init__(self, state_machine, display: Display):
+    def __init__(self, state_machine: 'StateMachine', display: Display):
         self.__state_machine = state_machine
         self.__display = display
         self.__time_hours: int = 0
