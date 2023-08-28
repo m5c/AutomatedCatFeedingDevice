@@ -1,5 +1,5 @@
 """
-Implements a classic count-down clock that automatically notfies a subscriber on every update.
+Implements a classic count-down clock that automatically notifies a subscriber on every update.
 """
 import queue
 from threading import Thread

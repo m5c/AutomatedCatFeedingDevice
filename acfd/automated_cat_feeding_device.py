@@ -48,7 +48,7 @@ class AutomatedCatFeedingDevice:
         # wait a moment, then turn display_utils to "dashed" to indicate that system is ready.
         self.__display.update_content("A.C.F.D.")
         sleep(2)
-        self.__display.update_content("----")
+        self.__display.update_content("0000")
 
         # First manual transit from IDLE to set time. Just by changing this, the buttons become
         # active.
