@@ -39,13 +39,12 @@ class Clock:
         count_down_thread = Thread(target=self.__count_down)
         count_down_thread.start()
 
-    def reset_clock(self, start_time_seconds: int) -> None:
+    def kill_clock(self) -> None:
         """
         Ends count-down thread by placing new value on queue. Thread notices change and goes to
-        sleep.
+        sleep. Clock cannot be reused.
         """
-        print("Clock Reset: "+str(start_time_seconds))
-        self.__time_queue.put(start_time_seconds)
+        self.__time_queue.put(-1)
         self.__running = False
 
     def __count_down(self):

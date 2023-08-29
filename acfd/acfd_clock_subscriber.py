@@ -17,10 +17,11 @@ class AcfdClockSubscriber(ClockSubscriber):
 
     def __init__(self, state_machine: 'StateMachine', display: Display, motor: LidMotor):
         """
-        ...
+        Constructor.
         """
         self.__display: Display = display
         self.__state_machine: 'StateMachine' = state_machine
+        self.__motor: LidMotor = motor
 
     def update_time(self, time_update: int) -> None:
         """

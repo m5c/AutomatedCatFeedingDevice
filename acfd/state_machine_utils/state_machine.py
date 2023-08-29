@@ -27,19 +27,28 @@ class StateMachine:
         """
         # Internal clock object for countdown. States have access to clock and RUNNING state is
         # subscriber to time changes.
-        self.__clock = Clock(1, AcfdClockSubscriber(self, display, motor))
+        clock_subscriber: AcfdClockSubscriber = AcfdClockSubscriber(self, display, motor)
+
+        # Clock is only set when running. set time state manually sets value on creation of new
+        # clock (clocks are not reusable)
+        self.__clock: Clock = None
 
         # State machine state can be changed by name. States are singletons (which are not
         # properly supported by python, therefore we manually create a single instance per
         # state manually and let the state machine maintain those).
         self.__states = {
             "IDLE": StateIdle(),
-            "SET_TIME": StateSetTime(self, display, self.__clock),
-            "RUNNING": StateRunning(self, display, self.__clock)
+            "SET_TIME": StateSetTime(self, display, clock_subscriber),
+            "RUNNING": StateRunning(self, display, clock_subscriber)
         }
         self.__state: State = self.__states.get("IDLE")
 
+    def set_clock(self, clock: Clock):
+        self.__clock = clock
 
+    @property
+    def clock(self) -> Clock:
+        return self.__clock
 
     @property
     def state(self) -> State:
