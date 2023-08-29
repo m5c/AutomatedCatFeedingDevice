@@ -5,6 +5,8 @@ how to react to input events.
 
 Author: Maximilian Schiedermeier
 """
+from acfd.acfd_clock_subscriber import AcfdClockSubscriber
+from acfd.clock import Clock
 from acfd.display_utils.display import Display
 from acfd.lid_motor import LidMotor
 from acfd.state_machine_utils.state import State
@@ -23,15 +25,21 @@ class StateMachine:
         """
         Constructor for the StateMachine. Initializes the current state to IDLE.
         """
+        # Internal clock object for countdown. States have access to clock and RUNNING state is
+        # subscriber to time changes.
+        self.__clock = Clock(1, AcfdClockSubscriber(self, display, motor))
+
         # State machine state can be changed by name. States are singletons (which are not
         # properly supported by python, therefore we manually create a single instance per
         # state manually and let the state machine maintain those).
         self.__states = {
             "IDLE": StateIdle(),
-            "SET_TIME": StateSetTime(self, display),
-            "RUNNING": StateRunning(self, display)
+            "SET_TIME": StateSetTime(self, display, self.__clock),
+            "RUNNING": StateRunning(self, display, self.__clock)
         }
         self.__state: State = self.__states.get("IDLE")
+
+
 
     @property
     def state(self) -> State:

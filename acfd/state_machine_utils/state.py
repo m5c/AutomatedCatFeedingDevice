@@ -1,8 +1,8 @@
 """
 Abstract base class for all states.
-Every state has its own way to handle input events. The button handler never triggers a
-specific function, but uses the StateMachine's current state to resolve the desired action via
-polymorphism.
+States are the polymorphic way to handle button input events. The hardware button handler never
+triggers a specific function, but uses the StateMachine's current state as proxy to resolve the
+desired action via polymorphism.
 
 Author: Maximilian Schiedermeier
 """

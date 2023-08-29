@@ -5,6 +5,7 @@ or to transition to countdown state.
 
 Author: Maximilian Schiedermeier
 """
+from acfd.clock import Clock
 from acfd.display_utils.display import Display
 from acfd.display_utils.display_content_formatter import to_zero_padded_number
 from acfd.state_machine_utils.state import State
@@ -16,11 +17,13 @@ class StateSetTime(State):
     count-down state.
     """
 
-    def __init__(self, state_machine: 'StateMachine', display: Display):
+    def __init__(self, state_machine: 'StateMachine', display: Display, clock: Clock):
         self.__state_machine = state_machine
         self.__display = display
+        self.__clock = clock
         self.__time_hours: int = 0
         self.__time_minutes: int = 0
+
 
     def time_to_padded_string(self) -> str:
         """
@@ -47,6 +50,7 @@ class StateSetTime(State):
 
     def handle_button_four(self) -> None:
         print("SET TIME 4")
-        # TODO: transition to state running.
-        self.__state_machine.change_state("IDLE")
-        self.__display.turn_off()
+        self.__state_machine.change_state("RUNNING")
+        self.__clock.reset_clock(5)
+        self.__clock.start_clock()
+        # TODO: correct implementation of time here

@@ -41,8 +41,3 @@ def register_button_callbacks(state_machine: StateMachine) -> None:
                           callback=state_machine.handle_button_four,
                           bouncetime=150)
 
-# def button_1_pressed(self, channel):
-#     """
-#     Define handlers for button press (channel is the GPIO that registered RISING signal)
-#     """
-#     self.__hour_button_callback()
