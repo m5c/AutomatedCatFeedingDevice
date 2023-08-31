@@ -9,7 +9,7 @@ from abc import ABC, abstractmethod
 class ClockSubscriber(ABC):
 
     @abstractmethod
-    def update_time(self, time_update: int) -> None:
+    def notify_clock_time_change(self, time_update: int) -> None:
         """
         Class (interface) implementation must provide logic for this abstract method. Method is
         invoked when the clock has an update.
@@ -17,7 +17,7 @@ class ClockSubscriber(ABC):
         pass
 
     @abstractmethod
-    def zero_reached(self) -> None:
+    def notify_clock_zero_reached(self) -> None:
         """
         Class (interface) implementation must provide logic for this abstract method. Method is
         invoked when the clock has reached zero.
@@ -25,9 +25,17 @@ class ClockSubscriber(ABC):
         pass
 
     @abstractmethod
-    def aborted(self) -> None:
+    def notify_clock_stopped(self) -> None:
         """
         Class (interface) implementation must provide logic for this abstract method. Method is
         invoked when the clock was reset / aborted.
+        """
+        pass
+
+    @abstractmethod
+    def started(self) -> None:
+        """
+        Class (interface) implementation must provide logic for this abstract method. Method is
+        invoked when the clock started.
         """
         pass

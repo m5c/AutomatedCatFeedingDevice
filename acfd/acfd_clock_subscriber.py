@@ -23,14 +23,14 @@ class AcfdClockSubscriber(ClockSubscriber):
         self.__state_machine: 'StateMachine' = state_machine
         self.__motor: LidMotor = motor
 
-    def update_time(self, time_update: int) -> None:
+    def notify_clock_time_change(self, time_update: int) -> None:
         """
         Called whenever the clock has an update (remaining seconds). Must update display content.
         """
         print("Request to update display time "+str(time_update))
         self.__display.update_content(to_zero_padded_number(time_update, 4))
 
-    def zero_reached(self) -> None:
+    def notify_clock_zero_reached(self) -> None:
         """
         Called by clock when 0 reached. Must transition to IDLE, perform lid open and then
         transition to SET_TIME.
@@ -40,7 +40,7 @@ class AcfdClockSubscriber(ClockSubscriber):
         self.__display.turn_off()
         # TODO: transition to IDLE, open bay, transition to SET TIME
 
-    def aborted(self) -> None:
+    def notify_clock_stopped(self) -> None:
         """
         Invoked when clock is aborted. This can be safely ignored, as the button press four
         causes the clock abort.
