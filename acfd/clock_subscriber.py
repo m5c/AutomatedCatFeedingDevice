@@ -33,7 +33,7 @@ class ClockSubscriber(ABC):
         pass
 
     @abstractmethod
-    def started(self) -> None:
+    def notify_clock_started(self) -> None:
         """
         Class (interface) implementation must provide logic for this abstract method. Method is
         invoked when the clock started.

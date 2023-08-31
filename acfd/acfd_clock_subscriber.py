@@ -23,6 +23,9 @@ class AcfdClockSubscriber(ClockSubscriber):
         self.__state_machine: 'StateMachine' = state_machine
         self.__motor: LidMotor = motor
 
+    def notify_clock_started(self) -> None:
+        pass
+
     def notify_clock_time_change(self, time_update: int) -> None:
         """
         Called whenever the clock has an update (remaining seconds). Must update display content.

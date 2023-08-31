@@ -18,10 +18,10 @@ class StateSetTime(State):
     count-down state.
     """
 
-    def __init__(self, state_machine: 'StateMachine', display: Display, clock_subscriber: AcfdClockSubscriber):
+    def __init__(self, state_machine: 'StateMachine', display: Display, clock: Clock):
         self.__state_machine = state_machine
         self.__display = display
-        self.__clock_subscriber = clock_subscriber
+        self.__clock = clock
         self.__time_hours: int = 0
         self.__time_minutes: int = 0
 
@@ -52,8 +52,6 @@ class StateSetTime(State):
     def handle_button_four(self) -> None:
         print("SET TIME 4")
         self.__state_machine.change_state("RUNNING")
-        clock: Clock = Clock(5, self.__clock_subscriber)
-        # self.__clock.reset_clock(5) # THIS IS THE PROBLEM. SEEMS TO BREAK CLOCK.
-        clock.start_clock()
-        self.__state_machine.set_clock(clock)
-        # TODO: correct implementation of time here
+
+        # TODO: correct implementation of time here / clock here
+        self.__clock.start_clock(10, True)

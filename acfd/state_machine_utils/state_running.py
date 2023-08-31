@@ -7,6 +7,7 @@ followed by Set Time state.
 Author: Maximilian Schiedermeier
 """
 from acfd.acfd_clock_subscriber import AcfdClockSubscriber
+from acfd.clock import Clock
 from acfd.display_utils.display import Display
 from acfd.state_machine_utils.state import State
 
@@ -16,10 +17,6 @@ class StateRunning(State):
     Buttons 1/2/3 trigger change of currently displayed time. Button for triggers transition to
     count-down state.
     """
-
-    def __init__(self, state_machine: 'StateMachine', display: Display, clock_subscriber: AcfdClockSubscriber):
-        self.__state_machine = state_machine
-        self.__display = display
 
     def handle_button_one(self) -> None:
         print("RUNNING 1")
@@ -35,7 +32,8 @@ class StateRunning(State):
 
     def handle_button_four(self) -> None:
         print("RUNNING 4")
+        # Stop running clock and transfer state machine to set time state.
         print("KILLING CLOCK")
-        self.__state_machine.clock.kill_clock()
+        self.__clock.stop_clock()
         self.__state_machine.change_state("SET_TIME")
 

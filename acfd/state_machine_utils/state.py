@@ -9,6 +9,9 @@ Author: Maximilian Schiedermeier
 
 from abc import ABC, abstractmethod
 
+from acfd.clock import Clock
+from acfd.display_utils.display import Display
+
 
 class State(ABC):
 
@@ -21,6 +24,11 @@ class State(ABC):
     #     pass
     # I think this is not needed, for every called can just set to IDLE, then call the parameter
     # function and then transition themselves.
+
+    def __init__(self, state_machine: 'StateMachine', display: Display, clock: Clock):
+        self.__state_machine = state_machine
+        self.__display = display
+        self.__clock = clock
 
     @abstractmethod
     def handle_button_one(self) -> None:
