@@ -47,7 +47,6 @@ class LidMotor:
         # thread lock variable to prevent motor commands while already running.
         self.__running = False
 
-
     def power_off(self) -> None:
         """
         Resets all motor pins to turn off leds and prevent initial mini step.
@@ -105,7 +104,7 @@ class LidMotor:
             # Increment iterator (will increment by two if skip enabled)
             iteration += iterator_size
 
-    def __open_acfd_blocking(self) -> None:
+    def open_acfd_blocking(self) -> None:
         """
         Opens the ACFD lid by turning the motor from parking position to 85degrees up.
         Then returns arm into parking position.
@@ -114,13 +113,13 @@ class LidMotor:
         :return: None.
         """
         self.__running = True
-        self.__rotate(-100)
-        self.__rotate(83)
+        self.__rotate(-105)  # -100
+        self.__rotate(81)  # 83
         self.__running = False
 
     def open_acfd(self) -> None:
         """
-        Threaded version of above function. Cannot be called while motor is already running
+        Threaded version of above function. Cannot be called while motor is already running.
         """
         if self.__running:
             raise Exception("Cannot start motor. Is currently running.")

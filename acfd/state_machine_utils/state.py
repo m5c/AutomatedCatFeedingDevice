@@ -15,21 +15,6 @@ from acfd.display_utils.display import Display
 
 class State(ABC):
 
-    # def transition_execute(self, func, target_state: State) -> None:
-    #     """
-    #     Most state will not override this method. This is only intended for intermediate states
-    #     that perform a function and then transition to next state, e.g. to ignore all imput
-    #     events until a function is fully executed (IDLE).
-    #     """
-    #     pass
-    # I think this is not needed, for every called can just set to IDLE, then call the parameter
-    # function and then transition themselves.
-
-    def __init__(self, state_machine: 'StateMachine', display: Display, clock: Clock):
-        self.__state_machine = state_machine
-        self.__display = display
-        self.__clock = clock
-
     @abstractmethod
     def handle_button_one(self) -> None:
         pass

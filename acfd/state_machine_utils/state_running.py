@@ -18,6 +18,11 @@ class StateRunning(State):
     count-down state.
     """
 
+    def __init__(self, state_machine: 'StateMachine', display: Display, clock: Clock):
+        self.__state_machine = state_machine
+        self.__display = display
+        self.__clock = clock
+
     def handle_button_one(self) -> None:
         print("RUNNING 1")
         # Ignore, manual time changes are not allowed while running

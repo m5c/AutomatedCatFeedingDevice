@@ -32,7 +32,7 @@ class StateMachine:
         # properly supported by python, therefore we manually create a single instance per
         # state manually and let the state machine maintain those).
         self.__states = {
-            "IDLE": StateIdle(self, display, self.__clock),
+            "IDLE": StateIdle(),
             "SET_TIME": StateSetTime(self, display, self.__clock),
             "RUNNING": StateRunning(self, display, self.__clock)
         }

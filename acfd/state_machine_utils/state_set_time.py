@@ -25,7 +25,6 @@ class StateSetTime(State):
         self.__time_hours: int = 0
         self.__time_minutes: int = 0
 
-
     def time_to_padded_string(self) -> str:
         """
         Consumes the current hours and minutes information and converts it to a padded string
@@ -33,6 +32,9 @@ class StateSetTime(State):
         """
         return to_zero_padded_number(self.__time_hours, 2) + to_zero_padded_number(
             self.__time_minutes, 2)
+
+    def time_in_seconds(self) -> int:
+        return 60 * 60 * self.__time_hours + 60 * self.__time_minutes
 
     def handle_button_one(self) -> None:
         print("SET TIME 1")
@@ -51,7 +53,14 @@ class StateSetTime(State):
 
     def handle_button_four(self) -> None:
         print("SET TIME 4")
-        self.__state_machine.change_state("RUNNING")
-
-        # TODO: correct implementation of time here / clock here
-        self.__clock.start_clock(10, True)
+        # If time is 0 => shut down
+        # Otherwise start clock
+        if self.time_in_seconds() == 0:
+            # Turning off display kills last background thread and ends program.
+            self.__display.turn_off()
+        else:
+            self.__state_machine.change_state("RUNNING")
+            self.__clock.start_clock(self.time_in_seconds(), True)
+            # update own time, to start clean on next state iteration
+            self.__time_hours = 0
+            self.__time_minutes = 0
