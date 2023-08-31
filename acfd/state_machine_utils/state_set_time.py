@@ -30,7 +30,7 @@ class StateSetTime(State):
         Consumes the current hours and minutes information and converts it to a padded string
         ready for display on 4 digit 7 segment component.
         """
-        return to_zero_padded_number(self.__time_hours, 2) + to_zero_padded_number(
+        return to_zero_padded_number(self.__time_hours, 2) + "." + to_zero_padded_number(
             self.__time_minutes, 2)
 
     def time_in_seconds(self) -> int:

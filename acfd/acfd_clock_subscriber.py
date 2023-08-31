@@ -30,8 +30,18 @@ class AcfdClockSubscriber(ClockSubscriber):
         """
         Called whenever the clock has an update (remaining seconds). Must update display content.
         """
-        print("Request to update display time " + str(time_update))
-        self.__display.update_content(to_zero_padded_number(time_update, 4)+".")
+        # If time still contains hours (is 3600s or more), forget about seconds. The 4 digits
+        # just show hours and minutes.
+        # If below one hour, switch to minutes and seconds.
+        if time_update >= 3600:
+            # chop off seconds: display hours and minutes
+            first_two_padded: str = to_zero_padded_number(time_update // 3600, 2)
+            last_two_padded: str = to_zero_padded_number(time_update % 3600 // 60, 2)
+        else:
+            # time is below an hour: display minutes and seconds
+            first_two_padded: str = to_zero_padded_number(time_update // 60, 2)
+            last_two_padded: str = to_zero_padded_number(time_update % 60, 2)
+        self.__display.update_content(first_two_padded + "." + last_two_padded + ".")
 
     def notify_clock_zero_reached(self) -> None:
         """
