@@ -53,11 +53,13 @@ class StateSetTime(State):
 
     def handle_button_four(self) -> None:
         print("SET TIME 4")
-        # If time is 0 => shut down
-        # Otherwise start clock
+        # If time is 0 => shut down (this is not desired in PROD. Users will simply pull the plug
+        # if they don't need the machine any more and there is no way to restart once killed.)
+        # Otherwise: start clock
         if self.time_in_seconds() == 0:
             # Turning off display kills last background thread and ends program.
-            self.__display.turn_off()
+            # self.__display.turn_off() # IGNORE IN PROD
+            pass
         else:
             self.__state_machine.change_state("RUNNING")
             self.__clock.start_clock(self.time_in_seconds(), True)

@@ -106,8 +106,20 @@ For automated start on Raspberry boot, add this line to your ```/etc/rc.local```
 ## IDE Setup
 
 You can conveniently develop using the PyCharm IDE and the provided run scripts.
-
 However, as your development machine likely has no GPIO pins, install the GPIO-def library instead, to remove IDE warnings: [`RPi-GPIO-def`](https://github.com/Def4l71diot/RPi.GPIO-def)
+
+## Raspi Setup
+
+ * Use the run.sh script to copy the sources to your raspi
+ * Create a launcher script `localrun.sh` at top level in your homedir:
+```
+cd /home/schieder/Code/AutomatedCatFeedingDevice
+python3 -m acfd.automated_cat_feeding_device
+```
+ * Edit as root `/etc/rc.local` to call `localrun.sh`, with '&', to prevent blocking on boot
+```
+/home/schieder/localrun.sh &
+```
 
 ## Contact / Pull Requests
 
