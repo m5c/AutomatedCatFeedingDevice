@@ -6,5 +6,5 @@ ssh schieder@192.168.0.191 'cd Code/AutomatedCatFeedingDevice; unzip acfd.zip'
 
 ## Main Program
 # Commented out here. Is started via /etc/rc.local
-#ssh -t schieder@192.168.0.191 'cd Code/AutomatedCatFeedingDevice; python3 -m acfd.automated_cat_feeding_device'
+ssh -t schieder@192.168.0.191 'cd Code/AutomatedCatFeedingDevice; python3 -m acfd.automated_cat_feeding_device'
 
