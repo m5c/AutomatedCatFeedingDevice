@@ -9,9 +9,6 @@ Author: Maximilian Schiedermeier
 
 from abc import ABC, abstractmethod
 
-from acfd.clock import Clock
-from acfd.display_utils.display import Display
-
 
 class State(ABC):
 

@@ -1,6 +1,6 @@
 """
-Represents a valid display_utils content, that is to say something that can be statically displayed on
-a 7 segment display_utils with decimal dot, four digits.
+Represents a valid display_utils content, that is to say something that can be statically
+displayed on a 7 segment display_utils with decimal dot, four digits.
 Author: Maximilian Schiedermeier
 """
 from acfd.display_utils.segment_char import SegmentChar, get_alphabet
@@ -10,12 +10,17 @@ amount_digits: int = 4
 
 
 class DisplayContent:
+    """
+    Class to represent content that can be shown a 4 digit dotted 7 segment display. This serves
+    as convenient wrapper to display alphanumeric strings on the seven segment element.
+    """
 
     def __init__(self, string_content: str) -> None:
         """
-        Constructor to create a display_utils content entity. Pass a string and the contructor tries to
-        convert it to a display_content representation.
-        This entity should be placed on the thread safe queue communicating with the display_utils entity.
+        Constructor to create a display_utils content entity. Pass a string and the contructor
+        tries to convert it to a display_content representation.
+        This entity should be placed on the thread safe queue communicating with the
+        display_utils entity.
         """
         self.__segment_chars = convert_to_segments_chars(string_content)
 

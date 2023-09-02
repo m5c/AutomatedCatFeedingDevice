@@ -34,7 +34,7 @@ class StateMachine:
         self.__states = {
             "IDLE": StateIdle(),
             "SET_TIME": StateSetTime(self, display, self.__clock),
-            "RUNNING": StateRunning(self, display, self.__clock)
+            "RUNNING": StateRunning(self, self.__clock)
         }
         self.__state: State = self.__states.get("IDLE")
 

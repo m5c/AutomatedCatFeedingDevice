@@ -88,8 +88,8 @@ class Clock:
             # First sleep, then update flags (to avoid missing interactions during sleep)
             # Placing negative values manually on queue is interpreted as external stop.
             sleep(1)
-            zero_reached = (self.__time_queue.queue[0] == 1)
-            stop_requested = (self.__time_queue.queue[0] < 0)
+            zero_reached = self.__time_queue.queue[0] == 1
+            stop_requested = self.__time_queue.queue[0] < 0
 
         # Mark thread as closed and notify observers
         self.__running = False

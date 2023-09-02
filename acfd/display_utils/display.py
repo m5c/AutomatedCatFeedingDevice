@@ -1,6 +1,8 @@
 """
-Helper module to test static 4-pack segment char display_utils, that is to say on reception of a list
-with four segments-chars those are statically displayed on the 4-digit seven segment display_utils with
+Helper module to test static 4-pack segment char display_utils, that is to say on reception of a
+list
+with four segments-chars those are statically displayed on the 4-digit seven segment
+display_utils with
 common cathode, until stopdisplay() is called or another list is provided.
 @Author Maximilian Schiedermeier
 """
@@ -32,7 +34,8 @@ class Display:
     def __enable_display_thread(self):
 
         """
-        Method for thread that turns on the display_utils to light up statically whatever is placed in
+        Method for thread that turns on the display_utils to light up statically whatever is
+        placed in
         the queue.
         This thread never removes from the queue, only peeks.
         Display will continue to iterate until the queue stores a None object.
@@ -61,14 +64,13 @@ class Display:
 
                 # turn off again all the segments that were lit up
                 segment_char.switch_off()
-
         print("Thread ended, no more content")
-        return
 
     @property
     def running(self) -> bool:
         """
-        Pseudo python getter (proper OO PLs would call it a getter) to look up if display_utils is currently switched on.
+        Pseudo python getter (proper OO PLs would call it a getter) to look up if display_utils
+        is currently switched on.
         """
         return not self.__content_queue.empty()
 
@@ -84,7 +86,8 @@ class Display:
 
     def turn_on(self, content_str: str):
         """
-        Turns on display_utils (in extra thread). Can only be called if queue is empty (display_utils off)
+        Turns on display_utils (in extra thread). Can only be called if queue is empty (
+        display_utils off)
         """
         if not self.__content_queue.empty():
             raise Exception("Cannot turn on display_utils. Is already lit up.")
@@ -97,7 +100,8 @@ class Display:
     def update_content(self, content_str: str):
         """
         Replaces the current display_utils content. Will be adapted on next display_utils iteration.
-        :param content_str: as the content to display_utils as string. Passing None turns off display_utils.
+        :param content_str: as the content to display_utils as string. Passing None turns off
+        display_utils.
         """
         # if the queue is currently empty, request display_utils start up first.
         if self.__content_queue.empty():

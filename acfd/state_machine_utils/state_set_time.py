@@ -5,7 +5,6 @@ or to transition to countdown state.
 
 Author: Maximilian Schiedermeier
 """
-from acfd.acfd_clock_subscriber import AcfdClockSubscriber
 from acfd.clock import Clock
 from acfd.display_utils.display import Display
 from acfd.display_utils.display_content_formatter import to_zero_padded_number
@@ -34,6 +33,9 @@ class StateSetTime(State):
             self.__time_minutes, 2)
 
     def time_in_seconds(self) -> int:
+        """
+        Converts amount of hours and minuted into the equivalent in seconds.
+        """
         return 60 * 60 * self.__time_hours + 60 * self.__time_minutes
 
     def handle_button_one(self) -> None:

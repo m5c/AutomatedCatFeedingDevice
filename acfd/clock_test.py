@@ -28,6 +28,11 @@ class ClockTest:
 
 
 class PrintingClockSubscriber(ClockSubscriber):
+    """
+    This is a dummy clock subscriber that does nothing but print all received clock events to
+    console. Meant for testing of the Clock implementation.
+    """
+
     def notify_clock_time_change(self, time_update: int) -> None:
         print(time_update)
 

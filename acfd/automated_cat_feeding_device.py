@@ -1,7 +1,6 @@
 """
-Main acfd logic. Interprets input events from keypad and sets content for display_utils,
-and controls
-motor.
+Main ACFD module.
+Start with: python3 -m acfd.automated_cat_feeding_device
 Author: Maximilian Schiedermeier
 """
 from time import sleep
@@ -13,6 +12,9 @@ from acfd.state_machine_utils.state_machine import StateMachine
 
 
 class AutomatedCatFeedingDevice:
+    """
+    Main ACFD class.
+    """
 
     def __init__(self):
         """
@@ -68,45 +70,8 @@ class AutomatedCatFeedingDevice:
         # active.
         self.__state_machine.change_state("SET_TIME")
 
-        # There is no need for permanent loop here, the program remains active until the
-        # display_utils is
-        # turned off.
-        # sleep(2)
-        # self.__display.turn_off()
-
-    # def update_time(self, time_update: int) -> None:
-    #     """
-    #     Callback function, invoked by clock on countdown.
-    #     """
-    #     print("Received time update: " + str(time_update))
-    #     self.__display.update_content(to_zero_padded_number(time_update, 4))
-    #
-    # def zero_reached(self) -> None:
-    #     """
-    #     Turn off display_utils
-    #     """
-    #     self.__display.update_content("OPEN")
-    #     # this one is blocking
-    #     self.__lid_motor.open_acfd()
-    #     self.__display.turn_off()
-    #
-    # def aborted(self) -> None:
-    #     """
-    #     For now: Turn off display_utils
-    #     """
-    #     print("ABORT called!")
-    #     self.__display.turn_off()
-    #
-    # def instant_open(self, whatever_python_enforced_nonsense):
-    #     self.__lid_motor.open_acfd()
-    #
-    # def test_message(self, whatever_python_enforced_nonsense):
-    #     if not self.__display.running:
-    #         self.__display.turn_on("OK")
-    #     else:
-    #         self.__display.update_content("OK")
-    #     sleep(3)
-    #     self.__display.turn_off()
+        # There is no need for permanent loop here, the program remains active until the display
+        # is turned off.
 
 
 AutomatedCatFeedingDevice()

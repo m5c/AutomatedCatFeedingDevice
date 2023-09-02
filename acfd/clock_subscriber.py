@@ -14,7 +14,6 @@ class ClockSubscriber(ABC):
         Class (interface) implementation must provide logic for this abstract method. Method is
         invoked when the clock has an update.
         """
-        pass
 
     @abstractmethod
     def notify_clock_zero_reached(self) -> None:
@@ -22,7 +21,6 @@ class ClockSubscriber(ABC):
         Class (interface) implementation must provide logic for this abstract method. Method is
         invoked when the clock has reached zero.
         """
-        pass
 
     @abstractmethod
     def notify_clock_stopped(self) -> None:
@@ -30,7 +28,6 @@ class ClockSubscriber(ABC):
         Class (interface) implementation must provide logic for this abstract method. Method is
         invoked when the clock was reset / aborted.
         """
-        pass
 
     @abstractmethod
     def notify_clock_started(self) -> None:
@@ -38,4 +35,3 @@ class ClockSubscriber(ABC):
         Class (interface) implementation must provide logic for this abstract method. Method is
         invoked when the clock started.
         """
-        pass

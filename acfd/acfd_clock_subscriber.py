@@ -2,8 +2,6 @@
 Implements lister for clock events. Has access to state machine to alter state, e.g. when zero
 reached.
 """
-from time import sleep
-
 from acfd.clock_subscriber import ClockSubscriber
 from acfd.display_utils.display import Display
 from acfd.display_utils.display_content_formatter import to_zero_padded_number

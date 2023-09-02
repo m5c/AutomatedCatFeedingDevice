@@ -40,4 +40,3 @@ def register_button_callbacks(state_machine: StateMachine) -> None:
     GPIO.add_event_detect(button_pins[3], GPIO.RISING,
                           callback=state_machine.handle_button_four,
                           bouncetime=150)
-
