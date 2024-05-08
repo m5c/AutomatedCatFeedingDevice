@@ -22,16 +22,19 @@ class AutomatedCatFeedingDevice:
         display_utils will
         likewise end program.
         """
+        print("ACFD starting...")
 
         # Obtain and reset motor, to prevent overheating from default GPIO values
         self.__lid_motor: LidMotor = LidMotor()
         self.__lid_motor.power_off()
+
 
         # Button registration should happen before display_utils initialization, as it overloads the
         # system and causes a display_utils glitch.
         # We therefore do a little trick and initialize the display_utils empty. So we have an
         # instance, but don't cause the glitch.
         self.__display: Display = Display("    ")
+
 
         # Initialize state machine in IDLE state, so button events have no effect until power up
         # complete.
@@ -43,6 +46,7 @@ class AutomatedCatFeedingDevice:
         # NOTE: State machine should cause button presses to be without effect until boot
         # procedure completed.
         register_button_callbacks(self.__state_machine)
+
 
         # Initialize display_utils with welcome message
         # wait a moment, then turn display_utils to "dashed" to indicate that system is ready.

@@ -18,6 +18,7 @@ class Display:
     def __init__(self, initial_string: str):
         # Set up common cathode pins and segment pins
         GPIO.setmode(GPIO.BCM)
+
         for segment in segment_values() + digit_values():
             GPIO.setup(segment, GPIO.OUT)
 

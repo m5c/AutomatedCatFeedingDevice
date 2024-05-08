@@ -7,14 +7,14 @@ from enum import Enum
 
 class Segment(Enum):
     # Zero
-    A = 9
-    B = 16
-    C = 20
-    D = 8
-    E = 25
-    F = 11
-    G = 26
-    DP = 19
+    A = 13
+    B = 21
+    C = 7
+    D = 11
+    E = 5
+    F = 19
+    G = 25
+    DP = 8
     # # Zero
     # A = 8
     # B = 9

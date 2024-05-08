@@ -8,10 +8,10 @@ from enum import Enum
 
 class Digit(Enum):
     # Zero
-    D1 = 15
-    D2 = 18
-    D3 = 17
-    D4 = 27
+    D1 = 26
+    D2 = 16
+    D3 = 20
+    D4 = 9
     # Pico
     # D1 = 1
     # D2 = 2

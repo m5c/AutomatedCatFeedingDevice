@@ -1,0 +1,7 @@
+dump with bullseye, 32 bits, headless. Do not use bookworm, has a GPIO bug. Get the right board version (pi0 / pi0-board2). Dump with shieder and public key
+startup once, so pi creates homedir, ideally use board with wifi, then ssh into
+create ~/Code/AutomatedCatFeedingDevice
+[test with ./run script]
+copy prepared init spript "localrun.sh" to ~/ on sdcard
+add line to /etc/rc.local: 
+	/home/pi/localrun.sh &
