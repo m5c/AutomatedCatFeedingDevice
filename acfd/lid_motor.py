@@ -70,7 +70,7 @@ class LidMotor:
         # smode.
         for _ in range(ticks):
             self.__tick(forward, self.__mechanism_skip_intermediate_steps)
-        self.power_off()
+        # self.power_off()
 
     def __tick(self, forward: bool, skip_intermediate_steps: bool) -> None:
         """
@@ -113,8 +113,19 @@ class LidMotor:
         :return: None.
         """
         self.__running = True
-        self.__rotate(-105)  # -100
-        self.__rotate(81)  # 83
+        self.__rotate(-44)  # -100
+        # sleep(1)
+        # self.__rotate(-44)  # -100
+        # sleep(1)
+        # self.__rotate(-44)  # -100
+        # sleep(1)
+        # self.__rotate(-44)  # -100
+        # sleep(1)
+        # self.__rotate(-44)  # -100
+        # sleep(1)
+        # self.__rotate(-44)  # -100
+
+        # self.__rotate(81)  # 83
         self.__running = False
 
     def open_acfd(self) -> None:

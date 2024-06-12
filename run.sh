@@ -1,10 +1,10 @@
 rm acfd.zip
-ssh schieder@192.168.0.198 'cd Code/AutomatedCatFeedingDevice/; rm -rf acfd'
+ssh schieder@192.168.0.5 'cd Code/AutomatedCatFeedingDevice/; rm -rf acfd'
 zip -r acfd.zip acfd
-scp acfd.zip schieder@192.168.0.198:/home/schieder/Code/AutomatedCatFeedingDevice
-ssh schieder@192.168.0.198 'cd Code/AutomatedCatFeedingDevice; unzip acfd.zip'
+scp acfd.zip schieder@192.168.0.5:/home/schieder/Code/AutomatedCatFeedingDevice
+ssh schieder@192.168.0.5 'cd Code/AutomatedCatFeedingDevice; unzip acfd.zip'
 
 ## Main Program
 # Commented out here. Is started via /etc/rc.local
-ssh -t schieder@192.168.0.198 'cd Code/AutomatedCatFeedingDevice; python3 -m acfd.automated_cat_feeding_device'
+ssh -t schieder@192.168.0.5 'cd Code/AutomatedCatFeedingDevice; python3 -m acfd.automated_cat_feeding_device'
 

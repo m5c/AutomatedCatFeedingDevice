@@ -11,9 +11,12 @@ from acfd.state_machine_utils.state import State
 
 class StateIdle(State):
     """
-    IDLE State is selected when an action is proces sbut needs time to finish. While this state
+    IDLE State is selected when an action is processed but needs time to finish. While this state
     is active, all incoming events should be simply discarded.
     """
+
+    def land(self) -> None:
+        pass
 
     def handle_button_one(self, whatever_python_enforced_nonsense) -> None:
         print("IDLE 1")

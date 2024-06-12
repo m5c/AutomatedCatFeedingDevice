@@ -16,6 +16,10 @@ from acfd.display_utils.display import Display
 class State(ABC):
 
     @abstractmethod
+    def land(self) -> None:
+        pass
+
+    @abstractmethod
     def handle_button_one(self) -> None:
         pass
 

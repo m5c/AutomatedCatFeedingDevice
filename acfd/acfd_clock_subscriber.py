@@ -50,13 +50,21 @@ class AcfdClockSubscriber(ClockSubscriber):
         """
         # Ignore all inputs, open bay
         self.__state_machine.change_state("IDLE")
-        self.__display.update_content("OPEN")
+        self.__display.update_content("Food")
         self.__motor.open_acfd_blocking()
-        self.__motor.power_off()
+
+        ## Revolver machine does not turn off motor power, so current angle is locked and feline
+        # cannot use paws to self-forward.
+        # self.__motor.power_off()
+
+        # Wait another 55 seconds, so the machine does not time-drift.
+        sleep(55)
 
         # Transition to set time
-        self.__display.update_content("0000")
-        self.__state_machine.change_state("SET_TIME")
+        # self.__display.update_content("AUTO")
+        # self.__clock.start_clock(5, True)
+        # self.__state_machine.change_state("RUNNING")
+        self.__state_machine.change_state("AUTO_CONTINUE")
 
     def notify_clock_stopped(self) -> None:
         """

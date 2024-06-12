@@ -13,6 +13,8 @@ from acfd.state_machine_utils.state import State
 from acfd.state_machine_utils.state_idle import StateIdle
 from acfd.state_machine_utils.state_running import StateRunning
 from acfd.state_machine_utils.state_set_time import StateSetTime
+from acfd.state_machine_utils.state_auto_continue import StateAutoContinue
+
 
 
 class StateMachine:
@@ -34,7 +36,8 @@ class StateMachine:
         self.__states = {
             "IDLE": StateIdle(),
             "SET_TIME": StateSetTime(self, display, self.__clock),
-            "RUNNING": StateRunning(self, display, self.__clock)
+            "RUNNING": StateRunning(self, display, self.__clock),
+            "AUTO_CONTINUE": StateAutoContinue(self, display, self.__clock)
         }
         self.__state: State = self.__states.get("IDLE")
 
@@ -51,6 +54,7 @@ class StateMachine:
         """
         print("State transition to " + target_state)
         self.__state = self.__states[target_state]
+        self.__state.land()
 
     def handle_button_one(self, whatever_python_nonsense_parameter):
         print("FSM-1")

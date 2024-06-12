@@ -23,6 +23,9 @@ class StateRunning(State):
         self.__display = display
         self.__clock = clock
 
+    def land(self) -> None:
+        pass
+
     def handle_button_one(self) -> None:
         print("RUNNING 1")
         # Ignore, manual time changes are not allowed while running
